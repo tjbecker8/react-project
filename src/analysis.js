@@ -7,9 +7,10 @@ import Consumerneeds from './consumerneeds'
 import Values from './values'
 import Likley from './likley'
 import Unlikley from './unlikley'
+import Keywords from './keywords'
 
 
-function App() {
+function Analysis() {
   return (
 
 <div id="wrap">
@@ -22,6 +23,7 @@ function App() {
 	<div className="row">
 		<Likley />
 		<Unlikley />
+		<Keywords />
 	</div>
 	<Bottomnav />
 </div>
@@ -30,4 +32,4 @@ function App() {
   )
 }
 
-export default App;
+export default Analysis;

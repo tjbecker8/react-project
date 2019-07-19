@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Signup from './signup'
 import App from './App'
 import Login from './login'
+import Analysis from './analysis'
 
 
 class Routes extends Component {
@@ -42,6 +43,7 @@ auth = () => {
 					}
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
 					<Route path="/" component={() => <Login auth={this.auth} />} />
+					<Route path="/analysis" component={Analysis} />
 				</Switch>
 			</BrowserRouter>
 		)
