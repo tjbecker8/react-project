@@ -4,6 +4,7 @@ import Signup from './signup'
 import App from './App'
 import Login from './login'
 import Analysis from './analysis'
+import Upload from './uploadfile'
 
 
 class Routes extends Component {
@@ -42,6 +43,7 @@ auth = () => {
 					<Route path="/app" component={App} />
 					}
 					<Route path="/analysis" component={Analysis} />
+					<Route path="/upload" component={Upload} />
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
 					<Route path="/" component={() => <Login auth={this.auth} />} />
 
