@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 class Login extends Component {
 	//data
@@ -60,7 +61,11 @@ login =(e) => {
 								<div className="error">{this.state.error}</div>
 								<button type="submit" className="btn btn-primary">Login</button>
 							</form>
-							<h5>need to signup? go to /signup</h5>
+							<div className="card-footer">
+								<span className="input-group-btn">
+	  							<Link to="/signup" >Click to Signup</Link>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
