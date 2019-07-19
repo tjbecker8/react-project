@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 
 class Signup extends Component {
@@ -57,6 +58,11 @@ signup =(e) => {
 								</div>
 								<button type="submit" className="btn btn-primary">Signup</button>
 							</form>
+							<div className="card-footer">
+								<span className="input-group-btn">
+	  							<Link to="/login" >Already signed up? Login</Link>
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
