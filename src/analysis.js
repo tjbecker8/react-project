@@ -4,6 +4,9 @@ import './App.css';
 import Personresults from './personresults'
 import Bottomnav from './bottomnav'
 import Consumerneeds from './consumerneeds'
+import Values from './values'
+import Likley from './likley'
+import Unlikley from './unlikley'
 
 
 function App() {
@@ -13,10 +16,12 @@ function App() {
 	<div className="row">
 		<Personresults />
 		<Consumerneeds />
+		<Values />
 
 	</div>
 	<div className="row">
-
+		<Likley />
+		<Unlikley />
 	</div>
 	<Bottomnav />
 </div>

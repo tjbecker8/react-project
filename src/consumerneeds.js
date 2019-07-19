@@ -14,10 +14,10 @@ class Consumerneeds extends Component {
 	<div className="col-3">
 		<div className="card text-center">
 			<div className="card-header">
-    		personality
+    		Consumer Needs
   		</div>
 			<div className="card-body">
-				<consumerradar />
+				<Consumerradar />
 			</div>
 		</div>
 	</div>

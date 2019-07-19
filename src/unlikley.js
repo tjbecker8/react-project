@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Keylist from './keylist'
+import Unlikelist from './unlikelist'
 
 
-class Keywords extends Component {
+class Unlikley extends Component {
 	//data
 
 	//functions
@@ -14,10 +14,10 @@ class Keywords extends Component {
 	<div className="col-3">
 		<div className="card text-center">
 			<div className="card-header">
-    		Keywords:
+    		Unlikley to:
   		</div>
 			<div className="card-body">
-				<Keylist />
+				<Unlikelist />
 			</div>
 		</div>
 	</div>
@@ -27,4 +27,4 @@ class Keywords extends Component {
 
 
 
-export default Keywords;
+export default Unlikley;

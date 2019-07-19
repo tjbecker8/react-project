@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Radarchart from './radar'
+import Likelist from './likelist'
 
 
-class Personality extends Component {
+class Likley extends Component {
 	//data
 
 	//functions
@@ -14,10 +14,10 @@ class Personality extends Component {
 	<div className="col-3">
 		<div className="card text-center">
 			<div className="card-header">
-    		Featured
+    		Likley to:
   		</div>
 			<div className="card-body">
-				<Radarchart />
+				<Likelist />
 			</div>
 		</div>
 	</div>
@@ -27,4 +27,4 @@ class Personality extends Component {
 
 
 
-export default Personality;
+export default Likley;
