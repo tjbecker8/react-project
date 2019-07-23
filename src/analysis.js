@@ -8,6 +8,7 @@ import Values from './values'
 import Likley from './likley'
 import Unlikley from './unlikley'
 import Keywords from './keywords'
+import Tones from './tones'
 
 
 function Analysis() {
@@ -18,6 +19,7 @@ function Analysis() {
 		<Personresults />
 		<Consumerneeds />
 		<Values />
+		<Tones />
 
 	</div>
 	<div className="row">
