@@ -6,6 +6,7 @@ import Sidebar from './sidebar'
 import Bottomnav from './bottomnav'
 
 
+
 function App() {
   return (
 
@@ -13,9 +14,10 @@ function App() {
 	<div className="row">
 		<Snapshot />
 		<Sidebar />
+
 	</div>
 	<div className="row">
-	
+
 	</div>
 	<Bottomnav />
 </div>

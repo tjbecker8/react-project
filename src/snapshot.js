@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom'
 
 
 
@@ -11,7 +12,7 @@ class Snapshot extends Component {
 	//render
 	render() {
 		return (
-			<div className="col-8">
+			<div className="col-4">
 				<div className="card">
 					<div className="card-header">
 						<h5 className="card-title">Snapshot</h5>
@@ -21,7 +22,9 @@ class Snapshot extends Component {
 						<p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
 					</div>
 					<div className="card-footer ">
-						<a className="btn btn-primary">New Analysis</a>
+						<span className="btn btn-primary">
+							<Link to="/upload" >New Analysis</Link>
+						</span>
 					</div>
 				</div>
 			</div>

@@ -7,7 +7,7 @@ class Upload extends Component {
 //state
 
 	state = {
-		// text: '',
+		text: '',
 		file: null
 	}
 
@@ -35,15 +35,13 @@ createNew = (e, text, file) => {
 		// console.log('file', file)
 		let file_holder = new FormData()
 		file_holder.append('file', file)
-		// file_holder.append('name', text)
+		file_holder.append('name', text)
 		// file_holder.append('channel', this.props.channel)
 		console.log('file_holder', file_holder)
-		let newAudio = {
-			// name: text,
-			file: file_holder,
-			// channel: this.props.channel
-		}
-		console.log('newAudio', newAudio)
+		// let newAudio = {
+		// 	file: file_holder,
+		// }
+		// console.log('newAudio', newAudio)
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
 				console.log('success');
 		}).catch((err) => {
@@ -56,20 +54,34 @@ createNew = (e, text, file) => {
 //render
 	render() {
 	    return (
-				<div id="upload-file">
-				<form onSubmit={(e) => {
-						this.createNew(e, this.state.text, this.state.file); this.clearMessage()}
-					}>
-					<div className="input-group">
-						<input type="file" name="file" onChange={this.addFile}/>
-						<input type="text" className="form-control" placeholder="File Name" value={this.state.text} onChange={(e) => this.changeText(e)} />
-						<div className="input-group-append">
-							<button type="submit" className="btn btn-success">Send</button>
+				<div className="row">
+				<div className="col-4">
+					<div className="card">
+						<div id="upload-file">
+							<form onSubmit={(e) => {this.createNew(e, this.state.text, this.state.file); this.clearMessage()}} className="md-form" >
+								<div className="file-field">
+										<input type="file" name="file" onChange={this.addFile} required />
+											</div>
+											<input type="text" className="form-control" placeholder="File Name" value={this.state.text} onChange={(e) => this.changeText(e)} required />
+											<button type="submit" className="btn btn-success">Send</button>
+									</form>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-4">
+							<div className="card">
+								<div className="card-body">
+									<h6>All audio files must be single/mono channel</h6>
+									<p>Use linke below to convert your files first</p>
+								</div>
+								<div className="card-footer">
+									<a href="https://audio.online-convert.com/convert-to-wav" target="_blank" rel="noopener noreferrer">Convert Files</a>
+								</div>
+							</div>
 						</div>
 					</div>
-				</form>
-			</div>
-	    )
-	  }
+			)
+		}
 	}
 export default Upload;
