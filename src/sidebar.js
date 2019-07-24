@@ -25,7 +25,7 @@ class Sidebar extends Component {
 				      <option>5</option>
 				    </select>
 				  </div>
-				<a className="btn btn-primary">View all</a>
+				<button className="btn btn-primary">View all</button>
 			</div>
 			<div className="card-footer text-muted">
 				<form className="form-inline">

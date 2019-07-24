@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-
+import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 class Upload extends Component {
 //state
 
 	state = {
 		text: '',
-		file: null
+		file: null,
+		redirect: false
 	}
 
 //functions
@@ -30,6 +31,18 @@ addFile = (e) => {
 	})
 }
 
+setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+
+	renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/analysis' />
+    }
+  }
+
 createNew = (e, text, file) => {
 		e.preventDefault()
 		// console.log('file', file)
@@ -43,7 +56,10 @@ createNew = (e, text, file) => {
 		// }
 		// console.log('newAudio', newAudio)
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
-				console.log('success');
+				alert('Analysis Complete')
+				this.setRedirect()
+				this.renderRedirect()
+
 		}).catch((err) => {
 			console.log('err', err)
 		})
