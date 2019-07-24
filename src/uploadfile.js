@@ -56,13 +56,8 @@ createNew = (e, text, file) => {
 		let file_holder = new FormData()
 		file_holder.append('file', file)
 		file_holder.append('name', text)
-
-
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
 				alert('Analysis Complete')
-
-
-
 		}).catch((err) => {
 			console.log('err', err)
 		})
