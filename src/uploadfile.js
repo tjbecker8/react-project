@@ -50,14 +50,15 @@ createNew = (e, text, file) => {
 		file_holder.append('file', file)
 		file_holder.append('name', text)
 		// file_holder.append('channel', this.props.channel)
-		console.log('file_holder', file_holder)
+		// console.log('file_holder', file_holder)
 		// let newAudio = {
 		// 	file: file_holder,
 		// }
 		// console.log('newAudio', newAudio)
+		this.setRedirect()
+		console.log(this.state.redircet);
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
 				alert('Analysis Complete')
-				this.setRedirect()
 				this.renderRedirect()
 
 		}).catch((err) => {
