@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 class Upload extends Component {
 //state
@@ -9,7 +8,6 @@ class Upload extends Component {
 	state = {
 		text: '',
 		file: null,
-		redirect: false
 	}
 
 //functions
@@ -31,35 +29,32 @@ addFile = (e) => {
 	})
 }
 
-setRedirect = () => {
-    this.setState({
-      redirect: true
-    })
-  }
 
-	renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect to='/analysis' />
-    }
-  }
+
+
+
+// setRedirect = () => {
+// 	this.setState((prevState) => ({
+// 		redirect: !prevState.redirect
+// 	}))
+// }
+
+
 
 createNew = (e, text, file) => {
 		e.preventDefault()
-		// console.log('file', file)
+
+
+
 		let file_holder = new FormData()
 		file_holder.append('file', file)
 		file_holder.append('name', text)
-		// file_holder.append('channel', this.props.channel)
-		// console.log('file_holder', file_holder)
-		// let newAudio = {
-		// 	file: file_holder,
-		// }
-		// console.log('newAudio', newAudio)
-		this.setRedirect()
-		console.log(this.state.redircet);
+
+
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
 				alert('Analysis Complete')
-				this.renderRedirect()
+
+
 
 		}).catch((err) => {
 			console.log('err', err)
@@ -89,7 +84,7 @@ createNew = (e, text, file) => {
 						<div className="col-4">
 							<div className="card">
 								<div className="card-body">
-									<h6>All audio files must be single/mono channel</h6>
+									<h6>All audio files must be single/mono channel, 16 bit, 16000 hertz.</h6>
 									<p>Use linke below to convert your files first</p>
 								</div>
 								<div className="card-footer">
