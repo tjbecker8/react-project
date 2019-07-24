@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import './upload.css';
 import axios from 'axios';
 class Upload extends Component {
 //state
@@ -29,6 +30,15 @@ addFile = (e) => {
 	})
 }
 
+changeClass = () => {
+  var element = document.getElementById("alert");
+  element.classList.add("active");
+}
+
+removeClass = () => {
+  var element = document.getElementById("alert");
+  element.classList.remove("active");
+}
 
 
 
@@ -43,9 +53,6 @@ addFile = (e) => {
 
 createNew = (e, text, file) => {
 		e.preventDefault()
-
-
-
 		let file_holder = new FormData()
 		file_holder.append('file', file)
 		file_holder.append('name', text)
@@ -66,11 +73,17 @@ createNew = (e, text, file) => {
 //render
 	render() {
 	    return (
+				<div>
+					<div id="alert" className="card">
+						<div className="card-body">
+							<h4>Please wait while analysis is being completed.</h4>
+						</div>
+					</div>
 				<div className="row">
 				<div className="col-4">
 					<div className="card">
 						<div id="upload-file">
-							<form onSubmit={(e) => {this.createNew(e, this.state.text, this.state.file); this.clearMessage()}} className="md-form" >
+							<form onSubmit={(e) => {this.createNew(e, this.state.text, this.state.file); this.clearMessage(); this.changeClass()}} className="md-form" >
 								<div className="file-field">
 										<input type="file" name="file" onChange={this.addFile} required />
 											</div>
@@ -92,6 +105,7 @@ createNew = (e, text, file) => {
 								</div>
 							</div>
 						</div>
+					</div>
 					</div>
 			)
 		}

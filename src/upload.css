@@ -1,0 +1,12 @@
+#alert {
+	position: fixed;
+	top: 50px;
+	left: 100px;
+	z-index: 1;
+	color: red;
+	display: none;
+}
+
+#alert.active {
+	display: block;
+}
