@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import Personresults from './personresults'
@@ -11,7 +11,23 @@ import Keywords from './keywords'
 import Tones from './tones'
 
 
-function Analysis() {
+class Analysis extends Component {
+//state
+state = {
+	data: null,
+}
+
+
+//functions
+
+
+
+
+
+//render
+
+render() {
+	console.log(this.props.location.aboutProps);
   return (
 
 <div id="wrap">
@@ -32,6 +48,7 @@ function Analysis() {
 
 
   )
+}
 }
 
 export default Analysis;

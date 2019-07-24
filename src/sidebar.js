@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import Options from './options'
 
 
 class Sidebar extends Component {
@@ -14,18 +14,14 @@ class Sidebar extends Component {
 			<div className="col-4">
 		<div className="card">
 			<div className="card-body">
-				<h5 className="card-title">Special title treatment</h5>
+				<h5 className="card-title">Analysis</h5>
 				<div className="form-group">
-				    <label for="exampleFormControlSelect2">Example multiple select</label>
+				    <label for="exampleFormControlSelect2">Select a previous analysis to veiw</label>
 				    <select multiple className="form-control" id="exampleFormControlSelect2">
-				      <option>1</option>
-				      <option>2</option>
-				      <option>3</option>
-				      <option>4</option>
-				      <option>5</option>
+				      <Options />
 				    </select>
 				  </div>
-				<button className="btn btn-primary">View all</button>
+				<button className="btn btn-primary">View analysis</button>
 			</div>
 			<div className="card-footer text-muted">
 				<form className="form-inline">

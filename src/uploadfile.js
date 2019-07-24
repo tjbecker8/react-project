@@ -3,12 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import './upload.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 class Upload extends Component {
 //state
 
 	state = {
 		text: '',
 		file: null,
+		data: null,
 	}
 
 //functions
@@ -57,7 +59,13 @@ createNew = (e, text, file) => {
 		file_holder.append('file', file)
 		file_holder.append('name', text)
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
+			this.removeClass()
 				alert('Analysis Complete')
+				console.log('res',res.data);
+				this.setState({
+					data: res.data
+				})
+				console.log(this.state.data);
 		}).catch((err) => {
 			console.log('err', err)
 		})
@@ -74,6 +82,19 @@ createNew = (e, text, file) => {
 							<h4>Please wait while analysis is being completed.</h4>
 						</div>
 					</div>
+
+					<div id="finish" className="card">
+						<div className="card-body">
+							<h4>your analysis is complete!</h4>
+							<Link to ={{
+									pathname: '/analysis',
+									aboutProps:{
+										data: this.state.data,
+									}
+								}} >See Analysis</Link>
+						</div>
+					</div>
+
 				<div className="row">
 				<div className="col-4">
 					<div className="card">
