@@ -5,12 +5,13 @@ import './sidebar.css';
 class Sidebar extends Component {
 	//data
 state = {
-	analysis: []
+	analysis: [],
+	_id: '',
 }
 	//functions
 	componentWillMount() {
 			axios.get('http://localhost:4000/full').then((res)=> {
-				console.log(res.data);
+				// console.log(res.data);
 				this.setState({
 					analysis: res.data
 				})
@@ -21,14 +22,23 @@ state = {
 
 		selectAnalysis = (id) => {
 				let analysis = this.state.analysis
-				analysis.map((a)=> a.active = false) //add the active property to each element
+				analysis.map((a)=> a.active = false)
 
 				let analysi = analysis.find((a) => a._id === id)
 				analysi.active = true
 				this.setState({analysis})
 				console.log(this.state.analysis);
-
+				console.log(id);
+				this.setState({
+					_id: id
+				})
+				console.log('_id',this.state._id);
 			}
+
+
+	getAnalysis = () => {
+
+	}
 
 
 
