@@ -40,7 +40,7 @@ class Personradar extends Component {
 
 			<MDBContainer>
 				<h3 className="mt-5">Personality - <Link to ={{
-						pathname: '/app',
+						pathname: '/indepth',
 						aboutProps:{
 							data: this.props.personality,
 						}

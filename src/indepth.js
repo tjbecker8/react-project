@@ -13,17 +13,15 @@ import Agreeableness from './Agreeableness'
 import EmotionalRange from './EmotionalRange'
 
 
-class Analysis extends Component {
+class Indepth extends Component {
 //state
 state = {
-
+ openness: []
 }
 
 
 //functions
-componentWillMount() {
-	console.log('test', );
-}
+
 
 
 
@@ -34,23 +32,23 @@ componentWillMount() {
 //render
 
 render() {
-
+console.log('work',this.props.location.aboutProps.data[0].children);
   return (
 
 <div id="wrap">
 	<div className="row">
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<h2>{this.state.name} Analysis - {this.state.word_count} words - {this.state.date} </h2>
+			<h2>InDepth Personality Analysis</h2>
 			</nav>
 	</div>
 	<div className="row">
-		<Openness  />
-		<Conscientiousness />
-		<Extraversion  />
+		<Openness openness={this.props.location.aboutProps.data[0].children} />
+		<Conscientiousness conscientiousness={this.props.location.aboutProps.data[1].children} />
+		<Extraversion extraversion={this.props.location.aboutProps.data[2].children} />
 	</div>
 	<div className="row">
-		<Agreeableness />
-		<EmotionalRange />
+		<Agreeableness agreeableness={this.props.location.aboutProps.data[3].children} />
+		<EmotionalRange emotionalRange={this.props.location.aboutProps.data[4].children} />
 
 	</div>
 
@@ -62,4 +60,4 @@ render() {
 }
 }
 
-export default Analysis;
+export default Indepth;

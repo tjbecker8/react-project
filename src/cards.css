@@ -1,1 +1,4 @@
-
+#transcript.card-body {
+	max-height: 190px;
+	overflow: scroll;
+}

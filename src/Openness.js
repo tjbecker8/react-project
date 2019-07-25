@@ -12,7 +12,7 @@ class Openness extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<Openradar document={this.props.document}/>
+		<Openradar document={this.props.openness}/>
 	</div>
 		)
 	}

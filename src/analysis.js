@@ -11,6 +11,7 @@ import Likley from './likley'
 import Unlikley from './unlikley'
 import Keywords from './keywords'
 import Tones from './tones'
+import Transcript from './transcript'
 
 
 class Analysis extends Component {
@@ -91,6 +92,7 @@ render() {
 		<Likley />
 		<Unlikley />
 		<Keywords keywords={this.state.keywords} />
+		<Transcript transcript={this.state.transcription}/>
 	</div>
 	<Bottomnav />
 </div>

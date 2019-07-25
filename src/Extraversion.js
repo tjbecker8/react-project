@@ -12,7 +12,7 @@ class Extraversion extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<Extraversionradar document={this.props.document}/>
+		<Extraversionradar document={this.props.extraversion}/>
 	</div>
 		)
 	}

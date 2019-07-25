@@ -12,7 +12,7 @@ class Agreeableness extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<Agreeablenessradar document={this.props.document}/>
+		<Agreeablenessradar document={this.props.agreeableness}/>
 	</div>
 		)
 	}

@@ -8,25 +8,24 @@ class Agreeablenessradar extends Component {
 	//data
 	state = {
 	    dataRadar: {
-	      labels: [],
+	      labels: [this.props.document[0].name, this.props.document[1].name, this.props.document[2].name, this.props.document[3].name, this.props.document[4].name, this.props.document[5].name],
 	      datasets: [
 					{
 						label: "Percentile",
 						backgroundColor: "rgba(194, 116, 161, 0.5)",
 						borderColor: "rgb(194, 116, 161)",
-						data: []
+						data: [this.props.document[0].percentile, this.props.document[1].percentile, this.props.document[2].percentile, this.props.document[3].percentile, this.props.document[4].percentile, this.props.document[5].percentile,]
 					},
 	        {
 	          label: "Score",
 	          backgroundColor: "rgba(71, 225, 167, 0.5)",
 	          borderColor: "rgb(71, 225, 167)",
-	          data: []
+	          data: [this.props.document[0].raw_score, this.props.document[1].raw_score, this.props.document[2].raw_score, this.props.document[3].raw_score, this.props.document[4].raw_score, this.props.document[5].raw_score,]
 	        }
 	      ]
 	    }
 
 	  }
-
 	//functions
 
 	componentWillMount() {
@@ -38,7 +37,7 @@ class Agreeablenessradar extends Component {
 		return (
 
 			<MDBContainer>
-				<h3 className="mt-5">Tone</h3>
+				<h3 className="mt-5">Agreeableness</h3>
         <Radar data={this.state.dataRadar} options={{ responsive: true }} />
       </MDBContainer>
 

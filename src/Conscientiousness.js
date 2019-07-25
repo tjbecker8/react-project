@@ -12,7 +12,7 @@ class Conscientiousness extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<Conscientiousnessradar document={this.props.document}/>
+		<Conscientiousnessradar document={this.props.conscientiousness}/>
 	</div>
 		)
 	}

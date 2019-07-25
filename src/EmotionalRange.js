@@ -12,7 +12,7 @@ class EmotionalRange extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<EmotionalRangeradar document={this.props.document}/>
+		<EmotionalRangeradar document={this.props.emotionalRange}/>
 	</div>
 		)
 	}
