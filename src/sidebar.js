@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import Options from './list-item'
 import axios from 'axios'
 import './sidebar.css';
+import {Link} from 'react-router-dom'
 class Sidebar extends Component {
 	//data
 state = {
 	analysis: [],
-	_id: '',
+	target: [],
 }
 	//functions
 	componentWillMount() {
@@ -29,10 +30,16 @@ state = {
 				this.setState({analysis})
 				console.log(this.state.analysis);
 				console.log(id);
-				this.setState({
-					_id: id
+
+				axios.get(`http://localhost:4000/full?_id=${id}`).then((res)=> {
+					console.log(res.data[0]);
+					this.setState({
+						target: res.data[0]
+					})
+					console.log(this.state.target);
+				}).catch((err)=>{
+					console.log(err)
 				})
-				console.log('_id',this.state._id);
 			}
 
 
@@ -49,9 +56,7 @@ state = {
 		<div className="card">
 			<div className="card-body">
 				<h5 className="card-title">Previous Analysis</h5>
-				<form onSubmit={(e) => {
-						this.testId()}
-					} >
+
 				<div className="form-group">
 				    <ul className="list-group">
 							{
@@ -61,8 +66,13 @@ state = {
 					}
 				</ul>
 				  </div>
-				<button type="submit" className="btn btn-primary">View analysis</button>
-				</form>
+					<Link to ={{
+							pathname: '/analysis',
+							aboutProps:{
+								data: this.state.target,
+							}
+						}} >Veiw Analysis</Link>
+
 			</div>
 			<div className="card-footer text-muted">
 				<form className="form-inline">
