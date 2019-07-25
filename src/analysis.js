@@ -77,9 +77,9 @@ render() {
 	<div className="row">
 		<Personresults personality={this.state.personality} />
 		<Consumerneeds />
+		<Values values={this.state.values} />
 	</div>
 	<div className="row">
-		<Values values={this.state.values} />
 
 
 	</div>
