@@ -6,7 +6,9 @@ class Keywords extends Component {
 	//data
 
 	//functions
-
+componentWillMount() {
+	console.log('keys',this.props.keywords);
+}
 
 	//render
 	render() {
@@ -17,7 +19,13 @@ class Keywords extends Component {
     		Keywords:
   		</div>
 			<div className="card-body">
-				<Keylist />
+				<ul>
+			{
+				this.props.keywords.map((k)=>{
+					return <Keylist word={k} />
+				})
+			}
+			</ul>
 			</div>
 		</div>
 	</div>
