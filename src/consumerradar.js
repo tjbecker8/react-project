@@ -1,48 +1,42 @@
 import React, {Component} from 'react';
-import {
-  Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
-} from 'recharts';
-
+import { Radar } from "react-chartjs-2";
+import { MDBContainer } from "mdbreact";
 
 
 class consumerradar extends Component {
 	//data
-state = {
-	data: [{
-		subject: 'Math', A: 120, B: 110, fullMark: 150,
-	},
-	{
-		subject: 'Chinese', A: 98, B: 130, fullMark: 150,
-	},
-	{
-		subject: 'English', A: 86, B: 130, fullMark: 150,
-	},
-	{
-		subject: 'Geography', A: 99, B: 100, fullMark: 150,
-	},
-	{
-		subject: 'Physics', A: 85, B: 90, fullMark: 150,
-	},
-	{
-		subject: 'History', A: 65, B: 85, fullMark: 150,
-	},]
-}
+	state = {
+			dataRadar: {
+				labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+				datasets: [
+					{
+						label: "My First dataset",
+						backgroundColor: "rgba(194, 116, 161, 0.5)",
+						borderColor: "rgb(194, 116, 161)",
+						data: [65, 59, 90, 81, 56, 55, 40]
+					},
+					{
+						label: "My Second dataset",
+						backgroundColor: "rgba(71, 225, 167, 0.5)",
+						borderColor: "rgb(71, 225, 167)",
+						data: [28, 48, 40, 19, 96, 27,100]
+					}
+				]
+			}
+
+		}
 
 
 	//functions
 
-	// export default class Example extends PureComponent {
-	//   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/6ebcxbx4/';
+
 	//render
 	render() {
 		return (
 
-			<RadarChart cx={135} cy={100} outerRadius={75} width={270} height={250} data={this.state.data}>
-				<PolarGrid />
-				<PolarAngleAxis dataKey="subject" />
-				<PolarRadiusAxis />
-				<Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-			</RadarChart>
+			<MDBContainer>
+        <Radar data={this.state.dataRadar} options={{ responsive: true }} />
+      </MDBContainer>
 
 		)
 	}

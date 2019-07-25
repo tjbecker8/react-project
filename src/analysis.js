@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import "mdbreact/dist/css/mdb.css";
 import Personresults from './personresults'
 import Bottomnav from './bottomnav'
 import Consumerneeds from './consumerneeds'
@@ -76,14 +77,17 @@ render() {
 	<div className="row">
 		<Personresults personality={this.state.personality} />
 		<Consumerneeds />
+	</div>
+	<div className="row">
 		<Values values={this.state.values} />
-		<Tones document_tone={this.state.document_tone} />
+
 
 	</div>
 	<div className="row">
 		<Likley />
 		<Unlikley />
 		<Keywords keywords={this.state.keywords} />
+		<Tones document_tone={this.state.document_tone} />
 	</div>
 	<Bottomnav />
 </div>

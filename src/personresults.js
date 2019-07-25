@@ -11,13 +11,13 @@ class Personresults extends Component {
 	//render
 	render() {
 		return (
-	<div className="col-3">
+	<div className="col-8">
 		<div className="card text-center">
 			<div className="card-header">
     		personality
   		</div>
 			<div className="card-body">
-				<Personradar />
+				<Personradar personality={this.props.personality} />
 			</div>
 		</div>
 	</div>

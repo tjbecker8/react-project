@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Valuesradar from './valuesradar'
+import Valuesradar from './valuesradar1'
 
 
 class Values extends Component {
@@ -11,13 +11,13 @@ class Values extends Component {
 	//render
 	render() {
 		return (
-	<div className="col-3">
+	<div className="col-8">
 		<div className="card text-center">
 			<div className="card-header">
     		Values
   		</div>
 			<div className="card-body">
-				<Valuesradar />
+				<Valuesradar values={this.props.values} />
 			</div>
 		</div>
 	</div>

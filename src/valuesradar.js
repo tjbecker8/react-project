@@ -31,15 +31,19 @@ state = {
 
 	//functions
 
-	// export default class Example extends PureComponent {
-	//   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/6ebcxbx4/';
+	componentWillMount() {
+		console.log('rrrrr', this.props.values);
+
+	}
+
+
 	//render
 	render() {
 		return (
 
-			<RadarChart cx={135} cy={100} outerRadius={75} width={270} height={250} data={this.state.data}>
+			<RadarChart cx={135} cy={100} outerRadius={75} width={270} height={250} data={this.props.values}>
 				<PolarGrid />
-				<PolarAngleAxis dataKey="subject" />
+				<PolarAngleAxis dataKey="name" />
 				<PolarRadiusAxis />
 				<Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
 			</RadarChart>

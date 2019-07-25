@@ -11,7 +11,7 @@ class Consumerneeds extends Component {
 	//render
 	render() {
 		return (
-	<div className="col-3">
+	<div className="col-8">
 		<div className="card text-center">
 			<div className="card-header">
     		Consumer Needs
