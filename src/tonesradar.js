@@ -25,7 +25,7 @@ class Tonesradar extends Component {
 	//functions
 
 	componentWillMount() {
-		console.log('document', this.props.document.tones[0].tone_name);
+		// console.log('document', this.props.document.tones[0].tone_name);
 }
 
 	//render

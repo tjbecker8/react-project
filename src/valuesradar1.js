@@ -30,7 +30,7 @@ class valuesradar extends Component {
 	//functions
 
 	componentWillMount() {
-		console.log('rrrrr', this.props.values[0].raw_score);
+		// console.log('rrrrr', this.props.values[0].raw_score);
 }
 
 	//render

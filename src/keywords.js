@@ -7,7 +7,7 @@ class Keywords extends Component {
 
 	//functions
 componentWillMount() {
-	console.log('keys',this.props.keywords);
+	// console.log('keys',this.props.keywords);
 }
 
 	//render

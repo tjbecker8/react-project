@@ -30,7 +30,7 @@ state = {
 
 //functions
 componentWillMount() {
-	console.log('test', this.props.location.aboutProps );
+	// console.log('test', this.props.location.aboutProps );
 	this.setState({
 		consumption_preferences: this.props.location.aboutProps.data.consumption_preferences
 	})
