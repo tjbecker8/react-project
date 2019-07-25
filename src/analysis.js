@@ -62,7 +62,10 @@ componentWillMount() {
 	this.setState({
 		word_count: this.props.location.aboutProps.data.word_count
 	})
+
 }
+
+
 
 
 
@@ -70,6 +73,15 @@ componentWillMount() {
 //render
 
 render() {
+	console.log('<><>',this.state.consumption_preferences);
+
+	const filter = this.state.consumption_preferences.filter((f) => {
+		return f.consumption_preferences.score === 1
+	})
+	console.log('filter',filter);
+
+
+
 	// console.log(this.props.location.aboutProps.data);
   return (
 
