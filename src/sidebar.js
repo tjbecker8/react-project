@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import Options from './options'
+import Options from './list-item'
 import axios from 'axios'
-
+import './sidebar.css';
 class Sidebar extends Component {
 	//data
 state = {
@@ -19,6 +19,19 @@ state = {
 			})
 		}
 
+		selectAnalysis = (id) => {
+				let analysis = this.state.analysis
+				analysis.map((a)=> a.active = false) //add the active property to each element
+
+				let analysi = analysis.find((a) => a._id === id)
+				analysi.active = true
+				this.setState({analysis})
+				console.log(this.state.analysis);
+
+			}
+
+
+
 	//render
 	render() {
 		return (
@@ -26,17 +39,20 @@ state = {
 		<div className="card">
 			<div className="card-body">
 				<h5 className="card-title">Previous Analysis</h5>
+				<form onSubmit={(e) => {
+						this.testId()}
+					} >
 				<div className="form-group">
-
-				    <select multiple className="form-control" id="exampleFormControlSelect2">
+				    <ul className="list-group">
 							{
 						this.state.analysis.map((a)=> {
-							return <Options analysis={a} key={a._id} />
+							return <Options selectAnalysis={this.selectAnalysis} analysis={a} key={a._id} />
 						})
 					}
-				    </select>
+				</ul>
 				  </div>
-				<button className="btn btn-primary">View analysis</button>
+				<button type="submit" className="btn btn-primary">View analysis</button>
+				</form>
 			</div>
 			<div className="card-footer text-muted">
 				<form className="form-inline">
