@@ -76,8 +76,8 @@ render() {
 	</div>
 	<div className="row">
 		<Personresults personality={this.state.personality} />
-		<Consumerneeds />
 		<Values values={this.state.values} />
+		<Tones document={this.state.document_tone} />
 	</div>
 	<div className="row">
 
@@ -87,7 +87,7 @@ render() {
 		<Likley />
 		<Unlikley />
 		<Keywords keywords={this.state.keywords} />
-		<Tones document_tone={this.state.document_tone} />
+		<Consumerneeds />
 	</div>
 	<Bottomnav />
 </div>

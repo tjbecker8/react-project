@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-
+import Tonesradar from './tonesradar'
 
 class Tones extends Component {
 	//data
@@ -11,23 +11,8 @@ class Tones extends Component {
 	//render
 	render() {
 		return (
-	<div className="col-3">
-		<div className="card text-center">
-			<div className="card-header">
-    		Tones
-  		</div>
-			<div className="card-body">
-				<ul>
-					<li>Anger</li>
-					<li>Fear</li>
-					<li>Joy</li>
-					<li>Sadness</li>
-					<li>Analytical</li>
-					<li>Confident</li>
-					<li>Tentative</li>
-				</ul>
-			</div>
-		</div>
+	<div className="col-4">
+		<Tonesradar document={this.props.document}/>
 	</div>
 		)
 	}
