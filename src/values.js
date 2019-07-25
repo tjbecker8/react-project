@@ -11,7 +11,7 @@ class Values extends Component {
 	//render
 	render() {
 		return (
-	<div className="col-8">
+	<div className="col-6">
 		<div className="card text-center">
 			<div className="card-header">
     		Values
