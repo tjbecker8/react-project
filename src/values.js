@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Valuesradar from './valuesradar1'
+import './cards.css';
 
 
 class Values extends Component {
