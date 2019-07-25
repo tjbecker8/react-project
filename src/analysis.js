@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import "mdbreact/dist/css/mdb.css";
+import moment from 'moment'
 import Personresults from './personresults'
 import Bottomnav from './bottomnav'
-import Consumerneeds from './consumerneeds'
+// import Consumerneeds from './consumerneeds'
 import Values from './values'
 import Likley from './likley'
 import Unlikley from './unlikley'
@@ -33,9 +34,12 @@ componentWillMount() {
 	this.setState({
 		consumption_preferences: this.props.location.aboutProps.data.consumption_preferences
 	})
+
+
 	this.setState({
-		date: this.props.location.aboutProps.data.date
+		date: moment(this.props.location.aboutProps.data.date).format('D MMM YY')
 	})
+
 	this.setState({
 		document_tone: this.props.location.aboutProps.data.document_tone
 	})
@@ -71,7 +75,7 @@ render() {
 <div id="wrap">
 	<div className="row">
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<h2>{this.state.name} Analysis</h2>
+			<h2>{this.state.name} Analysis - {this.state.word_count} words - {this.state.date} </h2>
 			</nav>
 	</div>
 	<div className="row">
@@ -87,7 +91,6 @@ render() {
 		<Likley />
 		<Unlikley />
 		<Keywords keywords={this.state.keywords} />
-		<Consumerneeds />
 	</div>
 	<Bottomnav />
 </div>
