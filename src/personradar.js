@@ -42,10 +42,10 @@ class Personradar extends Component {
 				<h3 className="mt-5">Personality - <Link to ={{
 						pathname: '/app',
 						aboutProps:{
-							data: this.state.target,
+							data: this.props.personality,
 						}
 					}} >Indepth</Link></h3>
-        <Radar data={this.state.dataRadar} options={{ responsive: true }} />
+				<Radar data={this.state.dataRadar} options={{ responsive: true }} />
       </MDBContainer>
 
 		)
