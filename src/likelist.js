@@ -10,13 +10,12 @@ class Likelist extends Component {
 
 	//render
 	render() {
+		
 		return (
-	<ul>
-		<li>item</li>
-		<li>item</li>
-		<li>item</li>
-		<li>item</li>
-	</ul>
+
+		<li>{this.props.likley.name}</li>
+
+
 		)
 	}
 }

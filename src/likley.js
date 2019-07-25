@@ -17,7 +17,13 @@ class Likley extends Component {
     		Likley to:
   		</div>
 			<div className="card-body">
-				<Likelist />
+				<ul>
+					{
+						this.props.likley.map((k)=>{
+							return <Likelist likley={k} key={k.consumption_preference_id} />
+						})
+					}
+				</ul>
 			</div>
 		</div>
 	</div>

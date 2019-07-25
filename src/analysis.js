@@ -18,6 +18,8 @@ class Analysis extends Component {
 //state
 state = {
 	consumption_preferences: [],
+	likley: [],
+	unlikley: [],
 	date: '',
 	document_tone: {},
 	keywords: [],
@@ -32,6 +34,25 @@ state = {
 //functions
 componentWillMount() {
 	// console.log('test', this.props.location.aboutProps );
+let array = this.props.location.aboutProps.data.consumption_preferences
+array.forEach((a) => {
+		a.consumption_preferences.forEach((c)=>{
+			if (c.score === 1) {
+				this.state.likley.push(c)
+			}
+		})
+	})
+
+array.forEach((a) => {
+				a.consumption_preferences.forEach((c)=>{
+				if (c.score === 0) {
+				this.state.unlikley.push(c)
+				}
+			})
+		})
+
+
+
 	this.setState({
 		consumption_preferences: this.props.location.aboutProps.data.consumption_preferences
 	})
@@ -66,88 +87,13 @@ componentWillMount() {
 }
 
 
-// let fruits = [
-//     {
-// 		name: 'apple',
-// 		users: [
-//             {
-// 				name: 'John',
-// 				age: 30
-// 			},{
-// 				name: 'Bob',
-// 				age: 30
-// 			},{
-// 				name: 'Sam',
-// 				age: 35
-// 			}
-// 		]
-// 	},{
-// 		name: 'banana',
-// 		users: [
-//             {
-// 				name: 'Paul',
-// 				age: 30
-// 			},{
-// 				name: 'Tom',
-// 				age: 30
-// 			},{
-// 				name: 'Tony',
-// 				age: 35
-// 			}
-// 		]
-// 	}
-// ]
-//
-// let filtered_fruits = []
-//
-// fruits.forEach((f) => {
-//   f.users.forEach((u) => {
-//     if (u.age == 30) {
-//       filtered_fruits.push(u)
-//     }
-//   })
-// })
-//
-//
-// console.log('fruits', fruits)
-// console.log('filtered_fruits', JSON.stringify(filtered_fruits, false, 2))
-
-
 
 
 
 //render
 
 render() {
-	console.log('<><>',this.state.consumption_preferences);
-	let array = this.state.consumption_preferences
-	let itemsLikley = []
-
-	array.forEach((a) => {
-			a.consumption_preferences.forEach((c)=>{
-				if (c.score === 1) {
-					itemsLikley.push(c)
-				}
-			})
-		})
-
-
-	let itemsUnLikley = []
-
-	array.forEach((a) => {
-			a.consumption_preferences.forEach((c)=>{
-					if (c.score === 0) {
-					itemsUnLikley.push(c)
-					}
-				})
-			})
-
-
-console.log('itemsLikley', itemsLikley)
-console.log('itemsUnLikley', itemsUnLikley);
-
-
-
+	console.log('<><>',this.state.likley);
 
 	// console.log(this.props.location.aboutProps.data);
   return (
@@ -168,8 +114,8 @@ console.log('itemsUnLikley', itemsUnLikley);
 
 	</div>
 	<div className="row">
-		<Likley />
-		<Unlikley />
+		<Likley likley={this.state.likley} />
+		<Unlikley unlikley={this.state.unlikley} />
 		<Keywords keywords={this.state.keywords} />
 		<Transcript transcript={this.state.transcription}/>
 	</div>

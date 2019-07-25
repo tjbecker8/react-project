@@ -11,12 +11,7 @@ class Unlikelist extends Component {
 	//render
 	render() {
 		return (
-	<ul>
-		<li>item</li>
-		<li>item</li>
-		<li>item</li>
-		<li>item</li>
-	</ul>
+	<li>{this.props.unlikley.name}</li>
 		)
 	}
 }

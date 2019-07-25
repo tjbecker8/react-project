@@ -17,7 +17,13 @@ class Unlikley extends Component {
     		Unlikley to:
   		</div>
 			<div className="card-body">
-				<Unlikelist />
+				<ul>
+					{
+						this.props.unlikley.map((k)=>{
+							return <Unlikelist unlikley={k} key={k.consumption_preference_id} />
+						})
+					}
+				</ul>
 			</div>
 		</div>
 	</div>
