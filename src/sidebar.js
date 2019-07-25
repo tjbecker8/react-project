@@ -28,15 +28,15 @@ state = {
 				let analysi = analysis.find((a) => a._id === id)
 				analysi.active = true
 				this.setState({analysis})
-				console.log(this.state.analysis);
-				console.log(id);
+				// console.log(this.state.analysis);
+				// console.log(id);
 
 				axios.get(`http://localhost:4000/full?_id=${id}`).then((res)=> {
-					console.log(res.data[0]);
+					// console.log(res.data[0]);
 					this.setState({
 						target: res.data[0]
 					})
-					console.log(this.state.target);
+					// console.log(this.state.target);
 				}).catch((err)=>{
 					console.log(err)
 				})

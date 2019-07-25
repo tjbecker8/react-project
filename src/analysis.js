@@ -14,12 +14,49 @@ import Tones from './tones'
 class Analysis extends Component {
 //state
 state = {
-	data: null,
+	consumption_preferences: [],
+	date: '',
+	document_tone: {},
+	keywords: [],
+	name: '',
+	personality: [],
+	transcription: '',
+	values: [],
+	word_count: 0,
 }
 
 
 //functions
-
+componentWillMount() {
+	console.log('test', this.props.location.aboutProps );
+	this.setState({
+		consumption_preferences: this.props.location.aboutProps.data.consumption_preferences
+	})
+	this.setState({
+		date: this.props.location.aboutProps.data.date
+	})
+	this.setState({
+		document_tone: this.props.location.aboutProps.data.document_tone
+	})
+	this.setState({
+		keywords: this.props.location.aboutProps.data.keywords
+	})
+	this.setState({
+		name: this.props.location.aboutProps.data.name
+	})
+	this.setState({
+		personality: this.props.location.aboutProps.data.personality
+	})
+	this.setState({
+		transcription: this.props.location.aboutProps.data.transcription
+	})
+	this.setState({
+		values: this.props.location.aboutProps.data.values
+	})
+	this.setState({
+		word_count: this.props.location.aboutProps.data.word_count
+	})
+}
 
 
 
@@ -27,21 +64,26 @@ state = {
 //render
 
 render() {
-	console.log(this.props.location.aboutProps);
+	// console.log(this.props.location.aboutProps.data);
   return (
 
 <div id="wrap">
 	<div className="row">
-		<Personresults />
+		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+			<h2>{this.state.name} Analysis</h2>
+			</nav>
+	</div>
+	<div className="row">
+		<Personresults personality={this.state.personality} />
 		<Consumerneeds />
-		<Values />
-		<Tones />
+		<Values values={this.state.values} />
+		<Tones document_tone={this.state.document_tone} />
 
 	</div>
 	<div className="row">
 		<Likley />
 		<Unlikley />
-		<Keywords />
+		<Keywords keywords={this.state.keywords} />
 	</div>
 	<Bottomnav />
 </div>
