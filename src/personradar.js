@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Radar } from "react-chartjs-2";
 import { MDBContainer } from "mdbreact";
+import {Link} from 'react-router-dom'
 
 
 
@@ -38,7 +39,12 @@ class Personradar extends Component {
 		return (
 
 			<MDBContainer>
-				<h3 className="mt-5">Personality</h3>
+				<h3 className="mt-5">Personality - <Link to ={{
+						pathname: '/app',
+						aboutProps:{
+							data: this.state.target,
+						}
+					}} >Indepth</Link></h3>
         <Radar data={this.state.dataRadar} options={{ responsive: true }} />
       </MDBContainer>
 
