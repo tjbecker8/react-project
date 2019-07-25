@@ -9,19 +9,19 @@ class Personradar extends Component {
 	//data
 	state = {
 			dataRadar: {
-				labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+				labels: [this.props.personality[0].name, this.props.personality[1].name, this.props.personality[2].name, this.props.personality[3].name, this.props.personality[4].name,],
 				datasets: [
 					{
-						label: "My First dataset",
+						label: "Percentile",
 						backgroundColor: "rgba(194, 116, 161, 0.5)",
 						borderColor: "rgb(194, 116, 161)",
-						data: [65, 59, 90, 81, 56, 55, 40]
+						data: [this.props.personality[0].percentile, this.props.personality[1].percentile9, this.props.personality[2].percentile, this.props.personality[3].percentile, this.props.personality[4].percentile,]
 					},
 					{
-						label: "My Second dataset",
+						label: "Raw Score",
 						backgroundColor: "rgba(71, 225, 167, 0.5)",
 						borderColor: "rgb(71, 225, 167)",
-						data: [28, 48, 40, 19, 96, 27,100]
+						data: [this.props.personality[0].raw_score, this.props.personality[1].raw_score, this.props.personality[2].raw_score, this.props.personality[3].raw_score, this.props.personality[4].raw_score,]
 					}
 				]
 			}
@@ -29,19 +29,16 @@ class Personradar extends Component {
 		}
 
 
-
 	//functions
-	componentWillMount() {
-		console.log('hhh',this.props.personality);
-	}
 
-	// export default class Example extends PureComponent {
-	//   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/6ebcxbx4/';
+
+
 	//render
 	render() {
 		return (
 
 			<MDBContainer>
+				<h3 className="mt-5">Personality</h3>
         <Radar data={this.state.dataRadar} options={{ responsive: true }} />
       </MDBContainer>
 

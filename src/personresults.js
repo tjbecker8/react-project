@@ -12,14 +12,11 @@ class Personresults extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<div className="card text-center">
-			<div className="card-header">
-    		personality
-  		</div>
-			<div className="card-body">
+
+
 				<Personradar personality={this.props.personality} />
-			</div>
-		</div>
+
+		
 	</div>
 		)
 	}

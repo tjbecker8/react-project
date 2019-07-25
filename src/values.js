@@ -13,14 +13,7 @@ class Values extends Component {
 	render() {
 		return (
 	<div className="col-4">
-		<div className="card text-center">
-			<div className="card-header">
-    		Values
-  		</div>
-			<div className="card-body">
 				<Valuesradar values={this.props.values} />
-			</div>
-		</div>
 	</div>
 		)
 	}

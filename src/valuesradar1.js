@@ -38,6 +38,7 @@ class valuesradar extends Component {
 		return (
 
 			<MDBContainer>
+				<h3 className="mt-5">Values</h3>
         <Radar data={this.state.dataRadar} options={{ responsive: true }} />
       </MDBContainer>
 
