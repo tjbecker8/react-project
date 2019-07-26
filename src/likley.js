@@ -1,17 +1,24 @@
 import React, {Component} from 'react';
 import Likelist from './likelist'
-
+import _ from 'lodash'
 
 class Likley extends Component {
 	//data
-
+state = {
+	data: []
+}
 	//functions
-
+	componentWillMount() {
+		const array = _.sampleSize(this.props.likley, 8)
+		this.setState({
+			data: array
+		})
+	}
 
 	//render
 	render() {
 		return (
-	<div className="col-3">
+	<div className="col-6">
 		<div className="card text-center">
 			<div className="card-header">
     		Likley to:
@@ -19,11 +26,14 @@ class Likley extends Component {
 			<div className="card-body">
 				<ul>
 					{
-						this.props.likley.map((k)=>{
+						this.state.data.map((k)=>{
 							return <Likelist likley={k} key={k.consumption_preference_id} />
 						})
 					}
 				</ul>
+			</div>
+			<div className="card-footer">
+				See all Influences
 			</div>
 		</div>
 	</div>

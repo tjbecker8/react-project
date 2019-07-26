@@ -93,7 +93,7 @@ array.forEach((a) => {
 //render
 
 render() {
-	
+
 
 	// console.log(this.props.location.aboutProps.data);
   return (
@@ -116,14 +116,15 @@ render() {
 	<div className="row">
 
 	</div>
-	<div className="row">
 
-
-	</div>
 	<div className="row">
 		<Likley likley={this.state.likley} />
 		<Unlikley unlikley={this.state.unlikley} />
-		<Transcript transcript={this.state.transcription}/>
+
+	</div>
+	<div className="row">
+<Transcript transcript={this.state.transcription}/>
+
 	</div>
 	<Bottomnav />
 </div>

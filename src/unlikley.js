@@ -1,17 +1,25 @@
 import React, {Component} from 'react';
 import Unlikelist from './unlikelist'
+import _ from 'lodash'
 
 
 class Unlikley extends Component {
 	//data
-
+state ={
+	data: []
+}
 	//functions
-
+componentWillMount() {
+	const array = _.sampleSize(this.props.unlikley, 8)
+	this.setState({
+		data: array
+	})
+}
 
 	//render
 	render() {
 		return (
-	<div className="col-3">
+	<div className="col-6">
 		<div className="card text-center">
 			<div className="card-header">
     		Unlikley to:
@@ -19,11 +27,15 @@ class Unlikley extends Component {
 			<div className="card-body">
 				<ul>
 					{
-						this.props.unlikley.map((k)=>{
+
+						this.state.data.map((k)=>{
 							return <Unlikelist unlikley={k} key={k.consumption_preference_id} />
 						})
 					}
 				</ul>
+			</div>
+			<div className="card-footer">
+				See all Influences
 			</div>
 		</div>
 	</div>
