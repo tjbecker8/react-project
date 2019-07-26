@@ -108,11 +108,12 @@ render() {
 
 <Tones document={this.state.document_tone} />
 <Personresults personality={this.state.personality} />
+<Values values={this.state.values} />
 </div>
 
 
 	<div className="row">
-		<Personresults personality={this.state.personality} />
+
 		<Values values={this.state.values} />
 	</div>
 	<div className="row">

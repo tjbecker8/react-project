@@ -5,9 +5,13 @@ import './cards.css';
 
 class Values extends Component {
 	//data
-
+state = {
+	values:[]
+}
 	//functions
-
+componentWillMount() {
+	console.log(this.props.values);
+}
 
 	//render
 	render() {
