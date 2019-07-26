@@ -42,7 +42,7 @@ signup =(e) => {
 	//render
 	render() {
 		return (
-			<div className="row">
+			<div id="form" className="row">
 				<div className="col-sm-4 offset-4">
 					<div className="card signup">
 						<div className="card-body">
@@ -59,7 +59,7 @@ signup =(e) => {
 								<button type="submit" className="btn btn-primary">Signup</button>
 							</form>
 							<div className="card-footer">
-								<span className="input-group-btn">
+								<span id="registration" className="input-group-btn">
 	  							<Link to="/login" >Already signed up? Login</Link>
 								</span>
 							</div>

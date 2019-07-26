@@ -1,0 +1,45 @@
+body, html {
+  height: 100%;
+	background-image: linear-gradient(to bottom right, #0F2027, #203A43, #2C5364);
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#form.row {
+	padding-top: 100px;
+}
+
+#content.row {
+	padding-top: 75px;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-bottom: 75px;
+}
+
+.card-body {
+	background-image: linear-gradient(to top left, #4B79A1, #283E51);
+	box-shadow: 3px 3px 23px 20px rgba(0,0,0,0.71);
+}
+
+.form-control {
+	background-color: #d7d2cc !important;
+}
+
+#button.btn-primary {
+	background-color: #136a8a !important;
+	border-color: #136a8a !important;
+}
+
+#button.btn-primary:hover {
+	background-color: #267871 !important;
+	border-color: #267871 !important;
+}
+
+a {
+		color: #CDAE94 !important;
+}
+
+#registration {
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.2);
+}

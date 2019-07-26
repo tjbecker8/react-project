@@ -53,7 +53,7 @@ state = {
 	render() {
 		return (
 			<div className="col-4">
-		<div className="card">
+		<div id="sidebar" className="card">
 			<div className="card-body">
 				<h5 className="card-title">Previous Analysis</h5>
 

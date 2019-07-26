@@ -9,3 +9,7 @@ li.active {
 	background: black;
 	color: red;
 }
+
+#sidebar.card {
+	height: 75vh;
+}

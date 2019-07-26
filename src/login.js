@@ -47,7 +47,7 @@ login =(e) => {
 	//render
 	render() {
 		return (
-			<div className="row">
+			<div id="form" className="row">
 				<div className="col-sm-4 offset-4">
 					<div className="card signup">
 						<div className="card-body">
@@ -59,11 +59,11 @@ login =(e) => {
 									<input type="password" className="form-control" placeholder="password" value={this.state.password} onChange={(e) => this.changePassword(e)}/>
 								</div>
 								<div className="error">{this.state.error}</div>
-								<button type="submit" className="btn btn-primary">Login</button>
+								<button id="button" type="submit" className="btn btn-primary">Login</button>
 							</form>
 							<div className="card-footer">
-								<span className="input-group-btn">
-	  							<Link to="/signup" >Click to Signup</Link>
+								<span id="registration" className="input-group-btn">
+	  							<Link to="/signup" >Need to register?</Link>
 								</span>
 							</div>
 						</div>

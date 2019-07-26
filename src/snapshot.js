@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
+import './snapshot.css';
 
 
 
@@ -12,8 +13,8 @@ class Snapshot extends Component {
 	//render
 	render() {
 		return (
-			<div className="col-4">
-				<div className="card">
+			<div className="col-8">
+				<div id="snapshot" className="card">
 					<div className="card-header">
 						<h5 className="card-title">Snapshot</h5>
 					</div>
