@@ -93,7 +93,7 @@ array.forEach((a) => {
 //render
 
 render() {
-	console.log('<><>',this.state.likley[0].consumption_preference_id);
+	
 
 	// console.log(this.props.location.aboutProps.data);
   return (

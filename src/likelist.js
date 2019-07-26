@@ -11,9 +11,10 @@ class Likelist extends Component {
 	//render
 	render() {
 		
+
 		return (
 
-		<li>{this.props.likley.name}</li>
+		<li>{this.props.likley.name.split(' ').slice(2).join(' ')}</li>
 
 
 		)
