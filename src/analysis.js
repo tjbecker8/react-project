@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css';
+import './analysis.css';
 import "mdbreact/dist/css/mdb.css";
 import moment from 'moment'
 import Personresults from './personresults'
@@ -99,15 +99,21 @@ render() {
   return (
 
 <div id="wrap">
-	<div className="row">
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
+
+		<nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<h2>{this.state.name} Analysis - {this.state.word_count} words - {this.state.date} </h2>
 			</nav>
-	</div>
+
+<div id="first" className="row">
+
+<Tones document={this.state.document_tone} />
+<Personresults personality={this.state.personality} />
+</div>
+
+
 	<div className="row">
 		<Personresults personality={this.state.personality} />
 		<Values values={this.state.values} />
-		<Tones document={this.state.document_tone} />
 	</div>
 	<div className="row">
 

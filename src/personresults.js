@@ -6,7 +6,9 @@ class Personresults extends Component {
 	//data
 
 	//functions
-
+componentWillMount() {
+	console.log('person',this.props.personality);
+}
 
 	//render
 	render() {
@@ -16,7 +18,7 @@ class Personresults extends Component {
 
 				<Personradar personality={this.props.personality} />
 
-		
+
 	</div>
 		)
 	}
