@@ -1,4 +1,16 @@
-#transcript.card-body {
-	max-height: 190px;
-	overflow: scroll;
+#definition {
+	display: none;
+	position: fixed;
+	width: 30vw;
+	padding-top: 75px;
+	padding-left: 100px
+
+}
+
+#definition.active {
+	display:block;
+}
+
+.card-footer:hover {
+	cursor: pointer;
 }

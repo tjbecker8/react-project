@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './cards.css';
 import Tonesradar from './tonesradar'
 
 class Tones extends Component {
@@ -43,9 +43,38 @@ componentWillMount() {
 	})
 }
 
+changeClass = () => {
+  var element = document.getElementById("definition");
+  element.classList.add("active");
+}
+
+removeClass = () => {
+  var element = document.getElementById("definition");
+  element.classList.remove("active");
+}
+
 	//render
 	render() {
 		return (
+		<div>
+			<div id="definition" className="fixed-top">
+				<div className="card">
+					<div className="card-header">
+						Tones Definition
+					</div>
+					<div className="card-body">
+						<ul>
+							<li>item</li>
+							<li>item</li>
+							<li>item</li>
+							<li>item</li>
+						</ul>
+					</div>
+					<div onClick={this.removeClass} className="card-footer">
+						close
+					</div>
+				</div>
+			</div>
 
 			<div className="card">
 				<div className="card-header">
@@ -60,10 +89,11 @@ componentWillMount() {
 						}
 					</ul>
 				</div>
-				<div className="card-footer">
+				<div onClick={this.changeClass} className="card-footer">
 					What does this Mean?
 				</div>
 			</div>
+		</div>
 
 
 		)

@@ -13,16 +13,9 @@ componentWillMount() {
 	//render
 	render() {
 		return (
-	<div className="col-3">
-		<div className="card text-center">
-			<div className="card-header">
-    		Transcript:
-  		</div>
-			<div id="transcript" className="card-body">
+
 				<p>{this.props.transcript}</p>
-			</div>
-		</div>
-	</div>
+		
 		)
 	}
 }

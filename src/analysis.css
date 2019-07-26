@@ -41,3 +41,28 @@ a {
 	padding: 5px;
 	background-color: rgba(0, 0, 0, 0.2);
 }
+
+#transcript-top {
+	display: none;
+}
+
+#transcript-top.active {
+	display: block;
+}
+
+.transcript-title:hover {
+	cursor: pointer;
+}
+
+#transcript-body.card-body {
+	overflow: scroll;
+}
+#transcript-card.card {
+	height: 75vh;
+	padding-top: 50px;
+}
+
+#transcript-col {
+	align-content: center;
+	padding-left: 15vw
+}

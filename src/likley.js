@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Likelist from './likelist'
 import _ from 'lodash'
+import './cards.css';
 
 class Likley extends Component {
 	//data
@@ -15,10 +16,41 @@ state = {
 		})
 	}
 
+	changeClass = () => {
+	  var element = document.getElementById("definition");
+	  element.classList.add("active");
+	}
+
+	removeClass = () => {
+	  var element = document.getElementById("definition");
+	  element.classList.remove("active");
+	}
+
 	//render
 	render() {
 		return (
-	<div className="col-6">
+<div className="col-6">
+
+	<div id="definition" className="fixed-top">
+		<div className="card">
+			<div className="card-header">
+				personality Definition
+			</div>
+			<div className="card-body">
+				<ul>
+					<li>item</li>
+					<li>item</li>
+					<li>item</li>
+					<li>item</li>
+				</ul>
+			</div>
+			<div onClick={this.removeClass} className="card-footer">
+				close
+			</div>
+		</div>
+	</div>
+
+	<div>
 		<div className="card text-center">
 			<div className="card-header">
     		Likley to:
@@ -32,10 +64,11 @@ state = {
 					}
 				</ul>
 			</div>
-			<div className="card-footer">
+			<div onClick={this.changeClass} className="card-footer">
 				See all Influences
 			</div>
 		</div>
+	</div>
 	</div>
 		)
 	}

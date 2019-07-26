@@ -86,22 +86,42 @@ array.forEach((a) => {
 
 }
 
+viewTranscript = () => {
+  var element = document.getElementById("transcript-top");
+  element.classList.add("active");
+}
 
+removeClass = () => {
+  var element = document.getElementById("transcript-top");
+  element.classList.remove("active");
+}
 
 
 
 //render
 
 render() {
-
-
 	// console.log(this.props.location.aboutProps.data);
   return (
 
 <div id="wrap">
+	<div id="transcript-top" className="fixed-top">
+		<div id="transcript-col" className="col-10">
+			<div id="transcript-card" className="card text-center">
+				<div className="card-header">
+	    		Transcript:
+	  		</div>
+				<div id="transcript-body" className="card-body">
+					<Transcript transcript={this.state.transcription}/>
+				</div>
+				<div className="card-footer transcript-title" onClick={this.removeClass}>
+				close</div>
+			</div>
+		</div>
+	</div>
 
 		<nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-			<h2>{this.state.name} Analysis - {this.state.word_count} words - {this.state.date} </h2>
+			<h2>{this.state.name} Analysis - </h2> <h2>{this.state.word_count} words - </h2>  <h2>{this.state.date} - </h2> <h2 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h2>
 			</nav>
 
 <div id="first" className="row">
@@ -123,7 +143,7 @@ render() {
 
 	</div>
 	<div className="row">
-<Transcript transcript={this.state.transcription}/>
+
 
 	</div>
 	<Bottomnav />
