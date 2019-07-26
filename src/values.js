@@ -10,15 +10,37 @@ state = {
 }
 	//functions
 componentWillMount() {
-	console.log(this.props.values);
+	// console.log(this.props.values);
+	let array = this.props.values
+	array.forEach((a) =>{
+		if (a.percentile > .3 && a.raw_score > .5) {
+			this.state.values.push(a)
+		}
+	})
 }
 
 	//render
 	render() {
+		// console.log(this.state.values);
 		return (
-	<div className="col-4">
-				<Valuesradar values={this.props.values} />
-	</div>
+
+			<div className="card">
+				<div className="card-header">
+					Values
+				</div>
+				<div className="card-body">
+					<ul>
+						{
+							this.state.values.map((t)=>{
+								return <Valuesradar values={t} key={t.trait_id} />
+							})
+						}
+					</ul>
+				</div>
+				<div className="card-footer">
+					What does this Mean?
+				</div>
+			</div>
 		)
 	}
 }

@@ -32,7 +32,7 @@ componentWillMount() {
 					<ul>
 						{
 							this.state.personality.map((t)=>{
-								return <Personradar document={t} id={t.trait_id}/>
+								return <Personradar document={t} key={t.trait_id}/>
 							})
 						}
 					</ul>

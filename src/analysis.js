@@ -93,7 +93,7 @@ array.forEach((a) => {
 //render
 
 render() {
-	console.log('<><>',this.state.likley);
+	console.log('<><>',this.state.likley[0].consumption_preference_id);
 
 	// console.log(this.props.location.aboutProps.data);
   return (
@@ -109,12 +109,12 @@ render() {
 <Tones document={this.state.document_tone} />
 <Personresults personality={this.state.personality} />
 <Values values={this.state.values} />
+<Keywords keywords={this.state.keywords} />
 </div>
 
 
 	<div className="row">
 
-		<Values values={this.state.values} />
 	</div>
 	<div className="row">
 
@@ -123,7 +123,6 @@ render() {
 	<div className="row">
 		<Likley likley={this.state.likley} />
 		<Unlikley unlikley={this.state.unlikley} />
-		<Keywords keywords={this.state.keywords} />
 		<Transcript transcript={this.state.transcription}/>
 	</div>
 	<Bottomnav />

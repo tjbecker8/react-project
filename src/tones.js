@@ -14,25 +14,31 @@ componentWillMount() {
 	let array = this.props.document.tones
 	array.forEach((a) =>{
 		if (a.tone_name === 'Sadness') {
-			this.state.tones.push('Sadness')
+			this.state.tones.push({name: 'Sadness',
+			id: 1})
 		}
 		if (a.tone_name === 'Anger') {
-			this.state.tones.push('Angry')
+			this.state.tones.push({name: 'Angry',
+			id: 2})
 		}
 		if (a.tone_name === 'Analytical') {
-			this.state.tones.push('Analytical')
+			this.state.tones.push({name: 'Analytical',
+			id: 3})
 		}
 		if (a.tone_name === 'Fear') {
-			this.state.tones.push('Fear')
+			this.state.tones.push({name: 'Fear',
+			id: 4})
 		}
 		if (a.tone_name === 'Joy') {
-			this.state.tones.push('Joy')
+			this.state.tones.push({name: 'Joy',
+			id: 5})
 		}
 		if (a.tone_name === 'Confident') {
-			this.state.tones.push('Confident')
+			this.state.tones.push({name: 'Confident',
+			id: 6})
 		}
 		if (a.tone_name === 'Tentative') {
-			this.state.tones.push('Tenative')
+			this.state.tones.push({name: 'Tenative', id: 7})
 		}
 	})
 }
@@ -49,7 +55,7 @@ componentWillMount() {
 					<ul>
 						{
 							this.state.tones.map((t)=>{
-								return <Tonesradar document={t}/>
+								return <Tonesradar document={t.name} key={t.id} />
 							})
 						}
 					</ul>
