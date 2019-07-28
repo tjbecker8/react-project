@@ -10,3 +10,12 @@
 #alert.active {
 	display: block;
 }
+
+
+#finish {
+	display: none
+}
+
+#finish.active {
+	display: block
+}

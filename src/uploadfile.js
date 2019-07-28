@@ -42,6 +42,11 @@ removeClass = () => {
   element.classList.remove("active");
 }
 
+changeFinish = () => {
+  var element = document.getElementById("finish");
+  element.classList.add("active");
+}
+
 
 
 
@@ -66,6 +71,10 @@ createNew = (e, text, file) => {
 					data: res.data
 				})
 				console.log(this.state.data);
+				this.changeFinish = () => {
+				  var element = document.getElementById("finish");
+				  element.classList.add("active");
+				}
 		}).catch((err) => {
 			console.log('err', err)
 		})
