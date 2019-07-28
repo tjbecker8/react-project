@@ -14,3 +14,39 @@
 .card-footer:hover {
 	cursor: pointer;
 }
+
+.card-header {
+	background: linear-gradient(to right, #1c8786, #324948);
+}
+
+.tones ul {
+	list-style: none;
+}
+
+.tones li {
+	display: inline-block;
+}
+
+.pers ul {
+	list-style: none;
+}
+
+.pers li {
+	display: inline-block;
+}
+
+.values ul {
+	list-style: none;
+}
+
+.values li {
+	display: inline-block;
+}
+
+.keywords ul {
+	list-style: none;
+}
+
+.keywords li {
+	display: inline-block;
+}

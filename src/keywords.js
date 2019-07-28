@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Keylist from './keylist'
-
+import './cards.css';
 
 class Keywords extends Component {
 	//data
@@ -19,7 +19,7 @@ componentWillMount() {
     		Keywords:
   		</div>
 			<div className="card-body">
-				<ul>
+				<ul className="keywords">
 			{
 				this.props.keywords.map((k)=>{
 					return <Keylist word={k} />

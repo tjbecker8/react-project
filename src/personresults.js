@@ -38,7 +38,7 @@ removeClass = () => {
 			<div >
 
 				<div id="definition" className="fixed-top">
-					<div className="card">
+					<div className="card text-center">
 						<div className="card-header">
 							personality Definition
 						</div>
@@ -57,12 +57,12 @@ removeClass = () => {
 				</div>
 
 
-			<div className="card">
+			<div className="card text-center">
 				<div className="card-header">
 					Personality
 				</div>
 				<div className="card-body">
-					<ul>
+					<ul className="pers">
 						{
 							this.state.personality.map((t)=>{
 								return <Personradar document={t} key={t.trait_id}/>

@@ -12,7 +12,7 @@ class Keylist extends Component {
 	render() {
 		return (
 
-		<li>{this.props.word}</li>
+		<li className="keywords">-  {this.props.word}  -</li>
 
 
 		)

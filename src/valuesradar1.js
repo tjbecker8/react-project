@@ -17,7 +17,7 @@ class valuesradar extends Component {
 	render() {
 		return (
 
-		<li>{this.props.values.name}</li>
+		<li className="values">-  {this.props.values.name}  -</li>
 
 
 		)

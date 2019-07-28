@@ -58,7 +58,7 @@ removeClass = () => {
 		return (
 		<div >
 			<div id="definition" className="fixed-top">
-				<div className="card">
+				<div className="card text-center">
 					<div className="card-header">
 						Tones Definition
 					</div>
@@ -76,12 +76,12 @@ removeClass = () => {
 				</div>
 			</div>
 
-			<div className="card">
+			<div className="card text-center">
 				<div className="card-header">
 					Tones
 				</div>
 				<div className="card-body">
-					<ul>
+					<ul className="tones">
 						{
 							this.state.tones.map((t)=>{
 								return <Tonesradar document={t.name} key={t.id} />

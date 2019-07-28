@@ -18,7 +18,7 @@ class Personradar extends Component {
 	render() {
 		return (
 
-<li>{this.props.document.name}</li>
+<li className="pers">-  {this.props.document.name}  -</li>
 
 		)
 	}

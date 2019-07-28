@@ -12,10 +12,10 @@ class Tonesradar extends Component {
 
 	//render
 	render() {
-		
+
 		return (
 
-			<li>{this.props.document}</li>
+			<li className="tones" >-  {this.props.document}  -</li>
 
 
 

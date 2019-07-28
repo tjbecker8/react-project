@@ -128,7 +128,7 @@ render() {
 	<div id="main" className="row">
 		<div className="col-8">
 
-			<div className="row">
+			<div id="tone-pers" className="row">
 				<div className="col-6">
 					<Tones document={this.state.document_tone} />
 				</div>
