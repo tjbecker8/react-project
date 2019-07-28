@@ -32,7 +32,7 @@ removeClass = () => {
 	//render
 	render() {
 		return (
-<div className="col-6">
+<div className="row">
 
 	<div id="definition" className="fixed-top">
 		<div className="card">

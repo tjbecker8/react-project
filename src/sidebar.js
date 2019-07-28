@@ -54,9 +54,10 @@ state = {
 		return (
 			<div className="col-4">
 		<div id="sidebar" className="card">
-			<div className="card-body">
+			<div id="header" className="card-header">
 				<h5 className="card-title">Previous Analysis</h5>
-
+			</div>
+			<div className="card-body">
 				<div className="form-group">
 				    <ul className="list-group">
 							{
@@ -66,7 +67,7 @@ state = {
 					}
 				</ul>
 				  </div>
-					<Link to ={{
+					<Link id="view-analysis" to ={{
 							pathname: '/analysis',
 							aboutProps:{
 								data: this.state.target,
@@ -77,7 +78,7 @@ state = {
 			<div className="card-footer text-muted">
 				<form className="form-inline">
 					<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-					<button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					<button id="button-search" className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 				</form>
 	  	</div>
 		</div>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
+import './navbar.css';
 
 
 
@@ -15,7 +16,7 @@ class Topnav extends Component {
 	//render
 	render() {
 		return (
-			<nav className="navbar fixed-top navbar-light bg-light">
+			<nav id="navbar-top" className="navbar fixed-top navbar-light bg-light">
 			<span className="input-group-btn">
 				<Link to="/app" >Home</Link>
 			</span>

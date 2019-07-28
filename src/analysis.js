@@ -120,28 +120,29 @@ render() {
 		</div>
 	</div>
 
-		<nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+		<nav id="nav-top-analysis" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 			<h2>{this.state.name} Analysis - </h2> <h2>{this.state.word_count} words - </h2>  <h2>{this.state.date} - </h2> <h2 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h2>
 			</nav>
 
-<div id="first" className="row">
+<div id="new-layout">
+	<div className="row">
+		<div className="col-8">
+			<Tones document={this.state.document_tone} />
+			<Personresults personality={this.state.personality} />
+			<Values values={this.state.values} />
+			<Keywords keywords={this.state.keywords} />
+		</div>
 
-<Tones document={this.state.document_tone} />
-<Personresults personality={this.state.personality} />
-<Values values={this.state.values} />
-<Keywords keywords={this.state.keywords} />
+		<div className="col-4">
+			<Likley likley={this.state.likley} />
+			<Unlikley unlikley={this.state.unlikley} />
+		</div>
+
+	</div>
 </div>
 
 
-	<div className="row">
 
-	</div>
-
-	<div className="row">
-		<Likley likley={this.state.likley} />
-		<Unlikley unlikley={this.state.unlikley} />
-
-	</div>
 	<div className="row">
 
 

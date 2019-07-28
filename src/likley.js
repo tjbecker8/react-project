@@ -29,7 +29,7 @@ state = {
 	//render
 	render() {
 		return (
-<div className="col-6">
+<div className="row">
 
 	<div id="definition" className="fixed-top">
 		<div className="card">
@@ -63,9 +63,6 @@ state = {
 						})
 					}
 				</ul>
-			</div>
-			<div onClick={this.changeClass} className="card-footer">
-				See all Influences
 			</div>
 		</div>
 	</div>

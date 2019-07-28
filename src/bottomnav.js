@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 
-
+import './navbar.css';
 
 class Bottomnav extends Component {
 	//data
@@ -15,7 +15,7 @@ class Bottomnav extends Component {
 	//render
 	render() {
 		return (
-			<nav className="navbar fixed-bottom navbar-light bg-light">
+			<nav id="navbar-bottom" className="navbar fixed-bottom navbar-light bg-light">
 			<span className="input-group-btn">
 				<Link to="/app" >Home</Link>
 			</span>

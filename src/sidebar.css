@@ -6,10 +6,33 @@
 }
 
 li.active {
-	background: black;
-	color: red;
+	background: #324948 !important;
+	color: white !important;
 }
 
 #sidebar.card {
 	height: 75vh;
+	box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.4);
+}
+
+#header {
+	background: linear-gradient(to right, #1c8786, #324948);
+}
+
+li {
+	background: #e6e6e6 !important;
+}
+
+#date {
+	background: linear-gradient(to left, #1c8786, #324948);
+}
+
+#button-search {
+	background: #324948 !important;
+	color: white !important;
+	border: none !important;
+}
+
+#view-analysis a {
+	color: black !important;
 }

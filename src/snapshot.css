@@ -2,4 +2,14 @@
 
 #snapshot.card {
 	height: 75vh;
+	box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.4);
+}
+
+#header {
+	background: linear-gradient(to right, #1c8786, #324948);
+}
+
+#new-analyis {
+	background: #324948 !important;
+	color: white !important;
 }

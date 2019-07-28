@@ -1,7 +1,6 @@
 body, html {
   height: 100%;
-	background-image: linear-gradient(to bottom right, #0F2027, #203A43, #2C5364);
-	background-repeat: no-repeat;
+	background-color: #f0f0f0;
 	background-size: 100%;
 }
 
@@ -15,8 +14,7 @@ body, html {
 }
 
 .card-body {
-	background-image: linear-gradient(to top left, #4B79A1, #283E51);
-	box-shadow: 3px 3px 23px 20px rgba(0,0,0,0.71);
+	background-color: white;
 }
 
 .form-control {
@@ -33,9 +31,7 @@ body, html {
 	border-color: #267871 !important;
 }
 
-a {
-		color: #CDAE94 !important;
-}
+
 
 #registration {
 	padding: 5px;
@@ -65,4 +61,16 @@ a {
 #transcript-col {
 	align-content: center;
 	padding-left: 15vw
+}
+
+#nav-top-analysis {
+	background: linear-gradient(to right, #4a4a4a, #222222) !important;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	height: 50px;
+	color: white;
+}
+
+#new-layout {
+	padding-top: 45px;
 }

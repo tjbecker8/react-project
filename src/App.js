@@ -13,12 +13,12 @@ function App() {
 <div id="wrap">
 
 <Topnav />
+
 	<div id="content" className="row">
 		<Snapshot />
 		<Sidebar />
-
 	</div>
-	
+
 	<Bottomnav />
 </div>
 
