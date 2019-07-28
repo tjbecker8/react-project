@@ -13,7 +13,7 @@ componentWillMount() {
 	//render
 	render() {
 		return (
-	<div className="col-3">
+	<div>
 		<div className="card text-center">
 			<div className="card-header">
     		Keywords:

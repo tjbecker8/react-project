@@ -56,7 +56,7 @@ removeClass = () => {
 	//render
 	render() {
 		return (
-		<div>
+		<div >
 			<div id="definition" className="fixed-top">
 				<div className="card">
 					<div className="card-header">

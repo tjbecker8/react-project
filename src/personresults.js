@@ -35,7 +35,7 @@ removeClass = () => {
 	render() {
 
 		return (
-			<div>
+			<div >
 
 				<div id="definition" className="fixed-top">
 					<div className="card">

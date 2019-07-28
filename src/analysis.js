@@ -125,12 +125,27 @@ render() {
 			</nav>
 
 <div id="new-layout">
-	<div className="row">
+	<div id="main" className="row">
 		<div className="col-8">
-			<Tones document={this.state.document_tone} />
-			<Personresults personality={this.state.personality} />
-			<Values values={this.state.values} />
-			<Keywords keywords={this.state.keywords} />
+
+			<div className="row">
+				<div className="col-6">
+					<Tones document={this.state.document_tone} />
+				</div>
+				<div className="col-6">
+					<Personresults personality={this.state.personality} />
+				</div>
+
+
+			</div>
+			<div className="row">
+				<div className="col-6">
+					<Values values={this.state.values} />
+				</div>
+				<div className="col-6">
+					<Keywords keywords={this.state.keywords} />
+				</div>
+			</div>
 		</div>
 
 		<div className="col-4">
