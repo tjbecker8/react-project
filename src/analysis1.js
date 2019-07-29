@@ -35,8 +35,8 @@ state = {
 
 //functions
 
-stateSet = (n, a, c, dt, key, per, tr, val, wc ) => {
-	this.setState({name: n, analysis: a, consumption_preferences: c, document_tone: dt, keywords: key, personality: per, transcription: tr, values: val, word_count: wc }, ()=>{console.log('state',this.state);})
+stateSet = (n, a, c, dt, key, per, tr, val, wc, da ) => {
+	this.setState({name: n, analysis: a, consumption_preferences: c, document_tone: dt, keywords: key, personality: per, transcription: tr, values: val, word_count: wc, date: da }, ()=>{console.log('state',this.state);})
 }
 
 
@@ -62,9 +62,9 @@ componentWillMount() {
 						})
 						})
 
-			this.stateSet(res.data[0].name, res.data[0], res.data[0].consumption_preferences, res.data[0].document_tone.tones, res.data[0].keywords, res.data[0].personality, res.data[0].transcription, res.data[0].values, res.data[0].word_count)
+			this.stateSet(res.data[0].name, res.data[0], res.data[0].consumption_preferences, res.data[0].document_tone.tones, res.data[0].keywords, res.data[0].personality, res.data[0].transcription, res.data[0].values, res.data[0].word_count, moment(res.data[0].date).format('D MMM YY'))
 
-		// this.state.target.push(res.data[0])
+			console.log(this.state.date);
 
 	})
 }
@@ -113,7 +113,7 @@ render() {
 			</div>
 
 				<nav id="nav-top-analysis" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-					<h2>{this.state.name} Analysis - </h2> <h2>{this.state.word_count} words - </h2>  <h2>{this.state.date} - </h2> <h2 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h2>
+					<h2>Moodylsis</h2>
 					</nav>
 
 		<div id="new-layout">
@@ -138,6 +138,19 @@ render() {
 							<Keywords keywords={this.state.keywords} />
 						</div>
 					</div>
+
+					<div className="row">
+						<div id="document-card" class="card">
+							<div class="card-header">
+								Document Information
+							</div>
+							<div class="card-body">
+								<h3>name: {this.state.name} - word count: {this.state.word_count} - created on: {this.state.date} words</h3> <h4 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h4>
+							</div>
+						</div>
+
+					</div>
+
 				</div>
 
 				<div className="col-4">
