@@ -20,6 +20,9 @@ class Snapshot extends Component {
 		likley: [],
 		unlikley: [],
 		personality_total: [],
+		unlike_total: [],
+		like_total:[],
+		person_total: [],
 	}
 	//functions
 	componentWillReceiveProps(props) {
@@ -60,6 +63,8 @@ class Snapshot extends Component {
 							if (s.score === 1) {
 								this.state.likley.push(s.name)
 							}
+							let count = _.countBy(this.state.likley)
+							this.setState({like_total: count})
 						})
 					})
 				})
@@ -70,6 +75,8 @@ class Snapshot extends Component {
 								if (s.score === 0) {
 									this.state.unlikley.push(s.name)
 								}
+								let count = _.countBy(this.state.unlikley)
+								this.setState({unlike_total: count})
 							})
 						})
 					})
@@ -79,6 +86,8 @@ class Snapshot extends Component {
 								if (c.percentile > 0.5) {
 									this.state.personality_total.push(c.name)
 								}
+								let count = _.countBy(this.state.personality_total)
+								this.setState({person_total: count})
 							})
 						})
 
