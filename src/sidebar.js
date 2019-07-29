@@ -10,6 +10,8 @@ state = {
 	target: [],
 }
 	//functions
+
+
 	componentWillMount() {
 		console.log('hhhh',this.props.analysis);
 				this.setState({
