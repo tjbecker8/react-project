@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import './upload.css';
 import axios from 'axios';
+import Bottomnav from './bottomnav'
+import Topnav from './topnav'
 import {Link} from 'react-router-dom'
 class Upload extends Component {
 //state
@@ -71,10 +73,7 @@ createNew = (e, text, file) => {
 					data: res.data
 				})
 				console.log(this.state.data);
-				this.changeFinish = () => {
-				  var element = document.getElementById("finish");
-				  element.classList.add("active");
-				}
+				this.changeFinish()
 		}).catch((err) => {
 			console.log('err', err)
 		})
@@ -86,34 +85,46 @@ createNew = (e, text, file) => {
 	render() {
 	    return (
 				<div>
+					<Topnav />
+
 					<div id="alert" className="card">
 						<div className="card-body">
-							<h4>Please wait while analysis is being completed.</h4>
+							<h4>Please wait while your analysis is being completed.</h4>
+							<small> Or you can go back to the home page and your analysis will be added to your dashboard when complete</small>
 						</div>
 					</div>
 
-					<div id="finish" className="card">
+					<div id="finish" className="card ">
 						<div className="card-body">
-							<h4>your analysis is complete!</h4>
+							<h4 id="h4-fin">Your analysis is complete!</h4>
+							<span id="see-analysis">
 							<Link to ={{
 									pathname: '/analysis',
 									aboutProps:{
 										data: this.state.data,
 									}
 								}} >See Analysis</Link>
+								</span>
 						</div>
 					</div>
 
-				<div className="row">
+				<div id="upload-row" className="row">
+					<div className="col-2"></div>
 				<div className="col-4">
 					<div className="card">
+
+
+
+						<div className="card-header">
+							Upload file
+						</div>
 						<div id="upload-file">
 							<form onSubmit={(e) => {this.createNew(e, this.state.text, this.state.file); this.clearMessage(); this.changeClass()}} className="md-form" >
 								<div className="file-field">
-										<input type="file" name="file" onChange={this.addFile} required />
+										<input id="file-input" type="file" name="file" onChange={this.addFile} required />
 											</div>
-											<input type="text" className="form-control" placeholder="File Name" value={this.state.text} onChange={(e) => this.changeText(e)} required />
-											<button type="submit" className="btn btn-success">Send</button>
+											<input id="file-name" type="text" className="form-control" placeholder="Please name your analysis" value={this.state.text} onChange={(e) => this.changeText(e)} required />
+											<button id="upload-button" type="submit" className="btn btn-success">Send</button>
 									</form>
 								</div>
 							</div>
@@ -121,16 +132,23 @@ createNew = (e, text, file) => {
 
 						<div className="col-4">
 							<div className="card">
+								<div className="card-header">
+									Notice!
+								</div>
 								<div className="card-body">
 									<h6>All audio files must be single/mono channel, 16 bit, 16000 hertz.</h6>
-									<p>Use linke below to convert your files first</p>
+									<p>Use link below to convert your files first</p>
 								</div>
 								<div className="card-footer">
-									<a href="https://audio.online-convert.com/convert-to-wav" target="_blank" rel="noopener noreferrer">Convert Files</a>
-								</div>
+									<span id="convert-files">
+										<a href="https://audio.online-convert.com/convert-to-wav" target="_blank" rel="noopener noreferrer">Convert Files</a>
+									</span>
+							</div>
 							</div>
 						</div>
+						<div className="col-4"></div>
 					</div>
+					<Bottomnav />
 					</div>
 			)
 		}

@@ -1,7 +1,7 @@
 #alert {
 	position: fixed;
-	top: 50px;
-	left: 100px;
+	top: 125px;
+	left: 200px;
 	z-index: 1;
 	color: red;
 	display: none;
@@ -13,9 +13,56 @@
 
 
 #finish {
-	display: none
+	position: fixed;
+	top: 125px;
+	left: 250px;
+	z-index: 1;
+	display: none;
+	color: #324948;
+	box-shadow: 0px 0px 32px 36px rgba(50,73,72,1);
 }
 
 #finish.active {
 	display: block
+}
+
+#upload-row {
+	padding-top: 75px;
+}
+
+#upload-button {
+	background: #324948 !important;
+	color: white !important;
+	border: none !important;
+	margin-left: 15px;
+}
+
+#convert-files {
+	padding: 10px;
+	border-radius: 3px;
+	background: #324948 !important;
+	color: white !important;
+	border: none !important;
+}
+
+#file-input {
+	padding-bottom: 15px;
+	padding-left: 15px;
+}
+
+#file-name {
+	margin-left: 15px;
+	width: 85%;
+}
+
+#see-analysis {
+	padding: 10px;
+	border-radius: 3px;
+	background: #324948 !important;
+	color: white !important;
+	margin-left: 100px;
+}
+
+#h4-fin {
+	padding: 25px;
 }
