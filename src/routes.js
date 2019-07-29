@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Signup from './signup'
 import App from './App'
 import Login from './login'
-import Analysis from './analysis'
+import Analysis from './analysis1'
 import Upload from './uploadfile'
 import Indepth from './indepth'
 
@@ -43,7 +43,7 @@ auth = () => {
 						this.checkAuth() &&
 					<Route path="/app" component={App} />
 					}
-					<Route path="/analysis" component={Analysis} />
+					<Route path="/analysis/:id" component={Analysis} />
 					<Route path="/indepth" component={Indepth} />
 					<Route path="/upload" component={Upload} />
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />

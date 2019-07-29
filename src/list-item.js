@@ -17,10 +17,12 @@ state = {
 	//render
 	render() {
 		return (
+		<a href={`/analysis/${this.state.analysis._id}`}>
 			<li onClick={()=> this.props.selectAnalysis(this.state.analysis._id)} className= {this.state.analysis.active ? 'active list-group-item d-flex justify-content-between align-items-center' : 'list-group-item d-flex justify-content-between align-items-center'}>
 				{this.state.analysis.name}
 				<span id="date" className="badge badge-primary badge-pill">{this.state.analysis.date}</span>
 			</li>
+		</a>
 
 
 
