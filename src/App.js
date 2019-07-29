@@ -1,11 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import Snapshot from './snapshot'
-import Sidebar from './sidebar'
+
 import Bottomnav from './bottomnav'
 import Topnav from './topnav'
+import Content from './content'
 
+//state
+
+//functions
+
+
+//render
 
 function App() {
   return (
@@ -14,10 +20,10 @@ function App() {
 
 <Topnav />
 
-	<div id="content" className="row">
-		<Snapshot />
-		<Sidebar />
-	</div>
+
+		<Content />
+
+
 
 	<Bottomnav />
 </div>

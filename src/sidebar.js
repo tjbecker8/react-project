@@ -11,14 +11,10 @@ state = {
 }
 	//functions
 	componentWillMount() {
-			axios.get('http://localhost:4000/full').then((res)=> {
-				// console.log(res.data);
+		console.log('hhhh',this.props.analysis);
 				this.setState({
-					analysis: res.data
+					analysis: this.props.analysis
 				})
-			}).catch((err)=> {
-				console.log('err', err);
-			})
 		}
 
 		selectAnalysis = (id) => {
