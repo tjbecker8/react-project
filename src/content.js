@@ -14,10 +14,10 @@ state = {
 	//functions
 	componentWillMount() {
 			axios.get('http://localhost:4000/full').then((res)=> {
-				console.log(res.data);
+
 				this.setState({
 					analysis: res.data
-				}, ()=>{console.log('state',this.state.analysis);})
+				})
 			}).catch((err)=> {
 				console.log('err', err);
 			})

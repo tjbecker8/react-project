@@ -12,11 +12,13 @@ state = {
 	//functions
 
 
-	componentWillMount() {
-		console.log('hhhh',this.props.analysis);
-				this.setState({
-					analysis: this.props.analysis
-				})
+
+
+		componentWillReceiveProps(props) {
+		
+			this.setState({
+				analysis: props.analysis
+			})
 		}
 
 		selectAnalysis = (id) => {
