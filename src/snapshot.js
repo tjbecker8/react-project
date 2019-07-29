@@ -19,6 +19,7 @@ class Snapshot extends Component {
 		keywords_flat: [],
 		likley: [],
 		unlikley: [],
+		personality_total: [],
 	}
 	//functions
 	componentWillReceiveProps(props) {
@@ -52,20 +53,33 @@ class Snapshot extends Component {
 		let flat = _.flatten(this.state.keywords)
 		this.setState({keywords_flat: flat})
 
-		let array = this.state.analysis
+		let array = props.analysis
 			array.forEach((a) => {
 					a.consumption_preferences.forEach((c)=>{
-						if (c.score === 1) {
-							this.state.likley.push(c)
-						}
+						c.consumption_preferences.forEach((s) => {
+							if (s.score === 1) {
+								this.state.likley.push(s.name)
+							}
+						})
 					})
 				})
-			array.forEach((a) => {
-				a.consumption_preferences.forEach((c)=>{
-					if (c.score === 0) {
-						this.state.unlikley.push(c)
-					}
+
+				array.forEach((a) => {
+						a.consumption_preferences.forEach((c)=>{
+							c.consumption_preferences.forEach((s) => {
+								if (s.score === 0) {
+									this.state.unlikley.push(s.name)
+								}
+							})
 						})
+					})
+
+					array.forEach((a) => {
+							a.personality.forEach((c)=>{
+								if (c.percentile > 0.5) {
+									this.state.personality_total.push(c.name)
+								}
+							})
 						})
 
 	}
