@@ -37,26 +37,29 @@ state = {
 componentWillMount() {
 		axios.get(`http://localhost:4000/full?_id=${this.props.match.params.id}`).then((res)=> {
 			console.log(res.data[0]);
-		this.setState({
-			analysis: res.data[0]
-		})
+			this.setState({
+				analysis: res.data[0]
+			})
+		let array = res.data[0].consumption_preferences
+			array.forEach((a) => {
+					a.consumption_preferences.forEach((c)=>{
+						if (c.score === 1) {
+							this.state.likley.push(c)
+						}
+					})
+				})
+			array.forEach((a) => {
+				a.consumption_preferences.forEach((c)=>{
+					if (c.score === 0) {
+						this.state.unlikley.push(c)
+					}
+				})
+			})
 
+	}).catch((err) => {
+		console.log('err', err);
 	})
-	// let array = this.state.consumption_preferences
-	// 	array.forEach((a) => {
-	// 			a.consumption_preferences.forEach((c)=>{
-	// 				if (c.score === 1) {
-	// 					this.state.likley.push(c)
-	// 				}
-	// 			})
-	// 		})
-	// 	array.forEach((a) => {
-	// 		a.consumption_preferences.forEach((c)=>{
-	// 			if (c.score === 0) {
-	// 				this.state.unlikley.push(c)
-	// 			}
-	// 		})
-	// 	})
+
 
 }
 
@@ -77,7 +80,7 @@ removeClass = () => {
 //render
 
 render() {
-	console.log('ffff',this.state.analysis);
+console.log(this.state);
   return (
 
 
