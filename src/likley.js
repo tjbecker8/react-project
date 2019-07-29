@@ -29,7 +29,7 @@ state = {
 	//render
 	render() {
 		return (
-<div id="like1" className="row">
+<div id="like-row" className="row">
 
 	<div id="definition" className="fixed-top">
 		<div className="card">
@@ -51,7 +51,7 @@ state = {
 	</div>
 
 	<div>
-		<div className="card text-center">
+		<div id="like-card" className="card text-center">
 			<div className="card-header">
     		Likley to:
   		</div>

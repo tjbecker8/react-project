@@ -11,7 +11,11 @@ class Tones extends Component {
 	//functions
 componentWillMount() {
 	// console.log('tones', this.props.document.tones);
-	let array = this.props.document.tones
+	let array = this.props.document
+	 if (array === null) {
+		 return console.log('fuck');
+	 }
+	 else {
 	array.forEach((a) =>{
 		if (a.tone_name === 'Sadness') {
 			this.state.tones.push({name: 'Sadness',
@@ -41,6 +45,7 @@ componentWillMount() {
 			this.state.tones.push({name: 'Tenative', id: 7})
 		}
 	})
+}
 }
 
 changeClass = () => {

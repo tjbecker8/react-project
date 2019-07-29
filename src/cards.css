@@ -50,3 +50,11 @@
 .keywords li {
 	display: inline-block;
 }
+
+#like-card {
+	width: 100%;
+}
+
+#unlike-card {
+	margin-bottom: 50px;
+}

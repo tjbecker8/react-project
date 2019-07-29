@@ -18,12 +18,12 @@ import axios from 'axios'
 class Analysis extends Component {
 //state
 state = {
-	target: [],
+	analysis: null,
 	consumption_preferences: [],
 	likley: [],
 	unlikley: [],
 	date: '',
-	document_tone: {},
+	document_tone: null,
 	keywords: [],
 	name: '',
 	personality: [],
@@ -34,30 +34,43 @@ state = {
 
 
 //functions
+
+stateSet = (n, a, c, dt, key, per, tr, val, wc ) => {
+	this.setState({name: n, analysis: a, consumption_preferences: c, document_tone: dt, keywords: key, personality: per, transcription: tr, values: val, word_count: wc }, ()=>{console.log('state',this.state);})
+}
+
+
+
+
 componentWillMount() {
+
 	axios.get(`http://localhost:4000/full?_id=${this.props.match.params.id}`).then((res)=> {
-		console.log('data',res.data);
-		this.state.target.push(res.data[0])
-		console.log('target',this.state.target[0]);
+
+		let array = res.data[0].consumption_preferences
+			array.forEach((a) => {
+					a.consumption_preferences.forEach((c)=>{
+						if (c.score === 1) {
+							this.state.likley.push(c)
+						}
+					})
+				})
+			array.forEach((a) => {
+				a.consumption_preferences.forEach((c)=>{
+					if (c.score === 0) {
+						this.state.unlikley.push(c)
+					}
+						})
+						})
+
+			this.stateSet(res.data[0].name, res.data[0], res.data[0].consumption_preferences, res.data[0].document_tone.tones, res.data[0].keywords, res.data[0].personality, res.data[0].transcription, res.data[0].values, res.data[0].word_count)
+
+		// this.state.target.push(res.data[0])
+
 	})
 }
 
 
-// let array = res.data[0].consumption_preferences
-// 	array.forEach((a) => {
-// 			a.consumption_preferences.forEach((c)=>{
-// 				if (c.score === 1) {
-// 					this.state.likley.push(c)
-// 				}
-// 			})
-// 		})
-// 	array.forEach((a) => {
-// 		a.consumption_preferences.forEach((c)=>{
-// 			if (c.score === 0) {
-// 				this.state.unlikley.push(c)
-// 			}
-// 		})
-// 	})
+
 
 
 viewTranscript = () => {
@@ -75,70 +88,68 @@ removeClass = () => {
 //render
 
 render() {
-console.log(this.state);
+	if(!this.state.word_count > 0){
+           // Just wait for the memory to be available
+           return null;
+        }
+
   return (
 
 
-<div id="wrap">
-	<div id="transcript-top" className="fixed-top">
-		<div id="transcript-col" className="col-10">
-			<div id="transcript-card" className="card text-center">
-				<div className="card-header">
-	    		Transcript:
-	  		</div>
-				<div id="transcript-body" className="card-body">
-					<Transcript transcript={this.state.transcription}/>
+		<div id="wrap">
+			<div id="transcript-top" className="fixed-top">
+				<div id="transcript-col" className="col-10">
+					<div id="transcript-card" className="card text-center">
+						<div className="card-header">
+			    		Transcript:
+			  		</div>
+						<div id="transcript-body" className="card-body">
+							<Transcript transcript={this.state.transcription}/>
+						</div>
+						<div className="card-footer transcript-title" onClick={this.removeClass}>
+						close</div>
+					</div>
 				</div>
-				<div className="card-footer transcript-title" onClick={this.removeClass}>
-				close</div>
+			</div>
+
+				<nav id="nav-top-analysis" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+					<h2>{this.state.name} Analysis - </h2> <h2>{this.state.word_count} words - </h2>  <h2>{this.state.date} - </h2> <h2 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h2>
+					</nav>
+
+		<div id="new-layout">
+			<div id="main" className="row">
+				<div className="col-8">
+
+					<div id="tone-pers" className="row">
+						<div className="col-6">
+							<Tones document={this.state.document_tone} />
+						</div>
+						<div className="col-6">
+							<Personresults personality={this.state.personality} />
+						</div>
+
+
+					</div>
+					<div className="row">
+						<div className="col-6">
+							<Values values={this.state.values} />
+						</div>
+						<div className="col-6">
+							<Keywords keywords={this.state.keywords} />
+						</div>
+					</div>
+				</div>
+
+				<div className="col-4">
+					<Likley likley={this.state.likley} />
+					<Unlikley unlikley={this.state.unlikley} />
+				</div>
 			</div>
 		</div>
-	</div>
-
-		<nav id="nav-top-analysis" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-			<h2>{this.state.name} Analysis - </h2> <h2>{this.state.word_count} words - </h2>  <h2>{this.state.date} - </h2> <h2 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h2>
-			</nav>
-
-<div id="new-layout">
-	<div id="main" className="row">
-		<div className="col-8">
-
-			<div id="tone-pers" className="row">
-				<div className="col-6">
-					<Tones document={this.state.document_tone} />
-				</div>
-				<div className="col-6">
-					<Personresults personality={this.state.personality} />
-				</div>
-
-
-			</div>
 			<div className="row">
-				<div className="col-6">
-					<Values values={this.state.values} />
-				</div>
-				<div className="col-6">
-					<Keywords keywords={this.state.keywords} />
-				</div>
 			</div>
+			<Bottomnav />
 		</div>
-
-		<div className="col-4">
-			<Likley likley={this.state.likley} />
-			<Unlikley unlikley={this.state.unlikley} />
-		</div>
-
-	</div>
-</div>
-
-
-
-	<div className="row">
-
-
-	</div>
-	<Bottomnav />
-</div>
 
 
   )
