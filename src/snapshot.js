@@ -17,6 +17,8 @@ class Snapshot extends Component {
 		word_total: null,
 		total_analysis: null,
 		keywords_flat: [],
+		likley: [],
+		unlikley: [],
 	}
 	//functions
 	componentWillReceiveProps(props) {
@@ -49,15 +51,26 @@ class Snapshot extends Component {
 		})
 		let flat = _.flatten(this.state.keywords)
 		this.setState({keywords_flat: flat})
+
+		let array = this.state.analysis
+			array.forEach((a) => {
+					a.consumption_preferences.forEach((c)=>{
+						if (c.score === 1) {
+							this.state.likley.push(c)
+						}
+					})
+				})
+			array.forEach((a) => {
+				a.consumption_preferences.forEach((c)=>{
+					if (c.score === 0) {
+						this.state.unlikley.push(c)
+					}
+						})
+						})
+
 	}
 
-size = (a) => {
-	_.size(a)
-}
 
-add = (a) => {
-	_.add(a)
-}
 
 
 	//render
