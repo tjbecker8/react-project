@@ -36,7 +36,7 @@ state = {
 //functions
 
 stateSet = (n, a, c, dt, key, per, tr, val, wc, da ) => {
-	this.setState({name: n, analysis: a, consumption_preferences: c, document_tone: dt, keywords: key, personality: per, transcription: tr, values: val, word_count: wc, date: da }, ()=>{console.log('state',this.state);})
+	this.setState({name: n, analysis: a, consumption_preferences: c, document_tone: dt, keywords: key, personality: per, transcription: tr, values: val, word_count: wc, date: da })
 }
 
 
@@ -47,7 +47,7 @@ componentWillMount() {
 	axios.get(`http://localhost:4000/full/${this.props.match.params.id}`, {headers: {
 			Authorization: `Bearer ${localStorage.getItem('token')}`
 		}}).then((res)=> {
-			console.log(res.data);
+			// console.log(res.data);
 		let array = res.data.consumption_preferences
 			array.forEach((a) => {
 					a.consumption_preferences.forEach((c)=>{

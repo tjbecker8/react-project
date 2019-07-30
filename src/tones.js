@@ -21,35 +21,44 @@ componentWillMount() {
 		if (a.tone_name === 'Sadness') {
 			this.state.tones.push({name: 'Sadness',
 			id: 1,
-			score: a.score})
+			score: {value: a.score * 100, color: '#4776b1'},
+		})
 		}
 		if (a.tone_name === 'Anger') {
 			this.state.tones.push({name: 'Angry',
 			id: 2,
-			score: a.score})
+			score: {value: a.score * 100, color: '#b82e2f'},
+		})
 		}
 		if (a.tone_name === 'Analytical') {
 			this.state.tones.push({name: 'Analytical',
 			id: 3,
-			score: a.score})
+			score: {value: a.score * 100, color: '#418171'},
+		})
 		}
 		if (a.tone_name === 'Fear') {
 			this.state.tones.push({name: 'Fear',
 			id: 4,
-			score: a.score})
+			score: {value: a.score * 100, color: '#222222'},
+		})
 		}
 		if (a.tone_name === 'Joy') {
 			this.state.tones.push({name: 'Joy',
 			id: 5,
-			score: a.score})
+			score: {value: a.score * 100, color: '#7b3cba'},
+		})
 		}
 		if (a.tone_name === 'Confident') {
 			this.state.tones.push({name: 'Confident',
 			id: 6,
-			score: a.score})
+			score: {value: a.score * 100, color: '#0000ff'},
+		})
 		}
 		if (a.tone_name === 'Tentative') {
-			this.state.tones.push({name: 'Tenative', id: 7, score: a.score})
+			this.state.tones.push({name: 'Tenative',
+				id: 7,
+				score: {value: a.score * 100, color: '#e0af18'},
+			})
 		}
 	})
 }

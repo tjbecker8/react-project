@@ -5,20 +5,27 @@ import ReactMinimalPieChart from 'react-minimal-pie-chart';
 
 class Tonesradar extends Component {
 //state
-State = {
-
+state = {
+	data: [{
+		value: 45,
+		color: '#e38627'
+	}],
+	chart: [],
 }
 
 
 	//functions
 
-	componentWillMount() {
-		console.log(this.props.document);
+	componentWillMount () {
+		console.log('props', this.props.document);
+		this.state.chart.push(this.props.document.score)
+
 }
 
 	//render
 	render() {
-
+		console.log('jjjj',this.state.chart);
+		console.log('rrr', this.state.data);
 		return (
 
 			<div className="col-4">
@@ -26,10 +33,7 @@ State = {
 					<div className="card-body">
 						<br></br>
 			<ReactMinimalPieChart
-				data={[{
-					value: 82,
-					color: '#E38627'
-				}]}
+				data={this.state.chart}
 				style={{height: '100px'}}
 				totalValue={100}
 				lineWidth={20}
