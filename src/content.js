@@ -13,7 +13,7 @@ state = {
 }
 	//functions
 	componentWillMount() {
-			axios.get('http://localhost:4000/full', {headers: {
+			axios.get('http://localhost:4000/api/analysis', {headers: {
 					Authorization: `Bearer ${localStorage.getItem('token')}`
 				}}).then((res)=> {
 

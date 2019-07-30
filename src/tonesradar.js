@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './cards.css'
 
 class Tonesradar extends Component {
 
@@ -15,7 +15,8 @@ class Tonesradar extends Component {
 
 		return (
 
-			<li className="tones" >-  {this.props.document}  -</li>
+
+			<li className="tones" >{this.props.document}</li>
 
 
 
