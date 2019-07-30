@@ -81,9 +81,10 @@ body, html {
 	padding-bottom: 15px;
 }
 
-#document-card {
-	margin-left: 15px;
-	margin-top: 10px;
-	margin-right: 15px;
-	width: 100%;
+#doc-col {
+	padding-left: 0px;
+}
+
+#key-col {
+	padding-left: 0px;
 }

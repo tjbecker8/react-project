@@ -30,20 +30,8 @@ ul {
 }
 
 
-.pers ul {
-	list-style: none;
-}
-
-.pers li {
-	display: inline-block;
-}
-
-.values ul {
-	list-style: none;
-}
-
-.values li {
-	display: inline-block;
+#document-card {
+	margin: 0;
 }
 
 .keywords ul {

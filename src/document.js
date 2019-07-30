@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './cards.css';
 
 class Document extends Component {
 	//data
@@ -12,16 +12,16 @@ class Document extends Component {
 		return (
 
 
-			<div className="col-4">
+			<div>
 				<div id="document-card" className="card">
 					<div className="card-header">
 						Document Information
 					</div>
 					<div className="card-body">
-						<h3>name: {this.props.name} words</h3>
-						<h3>word count: {this.props.wordCount}</h3>
-						<h3>created on: {this.props.date}</h3>
-						<h4 className="transcript-title" onClick={this.props.click}>Veiw Transcript</h4>
+						<h6>name: {this.props.name} words</h6>
+						<h6>word count: {this.props.wordCount}</h6>
+						<h6>created on: {this.props.date}</h6>
+						<h6 className="transcript-title" onClick={this.props.click}>Veiw Transcript</h6>
 					</div>
 				</div>
 			</div>
