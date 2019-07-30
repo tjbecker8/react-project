@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Options from './list-item'
 import axios from 'axios'
 import './sidebar.css';
-import {Link} from 'react-router-dom'
+
 class Sidebar extends Component {
 	//data
 state = {

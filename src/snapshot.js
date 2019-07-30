@@ -54,7 +54,27 @@ class Snapshot extends Component {
 			return this.state.consumption_preferences.push(c.consumption_preferences)
 		})
 		let flat = _.flatten(this.state.keywords)
-		this.setState({keywords_flat: flat})
+
+		var arr1=flat;
+		var mf = 1;
+		var m = 0;
+		var item;
+		for (var i=0; i<arr1.length; i++)
+		{
+			for (var j=i; j<arr1.length; j++)
+			{
+				if (arr1[i] === arr1[j])
+				m++;
+				if (mf<m)
+				{
+					mf=m;
+					item = arr1[i];
+				}
+			}
+			m=0;
+		}
+		console.log(item+" ( " +mf +" times ) ")
+		this.setState({keywords_flat: item})
 
 		let array = props.analysis
 			array.forEach((a) => {
@@ -108,7 +128,7 @@ class Snapshot extends Component {
 					<div className="card-body">
 						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
 						<h4 className="">With {this.state.word_total} word analysised</h4>
-						<h5>Your top used words are:</h5>
+						<h5>Your top used word is: {this.state.keywords_flat}</h5>
 						<h5>Your top used tone is:</h5>
 						<h5>Your top influnce is:</h5>
 						<h5>Your top personality trait is:</h5>
