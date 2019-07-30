@@ -17,6 +17,7 @@
 
 .card-header {
 	background: linear-gradient(to right, #1c8786, #324948);
+	color: white;
 }
 
 .tones ul {
@@ -25,6 +26,7 @@
 
 .tones li {
 	display: inline-block;
+
 }
 
 .pers ul {

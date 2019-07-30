@@ -69,7 +69,7 @@ removeClass = () => {
 					</ul>
 				</div>
 				<div onClick={this.changeClass} className="card-footer">
-					What does this Mean?
+					Definitions
 				</div>
 			</div>
 			</div>

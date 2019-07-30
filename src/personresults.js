@@ -40,7 +40,7 @@ removeClass = () => {
 				<div id="definition-person" className="fixed-top">
 					<div className="card text-center">
 						<div className="card-header">
-							personality Definition
+							Personality Definition
 						</div>
 						<div id="person-body" className="card-body">
 							<ul>
@@ -93,7 +93,7 @@ removeClass = () => {
 					</ul>
 				</div>
 				<div onClick={this.changeClass} className="card-footer">
-					What does this Mean?
+					Definitions
 				</div>
 			</div>
 			</div>
