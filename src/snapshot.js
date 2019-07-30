@@ -109,7 +109,7 @@ class Snapshot extends Component {
 						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
 						<h4 className="">With {this.state.word_total} word analysised</h4>
 						<h5>Your top used words are:</h5>
-						<h5>The majority of your conversations have a tone of:</h5>
+						<h5>Your top used tone is:</h5>
 						<h5>Your top influnce is:</h5>
 						<h5>Your top personality trait is:</h5>
 

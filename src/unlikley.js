@@ -33,7 +33,6 @@ removeClass = () => {
 
 	//render
 	render() {
-		console.log(this.state.like);
 		return (
 <div className="row">
 
