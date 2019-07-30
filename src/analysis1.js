@@ -11,6 +11,7 @@ import Likley from './likley'
 import Unlikley from './unlikley'
 import Keywords from './keywords'
 import Tones from './tones'
+import Document from './document'
 import Transcript from './transcript'
 import axios from 'axios'
 
@@ -132,16 +133,7 @@ render() {
 							<Personresults personality={this.state.personality} />
 						</div>
 
-						<div className="col-4">
-							<div id="document-card" className="card">
-								<div className="card-header">
-									Document Information
-								</div>
-								<div className="card-body">
-									<h3>name: {this.state.name} - word count: {this.state.word_count} - created on: {this.state.date} words</h3> <h4 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h4>
-								</div>
-							</div>
-						</div>
+						<Document name={this.state.name} wordCount={this.state.word_count} createdOn={this.state.date} click={this.viewTranscript} />
 
 
 					</div>
