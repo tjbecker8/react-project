@@ -11,6 +11,7 @@ class Snapshot extends Component {
 		analysis: [],
 		keywords: [],
 		tones: [],
+		tone_most: [],
 		word_count: [],
 		personality: [],
 		consumption_preferences: [],
@@ -20,11 +21,125 @@ class Snapshot extends Component {
 		likley: [],
 		unlikley: [],
 		personality_total: [],
+		personality_most: [],
 		unlike_total: [],
 		like_total:[],
 		person_total: [],
 	}
 	//functions
+findMostKeywords = (array) => {
+	var arr1=array;
+	var mf = 1;
+	var m = 0;
+	var item;
+	for (var i=0; i<arr1.length; i++)
+	{
+		for (var j=i; j<arr1.length; j++)
+		{
+			if (arr1[i] === arr1[j])
+			m++;
+			if (mf<m)
+			{
+				mf=m;
+				item = arr1[i];
+			}
+		}
+		m=0;
+	}
+	this.setState({keywords_flat: item})
+}
+
+findMostTones = (array) => {
+	var arr1=array;
+	var mf = 1;
+	var m = 0;
+	var item;
+	for (var i=0; i<arr1.length; i++)
+	{
+		for (var j=i; j<arr1.length; j++)
+		{
+			if (arr1[i] === arr1[j])
+			m++;
+			if (mf<m)
+			{
+				mf=m;
+				item = arr1[i];
+			}
+		}
+		m=0;
+	}
+	this.setState({tone_most: item})
+}
+
+findMostpersonality = (array) => {
+	var arr1=array;
+	var mf = 1;
+	var m = 0;
+	var item;
+	for (var i=0; i<arr1.length; i++)
+	{
+		for (var j=i; j<arr1.length; j++)
+		{
+			if (arr1[i] === arr1[j])
+			m++;
+			if (mf<m)
+			{
+				mf=m;
+				item = arr1[i];
+			}
+		}
+		m=0;
+	}
+	this.setState({personality_most: item})
+}
+
+findMostLike = (array) => {
+	var arr1=array;
+	var mf = 1;
+	var m = 0;
+	var item;
+	for (var i=0; i<arr1.length; i++)
+	{
+		for (var j=i; j<arr1.length; j++)
+		{
+			if (arr1[i] === arr1[j])
+			m++;
+			if (mf<m)
+			{
+				mf=m;
+				item = arr1[i];
+			}
+		}
+		m=0;
+	}
+	this.setState({like_total: item})
+}
+
+findMostUnlike = (array) => {
+	var arr1=array;
+	var mf = 1;
+	var m = 0;
+	var item;
+	for (var i=0; i<arr1.length; i++)
+	{
+		for (var j=i; j<arr1.length; j++)
+		{
+			if (arr1[i] === arr1[j])
+			m++;
+			if (mf<m)
+			{
+				mf=m;
+				item = arr1[i];
+			}
+		}
+		m=0;
+	}
+	this.setState({unlike_total: item})
+}
+
+
+
+
 	componentWillReceiveProps(props) {
 
 		this.setState({
@@ -41,6 +156,12 @@ class Snapshot extends Component {
 			})
 			return 'hello'
 		})
+		let tones = this.state.tones
+		this.findMostTones(tones)
+
+
+
+
 		props.analysis.map((c) => {
 			this.state.word_count.push(c.word_count)
 			let add = _.sum(this.state.word_count)
@@ -54,27 +175,8 @@ class Snapshot extends Component {
 			return this.state.consumption_preferences.push(c.consumption_preferences)
 		})
 		let flat = _.flatten(this.state.keywords)
+		this.findMostKeywords(flat)
 
-		var arr1=flat;
-		var mf = 1;
-		var m = 0;
-		var item;
-		for (var i=0; i<arr1.length; i++)
-		{
-			for (var j=i; j<arr1.length; j++)
-			{
-				if (arr1[i] === arr1[j])
-				m++;
-				if (mf<m)
-				{
-					mf=m;
-					item = arr1[i];
-				}
-			}
-			m=0;
-		}
-		console.log(item+" ( " +mf +" times ) ")
-		this.setState({keywords_flat: item})
 
 		let array = props.analysis
 			array.forEach((a) => {
@@ -83,8 +185,7 @@ class Snapshot extends Component {
 							if (s.score === 1) {
 								this.state.likley.push(s.name)
 							}
-							let count = _.countBy(this.state.likley)
-							this.setState({like_total: count})
+							this.findMostLike(this.state.likley)
 						})
 					})
 				})
@@ -95,8 +196,7 @@ class Snapshot extends Component {
 								if (s.score === 0) {
 									this.state.unlikley.push(s.name)
 								}
-								let count = _.countBy(this.state.unlikley)
-								this.setState({unlike_total: count})
+								this.findMostUnlike(this.state.unlikley)
 							})
 						})
 					})
@@ -106,10 +206,9 @@ class Snapshot extends Component {
 								if (c.percentile > 0.5) {
 									this.state.personality_total.push(c.name)
 								}
-								let count = _.countBy(this.state.personality_total)
-								this.setState({person_total: count})
 							})
 						})
+						this.findMostpersonality(this.state.personality_total)
 
 	}
 
@@ -129,9 +228,14 @@ class Snapshot extends Component {
 						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
 						<h4 className="">With {this.state.word_total} word analysised</h4>
 						<h5>Your top used word is: {this.state.keywords_flat}</h5>
-						<h5>Your top used tone is:</h5>
-						<h5>Your top influnce is:</h5>
-						<h5>Your top personality trait is:</h5>
+						<h5>Your top used tone is: {this.state.tone_most}</h5>
+						<h5>Your top personality trait is: {this.state.personality_most}</h5>
+						<h5>Your top influnces is:
+							<ul>
+								<li>{this.state.like_total}</li>
+								<li>Un{this.state.unlike_total}</li>
+							</ul>
+						</h5>
 
 
 					</div>
