@@ -122,3 +122,7 @@
 	max-height: 400px;
 	overflow: scroll;
 }
+
+.like-li {
+	text-align: left;
+}

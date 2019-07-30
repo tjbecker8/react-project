@@ -43,19 +43,19 @@ removeClass = () => {
 			</div>
 			<div id="like-body" className="card-body">
 				<ul>
-					<li>Likeley to:</li>
+					<li className="like-li" >Likeley to:</li>
 					<ul>
 						{
 						this.state.like.map((l) =>{
-							return <li>{l.name.split(' ').slice(2).join(' ')}</li>
+							return <li className="like-li" >{l.name.split(' ').slice(2).join(' ')}</li>
 						})
 						}
 					</ul>
-					<li>Unlikley to:</li>
+					<li className="like-li" >Unlikley to:</li>
 					<ul>
 						{
 							this.state.unlike.map((u) => {
-								return <li>{u.name.split(' ').slice(2).join(' ')}</li>
+								return <li className="like-li" >{u.name.split(' ').slice(2).join(' ')}</li>
 							})
 						}
 					</ul>

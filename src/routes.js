@@ -43,9 +43,19 @@ auth = () => {
 						this.checkAuth() &&
 					<Route path="/app" component={App} />
 					}
+
+					{
+						this.checkAuth() &&
 					<Route path="/analysis/:id" component={Analysis} />
+					}
+
 					<Route path="/indepth" component={Indepth} />
-					<Route path="/upload" component={Upload} />
+
+						{
+							this.checkAuth() &&
+						<Route path="/upload" component={Upload} />
+						}
+
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
 					<Route path="/" component={() => <Login auth={this.auth} />} />
 

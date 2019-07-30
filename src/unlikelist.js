@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './cards.css';
 
 
 class Unlikelist extends Component {
@@ -11,7 +11,7 @@ class Unlikelist extends Component {
 	//render
 	render() {
 		return (
-	<li>{this.props.unlikley.name.split(' ').slice(2).join(' ')}</li>
+	<li className="like-li">{this.props.unlikley.name.split(' ').slice(2).join(' ')}</li>
 		)
 	}
 }

@@ -69,11 +69,11 @@ removeClass = () => {
 					</div>
 					<div className="card-body">
 						<ul>
-							<li>Analytical: A person's reasoning and analytical attitude about things</li>
-							<li>Anger: Evoked due to injustice, conflict, humiliation, negligence or betrayal. If anger is active, the individual attacks the target, verbally or physically. If anger is passive, the person silently sulks and feels tension and hostility.</li>
-							<li>Confident: A person's degree of certainty</li>
-							<li>Fear: A response to impending danger. It is a survival mechanism that is a reaction to some negative stimulus. It may be a mild caution or an extreme phobia.</li>
-							<li>Tentative: A person's degree of inhibition</li>
+							<li className="like-li" >Analytical: A person's reasoning and analytical attitude about things</li>
+							<li className="like-li" >Anger: Evoked due to injustice, conflict, humiliation, negligence or betrayal. If anger is active, the individual attacks the target, verbally or physically. If anger is passive, the person silently sulks and feels tension and hostility.</li>
+							<li className="like-li" >Confident: A person's degree of certainty</li>
+							<li className="like-li" >Fear: A response to impending danger. It is a survival mechanism that is a reaction to some negative stimulus. It may be a mild caution or an extreme phobia.</li>
+							<li className="like-li" >Tentative: A person's degree of inhibition</li>
 						</ul>
 					</div>
 					<div onClick={this.removeClass} className="card-footer">

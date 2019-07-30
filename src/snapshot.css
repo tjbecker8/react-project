@@ -13,3 +13,7 @@
 	background: #324948 !important;
 	color: white !important;
 }
+
+li {
+	background: none !important;
+}

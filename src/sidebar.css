@@ -25,7 +25,7 @@ li.active {
 	background: linear-gradient(to right, #1c8786, #324948);
 }
 
-li {
+#options {
 	background: #e6e6e6 !important;
 }
 

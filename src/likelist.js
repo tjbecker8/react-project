@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './cards.css';
 
 
 class Likelist extends Component {
@@ -10,11 +10,11 @@ class Likelist extends Component {
 
 	//render
 	render() {
-		
+
 
 		return (
 
-		<li>{this.props.likley.name.split(' ').slice(2).join(' ')}</li>
+		<li className="like-li">{this.props.likley.name.split(' ').slice(2).join(' ')}</li>
 
 
 		)

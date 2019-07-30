@@ -42,11 +42,11 @@ removeClass = () => {
 						</div>
 						<div className="card-body">
 							<ul>
-								<li>Self-transcendence: Show concern for the welfare and interests of others.</li>
-								<li>Conservation: Emphasize self-restriction, order, and resistance to change.</li>
-								<li>Hedonism: Seek pleasure and sensuous gratification for themselves.</li>
-								<li>Self-enhancement: Seek personal success for themselves.</li>
-								<li>Open to change: Emphasize independent action, thought, and feeling, as well as a readiness for new experiences.</li>
+								<li className="like-li" >Self-transcendence: Show concern for the welfare and interests of others.</li>
+								<li className="like-li" >Conservation: Emphasize self-restriction, order, and resistance to change.</li>
+								<li className="like-li" >Hedonism: Seek pleasure and sensuous gratification for themselves.</li>
+								<li className="like-li" >Self-enhancement: Seek personal success for themselves.</li>
+								<li className="like-li" >Open to change: Emphasize independent action, thought, and feeling, as well as a readiness for new experiences.</li>
 							</ul>
 						</div>
 						<div onClick={this.removeClass} className="card-footer">
