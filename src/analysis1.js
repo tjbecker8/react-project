@@ -140,11 +140,11 @@ render() {
 					</div>
 
 					<div className="row">
-						<div id="document-card" class="card">
-							<div class="card-header">
+						<div id="document-card" className="card">
+							<div className="card-header">
 								Document Information
 							</div>
-							<div class="card-body">
+							<div className="card-body">
 								<h3>name: {this.state.name} - word count: {this.state.word_count} - created on: {this.state.date} words</h3> <h4 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h4>
 							</div>
 						</div>

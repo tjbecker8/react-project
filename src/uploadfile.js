@@ -13,6 +13,7 @@ class Upload extends Component {
 		text: '',
 		file: null,
 		data: null,
+		id: '',
 	}
 
 //functions
@@ -65,14 +66,17 @@ createNew = (e, text, file) => {
 		let file_holder = new FormData()
 		file_holder.append('file', file)
 		file_holder.append('name', text)
-		axios.post(`${process.env.REACT_APP_API}/full`, file_holder).then((res) => {
+		axios.post(`${process.env.REACT_APP_API}/full`, file_holder, {headers: {
+				Authorization: `Bearer ${localStorage.getItem('token')}`
+			}}).then((res) => {
 			this.removeClass()
-				alert('Analysis Complete')
 				console.log('res',res.data);
 				this.setState({
-					data: res.data
+					data: res.data,
+					id: res.data._id
 				})
-				console.log(this.state.data);
+				console.log('what we need',this.state.data._id);
+				console.log('other stuff', this.state.id);
 				this.changeFinish()
 		}).catch((err) => {
 			console.log('err', err)
@@ -99,9 +103,9 @@ createNew = (e, text, file) => {
 							<h4 id="h4-fin">Your analysis is complete!</h4>
 							<span id="see-analysis">
 							<Link to ={{
-									pathname: '/analysis',
+									pathname: `/analysis/${this.state.id}`,
 									aboutProps:{
-										data: this.state.data,
+										id: this.state.id,
 									}
 								}} >See Analysis</Link>
 								</span>
