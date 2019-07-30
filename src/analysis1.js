@@ -123,9 +123,11 @@ render() {
 				<div className="col-8">
 
 					<div id="tone-pers" className="row">
-						<div className="col-6">
+						<div className="col-12">
 							<Tones document={this.state.document_tone} />
 						</div>
+					</div>
+					<div id="tone-pers" className="row">
 						<div className="col-6">
 							<Personresults personality={this.state.personality} />
 						</div>

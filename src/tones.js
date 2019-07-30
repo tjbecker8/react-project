@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './cards.css';
-import Tonesradar from './tonesradar'
+import Tonesradar from './tonesradar1'
 
 class Tones extends Component {
 	//data
@@ -13,9 +13,10 @@ componentWillMount() {
 	// console.log('tones', this.props.document.tones);
 	let array = this.props.document
 	 if (array === null) {
-		 return console.log('fuck');
+		 return console.log('nope');
 	 }
 	 else {
+		 console.log('array', array);
 	array.forEach((a) =>{
 		if (a.tone_name === 'Sadness') {
 			this.state.tones.push({name: 'Sadness',
@@ -69,11 +70,12 @@ removeClass = () => {
 					</div>
 					<div className="card-body">
 						<ul>
-							<li className="like-li" >Analytical: A person's reasoning and analytical attitude about things</li>
-							<li className="like-li" >Anger: Evoked due to injustice, conflict, humiliation, negligence or betrayal. If anger is active, the individual attacks the target, verbally or physically. If anger is passive, the person silently sulks and feels tension and hostility.</li>
-							<li className="like-li" >Confident: A person's degree of certainty</li>
-							<li className="like-li" >Fear: A response to impending danger. It is a survival mechanism that is a reaction to some negative stimulus. It may be a mild caution or an extreme phobia.</li>
-							<li className="like-li" >Tentative: A person's degree of inhibition</li>
+							<li className="like-li" >Analytical: </li>
+							<li className="like-li" >Anger: </li>
+							<li className="like-li" >Confident: </li>
+							<li className="like-li" >Fear: </li>
+							<li className="like-li" >Tentative: </li>
+							<li className="like-li" >Sadness: </li>
 						</ul>
 					</div>
 					<div onClick={this.removeClass} className="card-footer">
