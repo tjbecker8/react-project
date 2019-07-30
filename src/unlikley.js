@@ -7,7 +7,9 @@ import './cards.css';
 class Unlikley extends Component {
 	//data
 state ={
-	data: []
+	data: [],
+	unlike: this.props.unlikley,
+	like: this.props.likley
 }
 	//functions
 componentWillMount() {
@@ -18,12 +20,12 @@ componentWillMount() {
 }
 
 changeClass = () => {
-  var element = document.getElementById("definition");
+  var element = document.getElementById("definition-like");
   element.classList.add("active");
 }
 
 removeClass = () => {
-  var element = document.getElementById("definition");
+  var element = document.getElementById("definition-like");
   element.classList.remove("active");
 }
 
@@ -31,20 +33,33 @@ removeClass = () => {
 
 	//render
 	render() {
+		console.log(this.state.like);
 		return (
 <div className="row">
 
-	<div id="definition" className="fixed-top">
+	<div id="definition-like" className="fixed-top">
 		<div className="card">
 			<div className="card-header">
-				personality Definition
+				All Influences
 			</div>
-			<div className="card-body">
+			<div id="like-body" className="card-body">
 				<ul>
-					<li>item</li>
-					<li>item</li>
-					<li>item</li>
-					<li>item</li>
+					<li>Likeley to:</li>
+					<ul>
+						{
+						this.state.like.map((l) =>{
+							return <li>{l.name.split(' ').slice(2).join(' ')}</li>
+						})
+						}
+					</ul>
+					<li>Unlikley to:</li>
+					<ul>
+						{
+							this.state.unlike.map((u) => {
+								return <li>{u.name.split(' ').slice(2).join(' ')}</li>
+							})
+						}
+					</ul>
 				</ul>
 			</div>
 			<div onClick={this.removeClass} className="card-footer">

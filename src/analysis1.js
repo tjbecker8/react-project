@@ -155,7 +155,7 @@ render() {
 
 				<div className="col-4">
 					<Likley likley={this.state.likley} />
-					<Unlikley unlikley={this.state.unlikley} />
+					<Unlikley unlikley={this.state.unlikley} likley={this.state.likley} />
 				</div>
 			</div>
 		</div>

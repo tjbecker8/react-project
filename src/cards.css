@@ -102,3 +102,21 @@
 #definition-values.active {
 	display:block;
 }
+
+#definition-like {
+	display: none;
+	position: fixed;
+	width: 75vw;
+	padding-top: 75px;
+	left: 150px;
+	z-index: 1 !important;
+}
+
+#definition-like.active {
+	display:block;
+}
+
+#like-body {
+	max-height: 400px;
+	overflow: scroll;
+}
