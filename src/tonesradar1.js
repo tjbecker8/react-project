@@ -4,12 +4,16 @@ import ReactMinimalPieChart from 'react-minimal-pie-chart';
 
 
 class Tonesradar extends Component {
+//state
+State = {
+
+}
 
 
 	//functions
 
 	componentWillMount() {
-
+		console.log(this.props.document);
 }
 
 	//render
@@ -29,10 +33,11 @@ class Tonesradar extends Component {
 				style={{height: '100px'}}
 				totalValue={100}
 				lineWidth={20}
+				animate
 				/>
 			</div>
 			<div className="card-footer">
-				Name
+				{this.props.document.name}
 			</div>
 			</div>
 			</div>

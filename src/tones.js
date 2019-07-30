@@ -20,30 +20,36 @@ componentWillMount() {
 	array.forEach((a) =>{
 		if (a.tone_name === 'Sadness') {
 			this.state.tones.push({name: 'Sadness',
-			id: 1})
+			id: 1,
+			score: a.score})
 		}
 		if (a.tone_name === 'Anger') {
 			this.state.tones.push({name: 'Angry',
-			id: 2})
+			id: 2,
+			score: a.score})
 		}
 		if (a.tone_name === 'Analytical') {
 			this.state.tones.push({name: 'Analytical',
-			id: 3})
+			id: 3,
+			score: a.score})
 		}
 		if (a.tone_name === 'Fear') {
 			this.state.tones.push({name: 'Fear',
-			id: 4})
+			id: 4,
+			score: a.score})
 		}
 		if (a.tone_name === 'Joy') {
 			this.state.tones.push({name: 'Joy',
-			id: 5})
+			id: 5,
+			score: a.score})
 		}
 		if (a.tone_name === 'Confident') {
 			this.state.tones.push({name: 'Confident',
-			id: 6})
+			id: 6,
+			score: a.score})
 		}
 		if (a.tone_name === 'Tentative') {
-			this.state.tones.push({name: 'Tenative', id: 7})
+			this.state.tones.push({name: 'Tenative', id: 7, score: a.score})
 		}
 	})
 }
@@ -92,7 +98,7 @@ removeClass = () => {
 					<div className="row">
 						{
 							this.state.tones.map((t)=>{
-								return <Tonesradar document={t.name} key={t.id} />
+								return <Tonesradar document={t} key={t.id} />
 							})
 						}
 
