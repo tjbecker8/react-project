@@ -132,31 +132,31 @@ render() {
 							<Personresults personality={this.state.personality} />
 						</div>
 
+						<div className="col-4">
+							<div id="document-card" className="card">
+								<div className="card-header">
+									Document Information
+								</div>
+								<div className="card-body">
+									<h3>name: {this.state.name} - word count: {this.state.word_count} - created on: {this.state.date} words</h3> <h4 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h4>
+								</div>
+							</div>
+						</div>
 
 
 					</div>
 					<div className="row">
 
-						<div className="col-6">
+						<div className="col-8">
 							<Values values={this.state.values} />
 						</div>
 
-						<div className="col-6">
+						<div className="col-4">
 							<Keywords keywords={this.state.keywords} />
 						</div>
 					</div>
 
-					<div className="row">
-						<div id="document-card" className="card">
-							<div className="card-header">
-								Document Information
-							</div>
-							<div className="card-body">
-								<h3>name: {this.state.name} - word count: {this.state.word_count} - created on: {this.state.date} words</h3> <h4 className="transcript-title" onClick={this.viewTranscript}>Veiw Transcript</h4>
-							</div>
-						</div>
 
-					</div>
 
 				</div>
 

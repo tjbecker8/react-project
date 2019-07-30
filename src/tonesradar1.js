@@ -17,15 +17,14 @@ state = {
 	//functions
 
 	componentWillMount () {
-		console.log('props', this.props.document);
+		// console.log('props', this.props.document);
 		this.state.chart.push(this.props.document.score)
 
 }
 
 	//render
 	render() {
-		console.log('jjjj',this.state.chart);
-		console.log('rrr', this.state.data);
+
 		return (
 
 			<div className="col-4">

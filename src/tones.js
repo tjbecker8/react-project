@@ -16,7 +16,7 @@ componentWillMount() {
 		 return console.log('nope');
 	 }
 	 else {
-		 console.log('array', array);
+		 // console.log('array', array);
 	array.forEach((a) =>{
 		if (a.tone_name === 'Sadness') {
 			this.state.tones.push({name: 'Sadness',

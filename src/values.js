@@ -60,13 +60,7 @@ removeClass = () => {
 					Values
 				</div>
 				<div className="card-body">
-					<ul className="values">
-						{
-							this.state.values.map((t)=>{
-								return <Valuesradar values={t} key={t.trait_id} />
-							})
-						}
-					</ul>
+				<Valuesradar values={this.props.values} />
 				</div>
 				<div onClick={this.changeClass} className="card-footer">
 					Definitions

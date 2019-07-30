@@ -36,11 +36,10 @@ class Personradar extends Component {
 
 	//render
 	render() {
-		console.log('person',this.props.person);
+
 		return (
 
-			<MDBContainer>
-				<h3 id="per-chart" >Polar area chart</h3>
+			<MDBContainer id="per-chart">
 				<Polar data={this.state.dataPolar} options={{ responsive: true }} />
 			</MDBContainer>
 
