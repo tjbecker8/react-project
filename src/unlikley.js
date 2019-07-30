@@ -34,7 +34,7 @@ removeClass = () => {
 	//render
 	render() {
 		return (
-<div className="row">
+<div>
 
 	<div id="definition-like" className="fixed-top">
 		<div className="card">
@@ -42,7 +42,7 @@ removeClass = () => {
 				All Influences
 			</div>
 			<div id="like-body" className="card-body">
-				<ul>
+				<ul className="like-unlike">
 					<li className="like-li" >Likeley to:</li>
 					<ul>
 						{
@@ -73,7 +73,7 @@ removeClass = () => {
     		Unlikley to:
   		</div>
 			<div className="card-body">
-				<ul>
+				<ul className="like-unlike">
 					{
 
 						this.state.data.map((k)=>{

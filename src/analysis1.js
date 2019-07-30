@@ -129,39 +129,44 @@ render() {
 						</div>
 					</div>
 					<div id="tone-pers" className="row">
-						<div className="col-8">
+						<div className="col-10">
 							<Personresults personality={this.state.personality} />
 						</div>
-						<div id="doc-col" className="col-4">
-						<Document name={this.state.name} wordCount={this.state.word_count} createdOn={this.state.date} click={this.viewTranscript} />
-						</div>
+
 
 					</div>
-					<div className="row">
 
-						<div className="col-8">
-							<Values values={this.state.values} />
-						</div>
-
-						<div id="key-col" className="col-4">
-							<Keywords keywords={this.state.keywords} />
-						</div>
-					</div>
 
 
 
 				</div>
 
 				<div className="col-4">
+					<div className="row">
 					<Likley likley={this.state.likley} />
+					</div>
+					<div className="row">
 					<Unlikley unlikley={this.state.unlikley} likley={this.state.likley} />
+					</div>
+				</div>
+			</div>
+			<div className="row">
+
+				<div className="col-6">
+					<Values values={this.state.values} />
+				</div>
+
+				<div id="key-col" className="col-3">
+					<Keywords keywords={this.state.keywords} />
+				</div>
+				<div id="doc-col" className="col-3">
+				<Document name={this.state.name} wordCount={this.state.word_count} createdOn={this.state.date} click={this.viewTranscript} />
 				</div>
 			</div>
 		</div>
-			<div className="row">
-			</div>
-			<Bottomnav />
 		</div>
+
+
 
 
   )

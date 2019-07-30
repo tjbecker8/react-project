@@ -29,34 +29,17 @@ state = {
 	//render
 	render() {
 		return (
-<div id="like-row" className="row">
 
-	<div id="definition" className="fixed-top">
-		<div className="card">
-			<div className="card-header">
-				personality Definition
-			</div>
-			<div className="card-body">
-				<ul>
-					<li>item</li>
-					<li>item</li>
-					<li>item</li>
-					<li>item</li>
-				</ul>
-			</div>
-			<div onClick={this.removeClass} className="card-footer">
-				close
-			</div>
-		</div>
-	</div>
 
-	<div>
+
+
+
 		<div id="like-card" className="card text-center">
 			<div className="card-header">
     		Likley to:
   		</div>
 			<div className="card-body">
-				<ul>
+				<ul className="like-unlike">
 					{
 						this.state.data.map((k)=>{
 							return <Likelist likley={k} key={k.consumption_preference_id} />
@@ -65,8 +48,8 @@ state = {
 				</ul>
 			</div>
 		</div>
-	</div>
-	</div>
+
+
 		)
 	}
 }

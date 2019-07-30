@@ -47,8 +47,13 @@ ul {
 	display: inline-block;
 }
 
+.like-unlike {
+	margin-top: 1rem !important;
+}
+
 #like-card {
-	width: 100%;
+width: 100% !important;
+
 }
 
 #unlike-card {
@@ -113,8 +118,10 @@ ul {
 }
 
 #like-body {
-	max-height: 400px;
-	overflow: scroll;
+width: 100%;
+max-height: 450px;
+overflow: scroll;
+
 }
 
 .like-li {
