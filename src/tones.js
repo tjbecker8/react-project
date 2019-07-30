@@ -89,18 +89,19 @@ removeClass = () => {
 					Tones
 				</div>
 				<div className="card-body">
-					<ul className="tones">
+					<div className="row">
 						{
 							this.state.tones.map((t)=>{
 								return <Tonesradar document={t.name} key={t.id} />
 							})
 						}
-					</ul>
+
 				</div>
 				<div onClick={this.changeClass} className="card-footer">
 					Definitions
 				</div>
 			</div>
+		</div>
 		</div>
 
 

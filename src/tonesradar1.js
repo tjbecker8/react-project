@@ -17,23 +17,25 @@ class Tonesradar extends Component {
 
 		return (
 
-
+			<div className="col-4">
+				<div className="card">
+					<div className="card-body">
+						<br></br>
 			<ReactMinimalPieChart
-	  data={[{
-	      value: 82,
-	      color: '#E38627'
-	    }]}
-		style={{height: '100px'}}
-	  totalValue={100}
-	  lineWidth={20}
-	  label
-	  labelStyle={{
-	    fontSize: '25px',
-	    fontFamily: 'sans-serif'
-	  }}
-	  labelPosition={0}
-	/>
-
+				data={[{
+					value: 82,
+					color: '#E38627'
+				}]}
+				style={{height: '100px'}}
+				totalValue={100}
+				lineWidth={20}
+				/>
+			</div>
+			<div className="card-footer">
+				Name
+			</div>
+			</div>
+			</div>
 
 		)
 	}
