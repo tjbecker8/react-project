@@ -11,7 +11,7 @@ state ={
 }
 	//functions
 componentWillMount() {
-	// console.log('person',this.props.personality);
+	console.log('person',this.props.personality);
 	let array = this.props.personality
 	array.forEach((a) =>{
 		if (a.percentile > .5 && a.raw_score > .5) {

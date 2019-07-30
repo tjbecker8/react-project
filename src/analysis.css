@@ -4,7 +4,9 @@ body, html {
 	background-size: 100%;
 }
 
-
+#main {
+	margin-right: 10px;
+}
 
 #first.row {
 	padding-top: 75px;
