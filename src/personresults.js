@@ -10,15 +10,15 @@ state ={
 	personality: []
 }
 	//functions
-componentWillMount() {
-	console.log('person',this.props.personality);
-	let array = this.props.personality
-	array.forEach((a) =>{
-		if (a.percentile > .5 && a.raw_score > .5) {
-			this.state.personality.push(a)
-		}
-	})
-}
+// componentWillMount() {
+// 	console.log('person',this.props.personality);
+// 	let array = this.props.personality
+// 	array.forEach((a) =>{
+// 		if (a.percentile > .5 && a.raw_score > .5) {
+// 			this.state.personality.push(a)
+// 		}
+// 	})
+// }
 
 changeClass = () => {
   var element = document.getElementById("definition-person");
@@ -83,13 +83,7 @@ removeClass = () => {
 					Personality
 				</div>
 				<div className="card-body">
-					<ul className="pers">
-						{
-							this.state.personality.map((t)=>{
-								return <Personradar document={t} key={t.trait_id}/>
-							})
-						}
-					</ul>
+					<Personradar person={this.props.personality} />
 				</div>
 				<div onClick={this.changeClass} className="card-footer">
 					Definitions

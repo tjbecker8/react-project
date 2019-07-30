@@ -128,17 +128,19 @@ render() {
 						</div>
 					</div>
 					<div id="tone-pers" className="row">
-						<div className="col-6">
+						<div className="col-8">
 							<Personresults personality={this.state.personality} />
 						</div>
-						<div className="col-6">
-							<Values values={this.state.values} />
-						</div>
+
 
 
 					</div>
 					<div className="row">
-						
+
+						<div className="col-6">
+							<Values values={this.state.values} />
+						</div>
+
 						<div className="col-6">
 							<Keywords keywords={this.state.keywords} />
 						</div>

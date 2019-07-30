@@ -127,3 +127,19 @@ ul {
 .like-li {
 	text-align: left;
 }
+
+#per-chart {
+	margin-top: 8px;
+}
+
+canvas {
+	margin-bottom: 8px;
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+.container {
+	padding: 0;
+	margin: 0;
+}
