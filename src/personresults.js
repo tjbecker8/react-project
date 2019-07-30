@@ -22,12 +22,12 @@ componentWillMount() {
 }
 
 changeClass = () => {
-  var element = document.getElementById("definition");
+  var element = document.getElementById("definition-person");
   element.classList.add("active");
 }
 
 removeClass = () => {
-  var element = document.getElementById("definition");
+  var element = document.getElementById("definition-person");
   element.classList.remove("active");
 }
 
@@ -37,17 +37,39 @@ removeClass = () => {
 		return (
 			<div >
 
-				<div id="definition" className="fixed-top">
+				<div id="definition-person" className="fixed-top">
 					<div className="card text-center">
 						<div className="card-header">
 							personality Definition
 						</div>
-						<div className="card-body">
+						<div id="person-body" className="card-body">
 							<ul>
-								<li>item</li>
-								<li>item</li>
-								<li>item</li>
-								<li>item</li>
+
+								<li>Agreeableness</li>
+								<ul>
+									<li>Present: Value getting along with others. They have a more optimistic view of human nature.</li>
+									<li>Not Present: Value self interests over others. They are more skeptical of others motives.</li>
+								</ul>
+								<li>Concientiousness</li>
+								<ul>
+									<li>Present: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.</li>
+									<li>Not Present:  More likely to prefer the spontaneous over the planned.</li>
+								</ul>
+								<li>Openness</li>
+								<ul>
+									<li>Present: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things.</li>
+									<li>Not Present: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.</li>
+								</ul>
+								<li>Extraversion - More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.</li>
+								<ul>
+									<li>Present: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves. </li>
+									<li>Not Present: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.</li>
+								</ul>
+								<li>Emotional Range - More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
+								<ul>
+									<li>Present: More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
+									<li>Not Present: More calm and less likely to get upset. It does not mean they are positive, or happy people.</li>
+								</ul>
 							</ul>
 						</div>
 						<div onClick={this.removeClass} className="card-footer">

@@ -15,7 +15,7 @@ state = {
 
 
 		componentWillReceiveProps(props) {
-		
+
 			this.setState({
 				analysis: props.analysis
 			})
@@ -57,9 +57,9 @@ state = {
 			<div id="header" className="card-header">
 				<h5 className="card-title">Previous Analysis</h5>
 			</div>
-			<div className="card-body">
-				<div className="form-group">
-				    <ul className="list-group">
+			<div id="sidebar-body" className="card-body">
+				<div id="sidebar-form" className="form-group">
+				    <ul id="sidebar-ul" className="list-group">
 							{
 						this.state.analysis.map((a)=> {
 							return <Options selectAnalysis={this.selectAnalysis} analysis={a} key={a._id} />
@@ -67,12 +67,6 @@ state = {
 					}
 				</ul>
 				  </div>
-					<Link id="view-analysis" to ={{
-							pathname: '/analysis',
-							aboutProps:{
-								data: this.state.target,
-							}
-						}} >Veiw Analysis</Link>
 
 			</div>
 			<div className="card-footer text-muted">

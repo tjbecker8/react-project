@@ -58,3 +58,47 @@
 #unlike-card {
 	margin-bottom: 50px;
 }
+
+#definition-tones {
+	display: none;
+	position: fixed;
+	width: 75vw;
+	padding-top: 75px;
+	padding-left: 100px
+
+}
+
+#definition-tones.active {
+	display:block;
+}
+
+#definition-person {
+	display: none;
+	position: fixed;
+	width: 75vw;
+	padding-top: 75px;
+	left: 150px;
+	z-index: 1 !important;
+}
+
+#definition-person.active {
+	display:block;
+}
+
+#person-body {
+	max-height: 400px;
+	overflow: scroll;
+}
+
+#definition-values {
+	display: none;
+	position: fixed;
+	width: 75vw;
+	padding-top: 75px;
+	left: 150px;
+	z-index: 1 !important;
+}
+
+#definition-values.active {
+	display:block;
+}

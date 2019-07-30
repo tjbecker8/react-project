@@ -103,11 +103,17 @@ class Snapshot extends Component {
 			<div className="col-8">
 				<div id="snapshot" className="card">
 					<div id="header" className="card-header">
-						<h5 className="card-title">Snapshot</h5>
+						<h5 className="card-title">Welcome "user"</h5>
 					</div>
 					<div className="card-body">
-						<h5 className="card-title">Special title treatment</h5>
-						<p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
+						<h4 className="">With {this.state.word_total} word analysised</h4>
+						<h5>Your top used words are:</h5>
+						<h5>The majority of your conversations have a tone of:</h5>
+						<h5>Your top influnce is:</h5>
+						<h5>Your top personality trait is:</h5>
+
+
 					</div>
 					<div className="card-footer ">
 						<span id="new-analyis" className="btn btn-primary">

@@ -20,12 +20,12 @@ componentWillMount() {
 }
 
 changeClass = () => {
-  var element = document.getElementById("definition");
+  var element = document.getElementById("definition-values");
   element.classList.add("active");
 }
 
 removeClass = () => {
-  var element = document.getElementById("definition");
+  var element = document.getElementById("definition-values");
   element.classList.remove("active");
 }
 
@@ -35,17 +35,18 @@ removeClass = () => {
 		return (
 			<div>
 
-				<div id="definition" className="fixed-top">
+				<div id="definition-values" className="fixed-top">
 					<div className="card text-center">
 						<div className="card-header">
-							personality Definition
+							Values Definition
 						</div>
 						<div className="card-body">
 							<ul>
-								<li>item</li>
-								<li>item</li>
-								<li>item</li>
-								<li>item</li>
+								<li>Self-transcendence: Show concern for the welfare and interests of others.</li>
+								<li>Conservation: Emphasize self-restriction, order, and resistance to change.</li>
+								<li>Hedonism: Seek pleasure and sensuous gratification for themselves.</li>
+								<li>Self-enhancement: Seek personal success for themselves.</li>
+								<li>Open to change: Emphasize independent action, thought, and feeling, as well as a readiness for new experiences.</li>
 							</ul>
 						</div>
 						<div onClick={this.removeClass} className="card-footer">
