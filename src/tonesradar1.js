@@ -17,7 +17,7 @@ state = {
 	//functions
 
 	componentWillMount () {
-		// console.log('props', this.props.document);
+		console.log('props', this.props.document.color);
 		this.state.chart.push(this.props.document.score)
 
 }
@@ -45,7 +45,7 @@ state = {
 				labelPosition={0}
 				/>
 			</div>
-			<div className="card-footer">
+			<div style={{color: this.props.document.color, fontWeight: 600}} className="card-footer tone-foot">
 				{this.props.document.name}
 			</div>
 			</div>

@@ -21,43 +21,50 @@ componentWillMount() {
 		if (a.tone_name === 'Sadness') {
 			this.state.tones.push({name: 'Sadness',
 			id: 1,
-			score: {value: Math.round(a.score * 100), color: '#4776b1'},
+			score: {value: Math.round(a.score * 100), color: '#56aaa9'},
+			color: '#56aaa9',
 		})
 		}
 		if (a.tone_name === 'Anger') {
 			this.state.tones.push({name: 'Angry',
 			id: 2,
-			score: {value: Math.round(a.score * 100), color: '#b82e2f'},
+			score: {value: Math.round(a.score * 100), color: '#b9863a'},
+			color: '#b9863a',
 		})
 		}
 		if (a.tone_name === 'Analytical') {
 			this.state.tones.push({name: 'Analytical',
 			id: 3,
-			score: {value: Math.round(a.score * 100), color: '#418171'},
+			score: {value: Math.round(a.score * 100), color: '#c99594'},
+			color: '#c99594',
 		})
 		}
 		if (a.tone_name === 'Fear') {
 			this.state.tones.push({name: 'Fear',
 			id: 4,
-			score: {value: Math.round(a.score * 100), color: '#222222'},
+			score: {value: Math.round(a.score * 100), color: '#686860'},
+			color: '#686860',
 		})
 		}
 		if (a.tone_name === 'Joy') {
 			this.state.tones.push({name: 'Joy',
 			id: 5,
-			score: {value: Math.round(a.score * 100), color: '#7b3cba'},
+			score: {value: Math.round(a.score * 100), color: '#97ad6a'},
+			color: '#97ad6a',
 		})
 		}
 		if (a.tone_name === 'Confident') {
 			this.state.tones.push({name: 'Confident',
 			id: 6,
-			score: {value: Math.round(a.score * 100), color: '#0000ff'},
+			score: {value: Math.round(a.score * 100), color: '#7d5899'},
+			color: '#7d5899',
 		})
 		}
 		if (a.tone_name === 'Tentative') {
 			this.state.tones.push({name: 'Tenative',
 				id: 7,
-				score: {value: Math.round(a.score * 100), color: '#e0af18'},
+				score: {value: Math.round(a.score * 100), color: '#895789'},
+				color: '#895789',
 			})
 		}
 	})
