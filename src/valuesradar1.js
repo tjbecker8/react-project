@@ -10,7 +10,7 @@ class valuesradar extends Component {
 		dataPolar: {
 			datasets: [
 				{
-					data: [this.props.values[0].percentile * 100, this.props.values[1].percentile * 100, this.props.values[2].percentile * 100, this.props.values[3].percentile * 100, this.props.values[4].percentile * 100],
+					data: [Math.round(this.props.values[0].percentile * 100), Math.round(this.props.values[1].percentile * 100), Math.round(this.props.values[2].percentile * 100), Math.round(this.props.values[3].percentile * 100), Math.round(this.props.values[4].percentile * 100)],
 					backgroundColor: [
 						"rgba(247, 70, 74, 0.5)",
 						"rgba(70, 191, 189, 0.5)",

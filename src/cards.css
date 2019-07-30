@@ -24,6 +24,10 @@
 	padding: 0px;
 }
 
+svg {
+	padding-bottom: 5px;
+}
+
 
 ul {
 	padding-inline-start: none !important;

@@ -37,6 +37,12 @@ state = {
 				totalValue={100}
 				lineWidth={20}
 				animate
+				label
+				labelStyle={{
+					fontSize: '25px',
+					fontFamily: 'sans-serif'
+				}}
+				labelPosition={0}
 				/>
 			</div>
 			<div className="card-footer">

@@ -12,7 +12,7 @@ class Personradar extends Component {
     dataPolar: {
       datasets: [
         {
-          data: [this.props.person[0].percentile * 100, this.props.person[1].percentile * 100, this.props.person[2].percentile * 100, this.props.person[3].percentile * 100, this.props.person[4].percentile * 100],
+          data: [Math.round(this.props.person[0].percentile * 100), Math.round(this.props.person[1].percentile * 100), Math.round(this.props.person[2].percentile * 100), Math.round(this.props.person[3].percentile * 100), Math.round(this.props.person[4].percentile * 100)],
           backgroundColor: [
             "rgba(247, 70, 74, 0.5)",
             "rgba(70, 191, 189, 0.5)",
