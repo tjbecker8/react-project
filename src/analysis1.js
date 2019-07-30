@@ -44,7 +44,9 @@ stateSet = (n, a, c, dt, key, per, tr, val, wc, da ) => {
 
 componentWillMount() {
 
-	axios.get(`http://localhost:4000/full?_id=${this.props.match.params.id}`).then((res)=> {
+	axios.get(`http://localhost:4000/full?_id=${this.props.match.params.id}`, {headers: {
+			Authorization: `Bearer ${localStorage.getItem('token')}`
+		}}).then((res)=> {
 
 		let array = res.data[0].consumption_preferences
 			array.forEach((a) => {
@@ -64,7 +66,7 @@ componentWillMount() {
 
 			this.stateSet(res.data[0].name, res.data[0], res.data[0].consumption_preferences, res.data[0].document_tone.tones, res.data[0].keywords, res.data[0].personality, res.data[0].transcription, res.data[0].values, res.data[0].word_count, moment(res.data[0].date).format('D MMM YY'))
 
-			console.log(this.state.date);
+			// console.log(this.state.date);
 
 	})
 }
