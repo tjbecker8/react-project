@@ -79,3 +79,21 @@ body, html {
 	padding-left: 15px;
 	padding-right: 15px;
 }
+
+#what-head {
+	height: 98px;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#what-body {
+	height: 180px;
+	text-align: center;
+	margin-top: 46px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+#new-analyis {
+	margin-left: 100px;
+}

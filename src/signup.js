@@ -43,7 +43,7 @@ signup =(e) => {
 	render() {
 		return (
 			<div id="form" className="row">
-				<div className="col-sm-4 offset-4">
+				<div className="col-sm-4 offset-2">
 					<div className="card signup">
 						<div className="card-header">
 							<h3>Welcome to Moodylsis</h3>
@@ -71,6 +71,28 @@ signup =(e) => {
 						</div>
 					</div>
 				</div>
+
+				<div className="col-sm-4">
+					<div className="card">
+						<div id="what-head" className="card-header">
+							<h3>What is Moodylsis?</h3>
+						</div>
+						<div id="what-body" className="card-body">
+							<h3>Moodylsis is an audio analyzer that measures the tone, personality, influnces, and values of a converstation.</h3>
+
+						</div>
+
+						<div className="card-footer">
+							<span id="new-analyis" className="btn btn-primary">
+								<Link id="new-analysis-btn" to="/upload" >Try it out</Link>
+							</span>
+						</div>
+
+					</div>
+
+				</div>
+
+
 			</div>
 
 		)
