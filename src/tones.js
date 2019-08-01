@@ -88,7 +88,7 @@ removeClass = () => {
 			<div id="definition-tones" className="fixed-top">
 				<div className="card text-center">
 					<div className="card-header">
-						Tones Definition
+						<h3>Tones Definition</h3>
 					</div>
 					<div className="card-body">
 						<ul>
@@ -108,7 +108,7 @@ removeClass = () => {
 
 			<div className="card text-center">
 				<div className="card-header">
-					Tones
+					<h3>Tones</h3>
 				</div>
 				<div className="card-body">
 					<div className="row">

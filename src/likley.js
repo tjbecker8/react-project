@@ -36,7 +36,7 @@ state = {
 
 		<div id="like-card" className="card text-center">
 			<div className="card-header">
-    		Likley to:
+    		<h3>Likley to:</h3>
   		</div>
 			<div className="card-body">
 				<ul className="like-unlike">

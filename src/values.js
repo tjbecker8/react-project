@@ -38,7 +38,7 @@ removeClass = () => {
 				<div id="definition-values" className="fixed-top">
 					<div className="card text-center">
 						<div className="card-header">
-							Values Definition
+							<h3>Values Definition</h3>
 						</div>
 						<div className="card-body">
 							<ul>
@@ -57,7 +57,7 @@ removeClass = () => {
 
 			<div className="card text-center">
 				<div className="card-header">
-					Values
+					<h3>Values</h3>
 				</div>
 				<div className="card-body">
 				<Valuesradar values={this.props.values} />

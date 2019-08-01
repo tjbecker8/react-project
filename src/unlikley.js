@@ -39,7 +39,7 @@ removeClass = () => {
 	<div id="definition-like" className="fixed-top">
 		<div className="card">
 			<div className="card-header">
-				All Influences
+				<h3>All Influences</h3>
 			</div>
 			<div id="like-body" className="card-body">
 				<ul className="like-unlike">
@@ -70,7 +70,7 @@ removeClass = () => {
 	<div>
 		<div id="unlike-card" className="card text-center">
 			<div className="card-header">
-    		Unlikley to:
+    		<h3>Unlikley to:</h3>
   		</div>
 			<div className="card-body">
 				<ul className="like-unlike">

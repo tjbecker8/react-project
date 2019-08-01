@@ -39,7 +39,7 @@ removeClass = () => {
 				<div id="definition-person" className="fixed-top">
 					<div className="card text-center">
 						<div className="card-header">
-							Personality Definition
+							<h3>Personality Definition</h3>
 						</div>
 						<div id="person-body" className="card-body">
 							<ul>
@@ -80,7 +80,7 @@ removeClass = () => {
 
 			<div className="card text-center">
 				<div className="card-header">
-					Personality
+					<h3>Personality</h3>
 				</div>
 				<div className="card-body">
 					<Personradar person={this.props.personality} />

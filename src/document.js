@@ -15,9 +15,9 @@ class Document extends Component {
 			<div>
 				<div id="document-card" className="card">
 					<div className="card-header">
-						Document Information
+						<h3>Analysis Information</h3>
 					</div>
-					<div className="card-body">
+					<div id="doc-card-body" className="card-body">
 						<h6>name: {this.props.name} words</h6>
 						<h6>word count: {this.props.wordCount}</h6>
 						<h6>created on: {this.props.date}</h6>

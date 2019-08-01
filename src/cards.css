@@ -58,6 +58,7 @@ width: 100% !important;
 
 #unlike-card {
 	margin-bottom: 50px;
+	margin-top: 15px;
 }
 
 #definition-tones {
@@ -149,10 +150,15 @@ canvas {
 
 #keywords-li {
 	padding: 10px;
-	background: red;
+
 	margin-right: 35px;
 	margin-left: 35px;
 	border-radius: 5px;
 	margin-top: 10px;
 	color: white;
+}
+
+#doc-card-body {
+	margin-left: 15px;
+	margin-top: 15px;
 }
