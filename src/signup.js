@@ -45,18 +45,23 @@ signup =(e) => {
 			<div id="form" className="row">
 				<div className="col-sm-4 offset-4">
 					<div className="card signup">
+						<div className="card-header">
+							<h3>Welcome to Moodylsis</h3>
+							<h5>Signup</h5>
+						</div>
 						<div className="card-body">
+
 							<form onSubmit={(e)=> this.signup(e)}>
-								<div className="form-group">
+								<div id="signup-name" className="form-group">
 									<input type="text" className="form-control" placeholder="name" value={this.state.name} onChange={(e)=> this.changeName(e)}/>
 								</div>
-								<div className="form-group">
+								<div id="signup-email" className="form-group">
 									<input type="email" className="form-control" placeholder="email" value={this.state.email} onChange={(e) => this.changeEmail(e)}/>
 								</div>
-								<div className="form-group">
+								<div id="signup-pass" className="form-group">
 									<input type="password" className="form-control" placeholder="password" value={this.state.password} onChange={(e) => this.changePassword(e)}/>
 								</div>
-								<button type="submit" className="btn btn-primary">Signup</button>
+								<button id="button" type="submit" className="btn btn-primary">Signup</button>
 							</form>
 							<div className="card-footer">
 								<span id="registration" className="input-group-btn">

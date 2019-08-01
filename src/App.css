@@ -36,6 +36,7 @@ body, html {
 #button.btn-primary {
 	background-color: #136a8a !important;
 	border-color: #136a8a !important;
+	margin-left: 15px;
 }
 
 #button.btn-primary:hover {
@@ -44,9 +45,37 @@ body, html {
 }
 
 
+#email-login {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
 
+#pass-login {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
 
 #registration {
 	padding: 5px;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: white !important;
+}
+
+#signup-name {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#signup-email {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#signup-pass {
+	padding-top: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }

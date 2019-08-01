@@ -4,7 +4,7 @@ import './analysis.css';
 import "mdbreact/dist/css/mdb.css";
 import moment from 'moment'
 import Personresults from './personresults'
-import Bottomnav from './bottomnav'
+
 // import Consumerneeds from './consumerneeds'
 import Values from './values'
 import Likley from './likley'

@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
-import Bottomnav from './bottomnav'
+
 import Topnav from './topnav'
 import Content from './content'
 
