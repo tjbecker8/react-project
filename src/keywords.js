@@ -16,16 +16,16 @@ componentWillMount() {
 	<div>
 		<div className="card text-center">
 			<div className="card-header">
-    		Keywords:
+    		<h3>Keywords:</h3>
   		</div>
 			<div className="card-body">
-				<ul className="keywords">
+				<div className="keywords">
 			{
 				this.props.keywords.map((k)=>{
 					return <Keylist word={k} />
 				})
 			}
-			</ul>
+		</div>
 			</div>
 		</div>
 	</div>

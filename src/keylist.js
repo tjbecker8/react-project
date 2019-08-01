@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import './cards.css';
 
 
 class Keylist extends Component {
@@ -12,7 +12,7 @@ class Keylist extends Component {
 	render() {
 		return (
 
-		<li className="keywords">-  {this.props.word}  -</li>
+		<h5 id="keywords-li" className="keywords">{this.props.word}</h5>
 
 
 		)

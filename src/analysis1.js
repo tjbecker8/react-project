@@ -14,6 +14,7 @@ import Tones from './tones'
 import Document from './document'
 import Transcript from './transcript'
 import axios from 'axios'
+import Topnav from './topnav'
 
 
 class Analysis extends Component {
@@ -115,9 +116,7 @@ render() {
 				</div>
 			</div>
 
-				<nav id="nav-top-analysis" className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-					<h2>Moodylsis</h2>
-					</nav>
+				<Topnav />
 
 		<div id="new-layout">
 			<div id="main" className="row">
