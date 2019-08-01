@@ -9,6 +9,7 @@ class Content extends Component {
 	//data
 state = {
 	analysis: [],
+	calc: {},
 
 }
 	//functions
@@ -16,9 +17,9 @@ state = {
 			axios.get('http://localhost:4000/api/analysis', {headers: {
 					Authorization: `Bearer ${localStorage.getItem('token')}`
 				}}).then((res)=> {
-
 				this.setState({
-					analysis: res.data
+					analysis: res.data.data,
+					calc: res.data.clac
 				})
 			}).catch((err)=> {
 				console.log('err', err);
@@ -36,11 +37,10 @@ state = {
 	//render
 	render() {
 
-
 		return (
 			<div id="content" className="row">
 				<Snapshot analysis={this.state.analysis} />
-				<Sidebar analysis={this.state.analysis} />
+				<Sidebar calc={this.state.calc} />
 		</div>
 		)
 	}
