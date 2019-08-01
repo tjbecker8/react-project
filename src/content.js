@@ -17,6 +17,7 @@ state = {
 			axios.get('http://localhost:4000/api/analysis', {headers: {
 					Authorization: `Bearer ${localStorage.getItem('token')}`
 				}}).then((res)=> {
+					// console.log('calc',res.data.calc);
 				this.setState({
 					analysis: res.data.data,
 					calc: res.data.calc,

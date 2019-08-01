@@ -8,7 +8,15 @@ import './snapshot.css';
 class Snapshot extends Component {
 	//data
 	state = {
-		calc: {}
+		calc: {},
+		name: '',
+		size: null,
+		keyword: '',
+		mostLike: '',
+		mostPersonality: '',
+		mostUnlike: '',
+		tone: '',
+		wordTotal: null,
 	}
 	//functions
 
@@ -18,6 +26,13 @@ class Snapshot extends Component {
 			calc: props.calc,
 			name: props.calc.author.name,
 			size: props.calc.size,
+			keyword: props.calc.keyword,
+			mostLike: props.calc.mostLike,
+			mostPersonality: props.calc.mostPersonality,
+			mostUnlike: props.calc.mostUnlike,
+			tone: props.calc.tone,
+			wordTotal: props.calc.wordTotal
+
 		})
 	}
 
@@ -30,18 +45,18 @@ class Snapshot extends Component {
 			<div className="col-8">
 				<div id="snapshot" className="card">
 					<div id="header" className="card-header">
-						<h2 className="card-title">Welcome </h2>
+						<h2 className="card-title">Welcome {this.state.name} </h2>
 					</div>
 					<div id="snap-body" className="card-body">
-						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
-						<h4 className="">With {this.state.word_total} word analysised</h4>
-						<h5>Your top used word is: {this.state.keywords_flat}</h5>
-						<h5>Your top used tone is: {this.state.tone_most}</h5>
-						<h5>Your top personality trait is: {this.state.personality_most}</h5>
+						<h3 className="">You have completed {this.state.size} analysis</h3>
+						<h4 className="">With {this.state.wordTotal} word analysised</h4>
+						<h5>Your top used word is: {this.state.keyword}</h5>
+						<h5>Your top used tone is: {this.state.tone}</h5>
+						<h5>Your top personality trait is: {this.state.mostPersonality}</h5>
 						<h5>Your top influnces is:
 							<ul>
-								<li>{this.state.like_total}</li>
-								<li>Un{this.state.unlike_total}</li>
+								<li>{this.state.mostLike}</li>
+								<li>Un{this.state.mostUnlike}</li>
 							</ul>
 						</h5>
 
