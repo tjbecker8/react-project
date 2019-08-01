@@ -1,10 +1,33 @@
 #alert {
 	position: fixed;
-	top: 125px;
+	top: 75px;
 	left: 200px;
 	z-index: 1;
-	color: red;
 	display: none;
+}
+
+#wait-body {
+	text-align: center;
+	font-size: 200px;
+}
+
+#wait-foot {
+	text-align: center;
+}
+
+#fin-body {
+	text-align: center;
+	font-size: 100px;
+}
+
+.spin {
+  animation: spin_7968 1.5s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes spin_7968 {
+  0% { transform:rotate(0deg) }
+  100% { transform:rotate(359deg) }
 }
 
 #alert.active {

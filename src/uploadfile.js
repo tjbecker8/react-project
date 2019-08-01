@@ -6,6 +6,9 @@ import axios from 'axios';
 
 import Topnav from './topnav'
 import {Link} from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSync, faCheckSquare } from '@fortawesome/free-solid-svg-icons'
+
 class Upload extends Component {
 //state
 
@@ -91,25 +94,36 @@ createNew = (e, text, file) => {
 				<div>
 					<Topnav />
 
-					<div id="alert" className="card">
-						<div className="card-body">
+					<div id="alert" className="card ">
+						<div className="card-header">
 							<h4>Please wait while your analysis is being completed.</h4>
-							<small> Or you can go back to the home page and your analysis will be added to your dashboard when complete</small>
+						</div>
+						<div id="wait-body" className="card-body">
+							<FontAwesomeIcon className="spin" icon={faSync} />
+						</div>
+						<div id="wait-foot" className="card-footer">
+							<h5>This may take several minutes</h5>
 						</div>
 					</div>
 
 					<div id="finish" className="card ">
-						<div className="card-body">
+						<div className="card-header">
 							<h4 id="h4-fin">Your analysis is complete!</h4>
-							<span id="see-analysis">
-							<Link to ={{
-									pathname: `/analysis/${this.state.id}`,
-									aboutProps:{
-										id: this.state.id,
-									}
-								}} >See Analysis</Link>
-								</span>
 						</div>
+						<div id="fin-body" className="card-body">
+							<FontAwesomeIcon icon={faCheckSquare} />
+
+						</div>
+						<div className="card-footer">
+						<span id="see-analysis">
+						<Link to ={{
+								pathname: `/analysis/${this.state.id}`,
+								aboutProps:{
+									id: this.state.id,
+								}
+							}} >See Analysis</Link>
+							</span>
+							</div>
 					</div>
 
 				<div id="upload-row" className="row">
