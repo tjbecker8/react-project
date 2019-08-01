@@ -10,13 +10,13 @@ class Snapshot extends Component {
 	state = {
 		calc: {},
 		name: '',
-		size: null,
+		size: 0,
 		keyword: '',
 		mostLike: '',
 		mostPersonality: '',
 		mostUnlike: '',
 		tone: '',
-		wordTotal: null,
+		wordTotal: 0,
 	}
 	//functions
 
@@ -24,14 +24,14 @@ class Snapshot extends Component {
 		console.log('props', props.calc);
 		this.setState({
 			calc: props.calc,
-			name: props.calc.author.name,
-			size: props.calc.size,
-			keyword: props.calc.keyword,
-			mostLike: props.calc.mostLike,
-			mostPersonality: props.calc.mostPersonality,
-			mostUnlike: props.calc.mostUnlike,
-			tone: props.calc.tone,
-			wordTotal: props.calc.wordTotal
+			// name: props.calc.author.name,
+			// size: props.calc.size,
+			// keyword: props.calc.keyword,
+			// mostLike: props.calc.mostLike,
+			// mostPersonality: props.calc.mostPersonality,
+			// mostUnlike: props.calc.mostUnlike,
+			// tone: props.calc.tone,
+			// wordTotal: props.calc.wordTotal
 
 		})
 	}
@@ -53,7 +53,7 @@ class Snapshot extends Component {
 						<h5>Your top used word is: {this.state.keyword}</h5>
 						<h5>Your top used tone is: {this.state.tone}</h5>
 						<h5>Your top personality trait is: {this.state.mostPersonality}</h5>
-						<h5>Your top influnces is:
+						<h5>Your top influnces are:
 							<ul>
 								<li>{this.state.mostLike}</li>
 								<li>Un{this.state.mostUnlike}</li>
@@ -62,7 +62,7 @@ class Snapshot extends Component {
 
 
 					</div>
-					<div className="card-footer ">
+					<div id="snap-foot" className="card-footer ">
 						<span id="new-analyis" className="btn btn-primary">
 							<Link id="new-analysis-btn" to="/upload" >Start New Analysis</Link>
 						</span>

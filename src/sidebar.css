@@ -46,3 +46,7 @@ li.active {
 h2.card-title {
 	margin: 0;
 }
+
+#side-foot:hover {
+	cursor: default !important;
+}

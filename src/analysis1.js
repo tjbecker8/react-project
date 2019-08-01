@@ -74,7 +74,6 @@ componentWillMount() {
 
 			this.stateSet(res.data.name, res.data, res.data.consumption_preferences, res.data.document_tone.tones, res.data.keywords, res.data.personality, res.data.transcription, res.data.values, res.data.word_count, moment(res.data.date).format('D MMM YY'))
 	})
-
 this.removeFile()
 }
 
