@@ -55,7 +55,7 @@ state = {
 			<div className="col-4">
 		<div id="sidebar" className="card">
 			<div id="header" className="card-header">
-				<h5 className="card-title">Previous Analysis</h5>
+				<h2 className="card-title">Previous Analysis</h2>
 			</div>
 			<div id="sidebar-body" className="card-body">
 				<div id="sidebar-form" className="form-group">

@@ -222,9 +222,9 @@ findMostUnlike = (array) => {
 			<div className="col-8">
 				<div id="snapshot" className="card">
 					<div id="header" className="card-header">
-						<h5 className="card-title">Welcome "user"</h5>
+						<h2 className="card-title">Welcome "user"</h2>
 					</div>
-					<div className="card-body">
+					<div id="snap-body" className="card-body">
 						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
 						<h4 className="">With {this.state.word_total} word analysised</h4>
 						<h5>Your top used word is: {this.state.keywords_flat}</h5>
@@ -241,7 +241,7 @@ findMostUnlike = (array) => {
 					</div>
 					<div className="card-footer ">
 						<span id="new-analyis" className="btn btn-primary">
-							<Link to="/upload" >New Analysis</Link>
+							<Link id="new-analysis-btn" to="/upload" >Start New Analysis</Link>
 						</span>
 					</div>
 				</div>

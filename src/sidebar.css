@@ -42,3 +42,7 @@ li.active {
 #view-analysis a {
 	color: black !important;
 }
+
+h2.card-title {
+	margin: 0;
+}
