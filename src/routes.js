@@ -20,12 +20,20 @@ checkAuth= () => {
 	} else {
 		return false
 	}
-	// if (this.state.loggedIn) {
-	// 	return true
-	// } else {
-	// 	return false
-	// }
 }
+
+checkTrial= () => {
+	if (localStorage.getItem('token')) {
+		return true
+	}
+	if (localStorage.getItem('trial')) {
+		return true
+	} else {
+		return false
+	}
+}
+
+
 
 auth = () => {
 	this.setState({
@@ -52,7 +60,7 @@ auth = () => {
 					<Route path="/indepth" component={Indepth} />
 
 						{
-							this.checkAuth() &&
+							this.checkTrial() &&
 						<Route path="/upload" component={Upload} />
 						}
 

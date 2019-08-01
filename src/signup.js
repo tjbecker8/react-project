@@ -38,6 +38,16 @@ signup =(e) => {
 	})
 }
 
+setTrial = (e) => {
+	if (localStorage.getItem('trial')) {
+		alert('sorry, you have already used your free trial, please sign up to continue')
+	}
+	else {
+		localStorage.setItem('trial', 'you get one free trial')
+		window.location = '/upload'
+	}
+}
+
 
 	//render
 	render() {
@@ -83,8 +93,8 @@ signup =(e) => {
 						</div>
 
 						<div className="card-footer">
-							<span id="new-analyis" className="btn btn-primary">
-								<Link id="new-analysis-btn" to="/upload" >Try it out</Link>
+							<span onClick={this.setTrial} id="new-analyis" className="btn btn-primary">
+								Try it out
 							</span>
 						</div>
 
