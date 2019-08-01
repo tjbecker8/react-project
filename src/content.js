@@ -19,7 +19,7 @@ state = {
 				}}).then((res)=> {
 				this.setState({
 					analysis: res.data.data,
-					calc: res.data.clac
+					calc: res.data.calc,
 				})
 			}).catch((err)=> {
 				console.log('err', err);
@@ -36,11 +36,10 @@ state = {
 
 	//render
 	render() {
-
 		return (
 			<div id="content" className="row">
-				<Snapshot analysis={this.state.analysis} />
-				<Sidebar calc={this.state.calc} />
+				<Snapshot calc={this.state.calc} />
+				<Sidebar analysis={this.state.analysis} />
 		</div>
 		)
 	}

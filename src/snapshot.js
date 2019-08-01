@@ -13,10 +13,12 @@ class Snapshot extends Component {
 	//functions
 
 	componentWillReceiveProps(props) {
+		console.log('props', props.calc);
 		this.setState({
-			calc: this.props.calc
+			calc: props.calc,
+			name: props.calc.author.name,
+			size: props.calc.size,
 		})
-		console.log('state',this.state);
 	}
 
 
@@ -24,12 +26,11 @@ class Snapshot extends Component {
 
 	//render
 	render() {
-		console.log(this.state);
 		return (
 			<div className="col-8">
 				<div id="snapshot" className="card">
 					<div id="header" className="card-header">
-						<h2 className="card-title">Welcome "user"</h2>
+						<h2 className="card-title">Welcome </h2>
 					</div>
 					<div id="snap-body" className="card-body">
 						<h3 className="">You have completed {this.state.total_analysis} analysis</h3>
