@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 import './upload.css';
 import axios from 'axios';
-import Bottomnav from './bottomnav'
+
 import Topnav from './topnav'
 import {Link} from 'react-router-dom'
 class Upload extends Component {
@@ -120,7 +120,7 @@ createNew = (e, text, file) => {
 
 
 						<div className="card-header">
-							Upload file
+							<h3>Upload file</h3>
 						</div>
 						<div id="upload-file">
 							<form onSubmit={(e) => {this.createNew(e, this.state.text, this.state.file); this.clearMessage(); this.changeClass()}} className="md-form" >
@@ -137,22 +137,22 @@ createNew = (e, text, file) => {
 						<div className="col-4">
 							<div className="card">
 								<div className="card-header">
-									Notice!
+									<h3>Notice!</h3>
 								</div>
-								<div className="card-body">
-									<h6>All audio files must be single/mono channel, 16 bit, 16000 hertz.</h6>
+								<div id="notice-card-body" className="card-body">
+									<h6>All audio files must be single/mono channel, 16 bit, 16000 hertz, and less than 60 minutes.</h6>
 									<p>Use link below to convert your files first</p>
 								</div>
 								<div className="card-footer">
 									<span id="convert-files">
-										<a href="https://audio.online-convert.com/convert-to-wav" target="_blank" rel="noopener noreferrer">Convert Files</a>
+										<a id="convert-link" href="https://audio.online-convert.com/convert-to-wav" target="_blank" rel="noopener noreferrer">Convert Files</a>
 									</span>
 							</div>
 							</div>
 						</div>
 						<div className="col-4"></div>
 					</div>
-					<Bottomnav />
+
 					</div>
 			)
 		}
