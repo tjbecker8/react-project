@@ -41,7 +41,13 @@ stateSet = (n, a, c, dt, key, per, tr, val, wc, da ) => {
 	this.setState({name: n, analysis: a, consumption_preferences: c, document_tone: dt, keywords: key, personality: per, transcription: tr, values: val, word_count: wc, date: da })
 }
 
-
+removeFile = () => {
+	if (localStorage.getItem('trial')) {
+		axios.delete(`http://localhost:4000/api/delete`, {
+			params: {author: "5d42c96d62aebe3275ce391d"}
+		})
+	}
+}
 
 
 componentWillMount() {
@@ -67,10 +73,9 @@ componentWillMount() {
 						})
 
 			this.stateSet(res.data.name, res.data, res.data.consumption_preferences, res.data.document_tone.tones, res.data.keywords, res.data.personality, res.data.transcription, res.data.values, res.data.word_count, moment(res.data.date).format('D MMM YY'))
-
-			// console.log(this.state.date);
-
 	})
+
+this.removeFile()
 }
 
 

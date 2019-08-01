@@ -53,7 +53,7 @@ auth = () => {
 					}
 
 					{
-						this.checkAuth() &&
+						this.checkTrial() &&
 					<Route path="/analysis/:id" component={Analysis} />
 					}
 
