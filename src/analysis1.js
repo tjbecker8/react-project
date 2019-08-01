@@ -92,6 +92,7 @@ removeClass = () => {
 //render
 
 render() {
+
 	if(!this.state.word_count > 0){
            // Just wait for the memory to be available
            return null;

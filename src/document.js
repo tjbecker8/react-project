@@ -18,10 +18,12 @@ class Document extends Component {
 						<h3>Analysis Information</h3>
 					</div>
 					<div id="doc-card-body" className="card-body">
-						<h6>name: {this.props.name} words</h6>
-						<h6>word count: {this.props.wordCount}</h6>
-						<h6>created on: {this.props.date}</h6>
-						<h6 className="transcript-title" onClick={this.props.click}>Veiw Transcript</h6>
+						<h4>Name: {this.props.name}</h4>
+						<h4>Word Count: {this.props.wordCount} words</h4>
+						<h4>Created On: {this.props.createdOn}</h4>
+					</div>
+					<div className="card-footer" onClick={this.props.click}>
+						Veiw Transcript
 					</div>
 				</div>
 			</div>
