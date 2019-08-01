@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import './navbar.css';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 class Topnav extends Component {
@@ -11,6 +12,7 @@ class Topnav extends Component {
 	logout= (e) => {
 			console.log('hello');
 			localStorage.removeItem('token')
+			window.location = '/login'
 	 }
 
 	//render
@@ -20,8 +22,9 @@ class Topnav extends Component {
 			<span className="input-group-btn">
 				<Link id="home-topnav" to="/app" >Moodlysis</Link>
 			</span>
-			<span onClick={this.logout} className="input-group-btn">
-				<Link to="/login" >Logout</Link>
+			<span id="logout" onClick={this.logout} >
+				<FontAwesomeIcon icon={faSignOutAlt} />
+				Signout
 			</span>
 		</nav>
 		)

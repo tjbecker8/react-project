@@ -19,3 +19,11 @@
 	font-size: 30px;
 	font-weight: 600;
 }
+
+#logout {
+	font-size: 30px;
+}
+
+#logout:hover {
+	cursor: pointer;
+}
