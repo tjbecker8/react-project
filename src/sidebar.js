@@ -43,10 +43,23 @@ state = {
 			}
 
 
-	getAnalysis = () => {
 
+	search =() => {
+	    var input, filter, ul, li, a, i, txtValue;
+	    input = document.getElementById("myInput");
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("sidebar-ul");
+	    li = ul.getElementsByTagName("li");
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        txtValue = a.textContent || a.innerText;
+	        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
 	}
-
 
 
 	//render
@@ -59,6 +72,7 @@ state = {
 			</div>
 			<div id="sidebar-body" className="card-body">
 				<div id="sidebar-form" className="form-group">
+
 				    <ul id="sidebar-ul" className="list-group">
 							{
 						this.state.analysis.map((a)=> {
@@ -70,10 +84,7 @@ state = {
 
 			</div>
 			<div className="card-footer text-muted">
-				<form className="form-inline">
-					<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-					<button id="button-search" className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>
+
 	  	</div>
 		</div>
 	</div>
