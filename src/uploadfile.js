@@ -59,11 +59,11 @@ removeTimer = () => {
 
 time = (analysisid) => {
 	setInterval( () => {
-	axios.get(`${process.env.REACT_APP_API}/full/${analysisid}`, {headers: {
+	axios.get(`${process.env.REACT_APP_API}full/${analysisid}`, {headers: {
 			Authorization: `Bearer ${localStorage.getItem('token')}`
 		}}).then((res)=> {
 			if (res.data.name) {
-				console.log('hello')
+				// console.log('hello')
 				this.removeClass()
 				this.setState({
 					data: res.data,
@@ -76,21 +76,17 @@ time = (analysisid) => {
 	}
 
 
-// setRedirect = () => {
-// 	this.setState((prevState) => ({
-// 		redirect: !prevState.redirect
-// 	}))
-// }
+
 
 checkForAnalysis = (analysisid) => {
 	console.log('set timout working');
 	console.log('id', analysisid);
-	axios.get(`${process.env.REACT_APP_API}/full/${analysisid}`, {headers: {
+	axios.get(`${process.env.REACT_APP_API}full/${analysisid}`, {headers: {
 			Authorization: `Bearer ${localStorage.getItem('token')}`
 		}}).then((res)=> {
 			console.log('res', res.data);
 			if (res.data.name) {
-				console.log('hello')
+				// console.log('hello')
 				this.removeClass()
 				this.setState({
 					data: res.data,
@@ -111,10 +107,10 @@ createNew = (e, text, file) => {
 		let file_holder = new FormData()
 		file_holder.append('file', file)
 		file_holder.append('name', text)
-		axios.post(`${process.env.REACT_APP_API}/full`, file_holder, {headers: {
+		axios.post(`${process.env.REACT_APP_API}full`, file_holder, {headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}}).then((res) => {
-			console.log('data', res.data);
+			// console.log('data', res.data);
 
 
 		this.time(res.data._id)

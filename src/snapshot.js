@@ -21,7 +21,7 @@ class Snapshot extends Component {
 	//functions
 
 	componentWillReceiveProps(props) {
-		console.log('props', props.calc);
+
 		if (props.calc) {
 		this.setState({
 			calc: props.calc,
@@ -35,8 +35,6 @@ class Snapshot extends Component {
 			wordTotal: props.calc.wordTotal
 
 		})
-	}else {
-		console.log('double fuck');
 	}
 	}
 
