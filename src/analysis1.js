@@ -52,7 +52,7 @@ removeFile = () => {
 
 componentWillMount() {
 
-	axios.get(`${process.env.REACT_APP_API}/full/${this.props.match.params.id}`, {headers: {
+	axios.get(`${process.env.REACT_APP_API}full/${this.props.match.params.id}`, {headers: {
 			Authorization: `Bearer ${localStorage.getItem('token')}`
 		}}).then((res)=> {
 			// console.log(res.data);

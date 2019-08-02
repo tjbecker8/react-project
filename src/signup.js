@@ -29,7 +29,7 @@ changePassword = (e) => {
 
 signup =(e) => {
 	e.preventDefault()
-	axios.post(`${process.env.REACT_APP_API}/api/signup`, this.state).then((res) => {
+	axios.post(`${process.env.REACT_APP_API}api/signup`, this.state).then((res) => {
 		console.log('res',res)
 		localStorage.setItem('token', res.data.token)
 		this.props.auth()
