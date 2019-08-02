@@ -4,10 +4,14 @@ import './cards.css';
 
 class Keywords extends Component {
 	//data
-
+state = {
+	keywords: []
+}
 	//functions
-componentWillMount() {
-	// console.log('keys',this.props.keywords);
+componentWillReceiveProps(props) {
+	this.setState({
+		keywords: props.keywords
+	})
 }
 
 	//render
@@ -21,7 +25,7 @@ componentWillMount() {
 			<div className="card-body">
 				<div className="keywords">
 			{
-				this.props.keywords.map((k)=>{
+				this.state.keywords.map((k)=>{
 					return <Keylist word={k} />
 				})
 			}
