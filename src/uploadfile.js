@@ -53,7 +53,27 @@ changeFinish = () => {
   element.classList.add("active");
 }
 
+removeTimer = () => {
+	clearInterval(this.time)
+}
 
+time = (analysisid) => {
+	setInterval( () => {
+	axios.get(`${process.env.REACT_APP_API}/full/${analysisid}`, {headers: {
+			Authorization: `Bearer ${localStorage.getItem('token')}`
+		}}).then((res)=> {
+			if (res.data.name) {
+				console.log('hello')
+				this.removeClass()
+				this.setState({
+					data: res.data,
+					id: res.data._id
+				})
+				this.changeFinish()
+				this.removeTimer()
+			}
+		})}, 45000)
+	}
 
 
 // setRedirect = () => {
@@ -97,26 +117,7 @@ createNew = (e, text, file) => {
 			console.log('data', res.data);
 
 
-			setInterval( () => {
-				alert('45 seconds')
-			console.log('set timout working');
-			console.log('id', res.data._id);
-			axios.get(`${process.env.REACT_APP_API}/full/${res.data._id}`, {headers: {
-					Authorization: `Bearer ${localStorage.getItem('token')}`
-				}}).then((res)=> {
-					console.log('res', res.data);
-					if (res.data.name) {
-						console.log('hello')
-						this.removeClass()
-						this.setState({
-							data: res.data,
-							id: res.data._id
-						})
-						this.changeFinish()
-						console.log('what we need',this.state.data._id);
-						console.log('other stuff', this.state.id);
-					}
-				})}, 45000)
+		this.time(res.data._id)
 
 
 		}).catch((err) => {
