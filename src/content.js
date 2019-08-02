@@ -14,7 +14,7 @@ state = {
 }
 	//functions
 	componentWillMount() {
-			axios.get('http://localhost:4000/api/analysis', {headers: {
+			axios.get(`${process.env.REACT_APP_API}/api/analysis`, {headers: {
 					Authorization: `Bearer ${localStorage.getItem('token')}`
 				}}).then((res)=> {
 					// console.log('calc',res.data.calc);

@@ -62,9 +62,31 @@ changeFinish = () => {
 // 	}))
 // }
 
+checkForAnalysis = (analysisid) => {
+	console.log('set timout working');
+	console.log('id', analysisid);
+	axios.get(`${process.env.REACT_APP_API}/full/${analysisid}`, {headers: {
+			Authorization: `Bearer ${localStorage.getItem('token')}`
+		}}).then((res)=> {
+			console.log('res', res.data);
+			if (res.data.name) {
+				console.log('hello')
+				this.removeClass()
+				this.setState({
+					data: res.data,
+					id: res.data._id
+				})
+				this.changeFinish()
+				console.log('what we need',this.state.data._id);
+				console.log('other stuff', this.state.id);
+			}
+		})
+}
+
 
 
 createNew = (e, text, file) => {
+	console.log('createNew');
 		e.preventDefault()
 		let file_holder = new FormData()
 		file_holder.append('file', file)
@@ -72,15 +94,31 @@ createNew = (e, text, file) => {
 		axios.post(`${process.env.REACT_APP_API}/full`, file_holder, {headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}}).then((res) => {
-			this.removeClass()
 			console.log('data', res.data);
-				this.setState({
-					data: res.data,
-					id: res.data._id
-				})
-				console.log('what we need',this.state.data._id);
-				console.log('other stuff', this.state.id);
-				this.changeFinish()
+
+
+			setInterval( () => {
+				alert('45 seconds')
+			console.log('set timout working');
+			console.log('id', res.data._id);
+			axios.get(`${process.env.REACT_APP_API}/full/${res.data._id}`, {headers: {
+					Authorization: `Bearer ${localStorage.getItem('token')}`
+				}}).then((res)=> {
+					console.log('res', res.data);
+					if (res.data.name) {
+						console.log('hello')
+						this.removeClass()
+						this.setState({
+							data: res.data,
+							id: res.data._id
+						})
+						this.changeFinish()
+						console.log('what we need',this.state.data._id);
+						console.log('other stuff', this.state.id);
+					}
+				})}, 45000)
+
+
 		}).catch((err) => {
 			console.log('err', err)
 		})

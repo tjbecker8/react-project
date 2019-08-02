@@ -43,7 +43,7 @@ stateSet = (n, a, c, dt, key, per, tr, val, wc, da ) => {
 
 removeFile = () => {
 	if (localStorage.getItem('trial')) {
-		axios.delete(`http://localhost:4000/api/delete`, {
+		axios.delete(`${process.env.REACT_APP_API}/api/delete`, {
 			params: {author: "5d42c96d62aebe3275ce391d"}
 		})
 	}
@@ -52,7 +52,7 @@ removeFile = () => {
 
 componentWillMount() {
 
-	axios.get(`http://localhost:4000/full/${this.props.match.params.id}`, {headers: {
+	axios.get(`${process.env.REACT_APP_API}/full/${this.props.match.params.id}`, {headers: {
 			Authorization: `Bearer ${localStorage.getItem('token')}`
 		}}).then((res)=> {
 			// console.log(res.data);
