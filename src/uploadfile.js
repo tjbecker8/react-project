@@ -73,7 +73,7 @@ createNew = (e, text, file) => {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}}).then((res) => {
 			this.removeClass()
-				console.log('res',res.data);
+			console.log('data', res.data);
 				this.setState({
 					data: res.data,
 					id: res.data._id

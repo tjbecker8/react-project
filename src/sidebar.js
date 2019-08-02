@@ -32,11 +32,14 @@ state = {
 
 
 		componentWillReceiveProps(props) {
-			console.log('sidebar', props);
-			if (props > 0) {
+			console.log('sidebar', props.analysis);
+			if (props.analysis) {
 			this.setState({
 				analysis: props.analysis
 			})
+		}
+		else {
+			console.log('fuck');
 		}
 	}
 

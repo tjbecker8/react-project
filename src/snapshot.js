@@ -22,18 +22,22 @@ class Snapshot extends Component {
 
 	componentWillReceiveProps(props) {
 		console.log('props', props.calc);
+		if (props.calc) {
 		this.setState({
 			calc: props.calc,
-			// name: props.calc.author.name,
-			// size: props.calc.size,
-			// keyword: props.calc.keyword,
-			// mostLike: props.calc.mostLike,
-			// mostPersonality: props.calc.mostPersonality,
-			// mostUnlike: props.calc.mostUnlike,
-			// tone: props.calc.tone,
-			// wordTotal: props.calc.wordTotal
+			name: props.calc.author.name,
+			size: props.calc.size,
+			keyword: props.calc.keyword,
+			mostLike: props.calc.mostLike,
+			mostPersonality: props.calc.mostPersonality,
+			mostUnlike: props.calc.mostUnlike,
+			tone: props.calc.tone,
+			wordTotal: props.calc.wordTotal
 
 		})
+	}else {
+		console.log('double fuck');
+	}
 	}
 
 
