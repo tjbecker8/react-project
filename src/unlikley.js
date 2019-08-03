@@ -33,8 +33,8 @@ removeClass = () => {
 
 	//render
 	render() {
-		console.log('unlike', this.state.like);
-		console.log('like', this.state.unlike);
+		// console.log('unlike', this.state.like);
+		// console.log('like', this.state.unlike);
 		return (
 <div>
 
@@ -49,7 +49,7 @@ removeClass = () => {
 					<ul>
 						{
 						this.state.like.map((l) =>{
-							return <li className="like-li" >{l.name.split(' ').slice(2).join(' ')}</li>
+							return <li key={l.consumption_preference_id} className="like-li" >{l.name.split(' ').slice(2).join(' ')}</li>
 						})
 						}
 					</ul>
@@ -57,7 +57,7 @@ removeClass = () => {
 					<ul>
 						{
 							this.state.unlike.map((u) => {
-								return <li className="like-li" >{u.name.split(' ').slice(2).join(' ')}</li>
+								return <li key={u.consumption_preference_id} className="like-li" >{u.name.split(' ').slice(2).join(' ')}</li>
 							})
 						}
 					</ul>
