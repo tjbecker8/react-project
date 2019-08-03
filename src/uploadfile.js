@@ -59,7 +59,7 @@ removeTimer = () => {
 }
 
 time = (analysisid) => {
-	setInterval( () => {
+	var timer = setInterval( () => {
 	axios.get(`${process.env.REACT_APP_API}full/${analysisid}`, {headers: {
 			Authorization: `Bearer ${localStorage.getItem('token')}`
 		}}).then((res)=> {
@@ -71,7 +71,7 @@ time = (analysisid) => {
 					id: res.data._id
 				})
 				this.changeFinish()
-				clearInterval()
+				clearInterval(timer)
 			}
 		})}, 45000)
 	}
