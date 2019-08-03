@@ -18,7 +18,7 @@ state = {
 
 	//render
 	render() {
-		console.log(this.props);
+		console.log(this.props.keywords);
 		return (
 	<div>
 		<div className="card text-center">
@@ -29,7 +29,7 @@ state = {
 				<div className="keywords">
 			{
 				this.state.keywords.map((k)=>{
-					return <Keylist word={k} />
+					return <Keylist word={k}  />
 				})
 			}
 		</div>
