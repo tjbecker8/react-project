@@ -18,6 +18,7 @@ state = {
 
 	//render
 	render() {
+		console.log(this.props);
 		return (
 	<div>
 		<div className="card text-center">
