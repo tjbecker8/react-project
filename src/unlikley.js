@@ -33,6 +33,8 @@ removeClass = () => {
 
 	//render
 	render() {
+		console.log('unlike', this.state.like);
+		console.log('like', this.state.unlike);
 		return (
 <div>
 

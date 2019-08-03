@@ -14,7 +14,7 @@ state = {
 		return console.log('no keywords');
 } else {
 	if (this.props.keywords.length === 5) {
-console.log('propies', this.props);
+// console.log('propies', this.props);
 this.setState({
 	keywords: this.props.keywords
 })
@@ -24,7 +24,7 @@ this.setState({
 
 	//render
 	render() {
-		console.log('come on', this.props.keywords);
+		// console.log('come on', this.props.keywords);
 		return (
 	<div>
 		<div className="card text-center">
