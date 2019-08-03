@@ -96,8 +96,8 @@ removeClass = () => {
 //render
 
 render() {
-console.log(this.state.keywords);
-console.log(this.state);
+// console.log(this.state.keywords);
+// console.log(this.state);
 	if(!this.state.word_count > 0){
            // Just wait for the memory to be available
            return null;
