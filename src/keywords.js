@@ -22,7 +22,6 @@ state = {
 
 	//render
 	render() {
-		console.log(this.props.keywords.length);
 		return (
 	<div>
 		<div className="card text-center">
