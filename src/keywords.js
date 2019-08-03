@@ -9,10 +9,10 @@ state = {
 }
 	//functions
 
-	componentWillReceiveProps(props) {
-	console.log('propies', props);
+	componentWillMount ()  {
+	console.log('propies', this.props);
 	this.setState({
-		keywords: props.keywords
+		keywords: this.props.keywords
 	})
 }
 
