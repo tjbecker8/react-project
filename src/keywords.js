@@ -10,11 +10,13 @@ state = {
 	//functions
 
 	componentWillMount ()  {
+		if (this.props.keywords) {
 		if (this.props.keywords.length === 5) {
 	console.log('propies', this.props);
 	this.setState({
 		keywords: this.props.keywords
 	})
+}
 }
 }
 
