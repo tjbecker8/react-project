@@ -71,7 +71,7 @@ time = (analysisid) => {
 					id: res.data._id
 				})
 				this.changeFinish()
-				this.removeTimer()
+				clearInterval()
 			}
 		})}, 45000)
 	}
@@ -96,6 +96,7 @@ checkForAnalysis = (analysisid) => {
 				this.changeFinish()
 				console.log('what we need',this.state.data._id);
 				console.log('other stuff', this.state.id);
+
 			}
 		})
 }
