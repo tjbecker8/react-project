@@ -101,14 +101,14 @@ checkForAnalysis = (analysisid) => {
 
 
 createNew = (e, text, file) => {
-	console.log('createNew');
+	// console.log('createNew');
 		e.preventDefault()
-		console.log('file', file);
-		console.log('text', text);
+		// console.log('file', file);
+		// console.log('text', text);
 		let file_holder = new FormData()
 		file_holder.append('file', file)
 		file_holder.append('name', text)
-		console.log('testtest', file_holder);
+		// console.log('testtest', file_holder);
 		axios.post(`${process.env.REACT_APP_API}full`, file_holder, {headers: {
 				Authorization: `Bearer ${localStorage.getItem('token')}`
 			}}).then((res) => {
