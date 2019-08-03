@@ -53,10 +53,7 @@ changeFinish = () => {
   element.classList.add("active");
 }
 
-removeTimer = () => {
-	console.log('remove timer');
-	clearInterval(this.time)
-}
+
 
 time = (analysisid) => {
 	var timer = setInterval( () => {
@@ -150,7 +147,7 @@ createNew = (e, text, file) => {
 
 						</div>
 						<div className="card-footer">
-						<span id="see-analysis" onClick={this.removeTimer()}>
+						<span id="see-analysis" >
 						<Link to ={{
 								pathname: `/analysis/${this.state.id}`,
 								aboutProps:{
