@@ -9,6 +9,7 @@ state = {
 }
 	//functions
 componentWillReceiveProps(props) {
+	console.log('propies', props);
 	this.setState({
 		keywords: props.keywords
 	})
