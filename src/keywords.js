@@ -10,10 +10,12 @@ state = {
 	//functions
 
 	componentWillMount ()  {
+		if (!this.props.keywords === null) {
 	console.log('propies', this.props);
 	this.setState({
 		keywords: this.props.keywords
 	})
+}
 }
 
 	//render
