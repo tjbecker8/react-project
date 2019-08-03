@@ -8,7 +8,8 @@ state = {
 	keywords: []
 }
 	//functions
-componentWillReceiveProps(props) {
+
+	componentWillReceiveProps(props) {
 	console.log('propies', props);
 	this.setState({
 		keywords: props.keywords
