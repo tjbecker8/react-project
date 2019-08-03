@@ -17,7 +17,7 @@ state = {
 	//functions
 
 	componentWillMount () {
-		console.log('props', this.props.document.color);
+		// console.log('props', this.props.document.color);
 		this.state.chart.push(this.props.document.score)
 
 }

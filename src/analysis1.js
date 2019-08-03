@@ -96,14 +96,13 @@ removeClass = () => {
 //render
 
 render() {
-
+console.log(this.state.keywords);
 	if(!this.state.word_count > 0){
            // Just wait for the memory to be available
            return null;
         }
 
   return (
-
 
 		<div id="wrap">
 			<div id="transcript-top" className="fixed-top">
