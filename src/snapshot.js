@@ -21,7 +21,7 @@ class Snapshot extends Component {
 	//functions
 
 	componentWillReceiveProps(props) {
-		
+
 		if (props.calc) {
 		this.setState({
 			calc: props.calc,
@@ -52,7 +52,6 @@ class Snapshot extends Component {
 					<div id="snap-body" className="card-body">
 						<h3 className="">You have completed {this.state.size} analysis</h3>
 						<h4 className="">With {this.state.wordTotal} word analysised</h4>
-						<h5>Your top used word is: {this.state.keyword}</h5>
 						<h5>Your top used tone is: {this.state.tone}</h5>
 						<h5>Your top personality trait is: {this.state.mostPersonality}</h5>
 						<h5>Your top influnces are:
