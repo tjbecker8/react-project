@@ -82,25 +82,7 @@ setTrial = (e) => {
 					</div>
 				</div>
 
-				<div className="col-sm-4">
-					<div className="card">
-						<div id="what-head" className="card-header">
-							<h3>What is Moodylsis?</h3>
-						</div>
-						<div id="what-body" className="card-body">
-							<h3>Moodylsis is an audio analyzer that measures the tone, personality, influnces, and values of a converstation.</h3>
-
-						</div>
-
-						<div className="card-footer">
-							<span onClick={this.setTrial} id="new-analyis" className="btn btn-primary">
-								Try it out
-							</span>
-						</div>
-
-					</div>
-
-				</div>
+				
 
 
 			</div>

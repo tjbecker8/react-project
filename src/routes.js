@@ -6,7 +6,7 @@ import Login from './login'
 import Analysis from './analysis1'
 import Upload from './uploadfile'
 import Indepth from './indepth'
-
+import Landing from './landing'
 
 class Routes extends Component {
 	//data
@@ -65,7 +65,10 @@ auth = () => {
 						}
 
 					<Route path="/signup" component={() => <Signup auth={this.auth} />} />
-					<Route path="/" component={() => <Login auth={this.auth} />} />
+					<Route path="/login" component={() => <Login auth={this.auth} />} />
+					<Route path="/" component={Landing} />
+
+
 
 				</Switch>
 			</BrowserRouter>
