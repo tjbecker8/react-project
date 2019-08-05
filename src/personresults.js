@@ -46,28 +46,28 @@ removeClass = () => {
 
 								<li className="like-li" >Agreeableness</li>
 								<ul>
-									<li className="like-li" >Present: Value getting along with others. They have a more optimistic view of human nature.</li>
-									<li className="like-li" >Not Present: Value self interests over others. They are more skeptical of others motives.</li>
+									<li className="like-li" >Higher: Value getting along with others. They have a more optimistic view of human nature.</li>
+									<li className="like-li" >Lower: Value self interests over others. They are more skeptical of others motives.</li>
 								</ul>
 								<li className="like-li" >Concientiousness</li>
 								<ul>
-									<li className="like-li" >Present: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.</li>
-									<li className="like-li" >Not Present:  More likely to prefer the spontaneous over the planned.</li>
+									<li className="like-li" >Higher: More self-disciplined, dutiful, or aiming for achievement against measures or outside expectations.</li>
+									<li className="like-li" >Lower:  More likely to prefer the spontaneous over the planned.</li>
 								</ul>
 								<li className="like-li" >Openness</li>
 								<ul>
-									<li className="like-li" >Present: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things.</li>
-									<li className="like-li" >Not Present: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.</li>
+									<li className="like-li" >Higher: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things.</li>
+									<li className="like-li" >Lower: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.</li>
 								</ul>
 								<li className="like-li" >Extraversion - More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.</li>
 								<ul>
-									<li className="like-li" >Present: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves. </li>
-									<li className="like-li" >Not Present: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.</li>
+									<li className="like-li" >Higher: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves. </li>
+									<li className="like-li" >Lower: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.</li>
 								</ul>
 								<li className="like-li" >Emotional Range - More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
 								<ul>
-									<li className="like-li" >Present: More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
-									<li className="like-li" >Not Present: More calm and less likely to get upset. It does not mean they are positive, or happy people.</li>
+									<li className="like-li" >Higher: More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
+									<li className="like-li" >Lower: More calm and less likely to get upset. It does not mean they are positive, or happy people.</li>
 								</ul>
 							</ul>
 						</div>
