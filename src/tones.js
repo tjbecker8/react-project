@@ -92,13 +92,33 @@ removeClass = () => {
 					</div>
 					<div className="card-body">
 						<ul>
-							<li className="like-li" >Analytical: A writer's reasoning and analytical attitude about things. Higher value, more likely to be perceived as intellectual, rational, systematic, emotionless, or impersonal. </li>
-							<li className="like-li" >Anger: Likelihood of writer being perceived as angry. Low value indicates unlikely to be perceived as angry. High value indicates very likely to be perceived as angry. </li>
-							<li className="like-li" >Confident: A writer's degree of certainty. Higher value, more likely to be perceived as assured, collected, hopeful, or egotistical. </li>
-							<li className="like-li" >Fear: Likelihood of writer being perceived as scared. Low value indicates unlikely to be perceived as fearful. High value, very likely to be perceived as scared. </li>
-							<li className="like-li" >Tentative: A writer's degree of inhibition. Higher value, more likely to be perceived as questionable, doubtful, limited, or debatable.</li>
-							<li className="like-li" >Sadness: Likelihood of writer being perceived as sad. Low value, unlikely to be perceived as sad. High value very likely to be perceived as sad. </li>
-							<li className="like-li" >Joy: Joy or happiness has shades of enjoyment, satisfaction and pleasure. There is a sense of well-being, inner peace, love, safety and contentment. </li>
+							<li className="like-li" >Analytical: <ul>
+								<li>A writer's reasoning and analytical attitude about things. Higher value, more likely to be perceived as intellectual, rational, systematic, emotionless, or impersonal.</li>
+							</ul> </li>
+						<li className="like-li" >Anger: <ul>
+							<li>Likelihood of writer being perceived as angry. Low value indicates unlikely to be perceived as angry. High value indicates very likely to be perceived as angry. </li>
+						</ul> </li>
+					<li className="like-li" >Confident: <ul>
+						<li>A writer's degree of certainty. Higher value, more likely to be perceived as assured, collected, hopeful, or egotistical. </li>
+					</ul> </li>
+				<li className="like-li" >Fear: <ul>
+					<li>Likelihood of writer being perceived as scared. Low value indicates unlikely to be perceived as fearful. High value, very likely to be perceived as scared.</li>
+				</ul> </li>
+							<li className="like-li" >Tentative:
+								<ul>
+									<li>A writer's degree of inhibition. Higher value, more likely to be perceived as questionable, doubtful, limited, or debatable.</li>
+								</ul>
+							</li>
+							<li className="like-li" >Sadness:
+								<ul>
+									<li> Likelihood of writer being perceived as sad. Low value, unlikely to be perceived as sad. High value very likely to be perceived as sad.</li>
+								</ul>
+							 </li>
+							<li className="like-li" >Joy:
+								<ul>
+									<li>Joy or happiness has shades of enjoyment, satisfaction and pleasure. There is a sense of well-being, inner peace, love, safety and contentment.</li>
+								</ul>
+							 </li>
 						</ul>
 					</div>
 					<div onClick={this.removeClass} className="card-footer">
