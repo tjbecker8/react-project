@@ -21,7 +21,7 @@ class Snapshot extends Component {
 	//functions
 
 	componentWillReceiveProps(props) {
-
+		console.log(props.calc.keyword);
 		if (props.calc) {
 		this.setState({
 			calc: props.calc,
