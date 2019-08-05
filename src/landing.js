@@ -41,7 +41,7 @@ class Signup extends Component {
 				<span id="signup" className="input-group-btn">
 					<Link to="/signup" >Sign Up</Link>
 				</span>
-				<span onClick={this.setTrial} id="new-analyis" className="btn btn-primary">
+				<span onClick={this.setTrial} id="new-analyis-123" className="btn btn-primary">
 					Try it out
 				</span>
 
