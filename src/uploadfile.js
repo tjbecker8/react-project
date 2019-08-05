@@ -70,7 +70,7 @@ time = (analysisid) => {
 				this.changeFinish()
 				clearInterval(timer)
 			}
-		})}, 45000)
+		})}, 15000)
 	}
 
 
