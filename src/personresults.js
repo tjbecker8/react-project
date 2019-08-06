@@ -59,12 +59,12 @@ removeClass = () => {
 									<li className="like-li" >Higher: Intellectually curious, emotionally-aware, sensitive to beauty and willing to try new things.</li>
 									<li className="like-li" >Lower: Preferring the plain, straightforward, and obvious over the complex, ambiguous, and subtle.</li>
 								</ul>
-								<li className="like-li" >Extraversion - More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves.</li>
+								<li className="like-li" >Extraversion</li>
 								<ul>
 									<li className="like-li" >Higher: More energetic and pronounced engagement with the external world. Likes high group visibility, talking, and asserting themselves. </li>
 									<li className="like-li" >Lower: Needs less stimulation and are more independent of their social world. It does not mean they are shy, un-friendly, or antisocial.</li>
 								</ul>
-								<li className="like-li" >Emotional Range - More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
+								<li className="like-li" >Emotional Range </li>
 								<ul>
 									<li className="like-li" >Higher: More likely to have negative emotions or get upset. It could mean they are going through a tough time.</li>
 									<li className="like-li" >Lower: More calm and less likely to get upset. It does not mean they are positive, or happy people.</li>
