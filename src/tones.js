@@ -90,7 +90,7 @@ removeClass = () => {
 					<div className="card-header">
 						<h3>Tones Definition</h3>
 					</div>
-					<div className="card-body">
+					<div id="tones-body" className="card-body">
 						<ul>
 							<li className="like-li" >Analytical: <ul>
 								<li>A writer's reasoning and analytical attitude about things. Higher value, more likely to be perceived as intellectual, rational, systematic, emotionless, or impersonal.</li>
