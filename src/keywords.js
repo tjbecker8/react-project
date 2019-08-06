@@ -14,7 +14,7 @@ state = {
 		return console.log('no keywords');
 } else {
 	if (this.props.keywords.length > 2) {
-console.log('propies', this.props);
+// console.log('propies', this.props);
 this.setState({
 	keywords: this.props.keywords
 })
