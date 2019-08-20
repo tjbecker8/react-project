@@ -1,7 +1,7 @@
 .wrap {
 	background-image: url(https://res.cloudinary.com/dg3lfqtcg/image/upload/v1564992478/tomtom_lp96ox.jpg);
-max-width: 100vw;
-max-height: 100vh;
+width: 100vw;
+height: 100vh;
 /* width: 100vw;
 height: 100vh; */
 background-repeat: no-repeat;
