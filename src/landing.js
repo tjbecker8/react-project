@@ -32,7 +32,7 @@ class Signup extends Component {
 	//render
 	render() {
 		return (
-
+ 		<div className ="main-landing">
 			<div className="wrap">
 			<div className="landing">
 				<span id="login" className="input-group-btn">
@@ -48,6 +48,8 @@ class Signup extends Component {
 			</div>
 
 			</div>
+
+		</div>
 
 
 
